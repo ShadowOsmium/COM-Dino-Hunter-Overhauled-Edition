@@ -1,0 +1,757 @@
+<root>
+		<!-- 
+			id							����ID
+			lvl							���ܵȼ�
+			type 						0:�������� 1:��������
+			rangetype				0:���弼�� 1:Ⱥ�弼��
+
+			rangetypevalue  0���弼��:"��С����,��������"
+											1Ⱥ�＼��:"��С����,��������,��Χ[0��ʾ360��],������������[0��ʾ������]"
+			
+			targetlimit			0:	����Ŀ�� 1:�ѷ� 2:�з� 3:�Լ�
+			skillmode 			��skillmodevalue˵��
+										
+			skillmodevalue	1		һ���Լ���:		"����ʱ����[0-1]"
+			
+										  2		�����Լ���:		"����ʱ��,��������"
+										  
+										  3		����Ŀ��:			"����ʱ��,��,�Ƿ�����Ŀ��[0:no 1:yes]"
+										  
+										  4 	����Ŀ��:			"����ʱ��,�������󳤶�[0��ʾ����������],��ЧID"
+										  
+										  5 	�����＼��:		"����ʱ����, ������ģ��ID, ����λ��[kBonePart], ˮƽ�ٶ�, ˮƽ�Ƕ�, ��ֱ�Ƕ�, ����"
+										  
+										  6 	��ײ����: 		"��ײ����,����ʱ��,����Ч������ʱ��,��ЧID"
+										  
+										  7 	��ը����: 		"����ʱ����[0-1], ��ը��Χ"
+										  
+										  8 	Ư�Ƽ���: 		"����ʱ��, ��,λ����������, λ����������"
+										  
+										  9 	���ٳ�ײ:			"����ʱ��,�ƶ��ٶ�,�����ٶ�,����Ч������ʱ��,��ЧID"
+
+			name						������
+			desc						��������
+			action					���ܶ���ID,����û��,�򲥷�Ĭ�Ͻ�ɫ����
+			actionspeed			���ܶ��������ٶ�
+			actionloop			���ܶ����Ƿ�ѭ������[0:��ѭ�� 1:ѭ��]
+			actionbuff			���ܶ����ڼ���BuffID
+			
+			func						���ܹ���(�μ�:skillfunc˵��)
+			valuex					���ܹ��ܲ���x
+			valuey					���ܹ��ܲ���y
+
+			usecount             ���＼��ʹ�����ƣ���������0��ʾ������
+			
+1402;	//��������
+1405;	//����������
+1404;	//������Ч
+1408;	//���ҳ��漼��
+1921; //��������
+1932; //��������
+1940;	//˫������������
+
+		-->
+	<skillinfo>
+		<!--
+			ͨ�ö���
+			1			����
+			4 		�ƶ�
+			1000 	����
+			2502	����
+			2504	����
+		-->
+	<!-- �ڻ����� -->
+		<skill id="1000000" lvl="1" type="0" action="2502" targetlimit="3"	rangetype="0" rangetypevalue="0,100" skillmode="1" skillmodevalue="0.9" func="13" valuex="10" valuey="0"/>
+
+	
+
+		<!-- ***********************************�������� start by 10000************************************************************************* -->
+		<!--	��������
+					10001	Ԥ������
+					10002	����
+					10003	��ת����
+		-->
+
+		
+		<!-- ����Ŀ��0.5s[����0-4] -->
+		<skill id="10000" lvl="1" type="0" action="1" 		rangetype="0" rangetypevalue="0,5" 			skillmode="3" skillmodevalue="0.5" />	
+		<!-- ��ͨ˺ҧ 100%�˺�-->
+		<skill id="10001" lvl="1" type="0" action="1000" 	rangetype="0" rangetypevalue="0,5" 			skillmode="1" skillmodevalue="0.5" func="5" valuex="100" valuey="0"/>
+		
+		<!-- ����Ŀ��2s[����10-60] -->
+		<skill id="10002" lvl="1" type="0" action="10001" rangetype="0" rangetypevalue="10,60" 		skillmode="3" skillmodevalue="2" />	
+		<!-- ���� 150%�˺� -->
+		<skill id="10003" lvl="1" type="0" action="10002" acitonbuff="201" rangetype="0" rangetypevalue="0,5" 			skillmode="4" skillmodevalue="1.5,1,1402" func="5,4" valuex="150,4" valuey="0,0" />
+				
+		<!-- ����Ŀ��2s[����10-60] -->
+		<skill id="10004" lvl="1" type="0" action="10001" rangetype="0" rangetypevalue="10,60" 		skillmode="3" skillmodevalue="2" />	
+		<!-- �������� 200%�˺�-->
+		<skill id="10005" lvl="1" type="0" action="10003" acitonbuff="201" rangetype="0" rangetypevalue="0,5" 			skillmode="4" skillmodevalue="1.5,1,1402" func="5,4" valuex="200,4" valuey="0,0"/>
+		
+	
+		<!-- ����Ŀ��0.5s[����0-4] -->
+		<skill id="10006" lvl="1" type="0" action="1" 		rangetype="0" rangetypevalue="0,8" 			skillmode="3" skillmodevalue="0.5" />	
+		<!-- BOSS��ͨ˺ҧ 100%�˺�-->
+		<skill id="10007" lvl="1" type="0" action="1000" 	rangetype="1" rangetypevalue="0,8,60,0" skillmode="1" skillmodevalue="0.5" func="5" valuex="100" valuey="0"/>
+		
+		<!-- BOSS���� -->
+		<skill id="10008" lvl="1" type="0" action="1" 		rangetype="0" rangetypevalue="5,50" 		skillmode="4" skillmodevalue="0,-3" />
+		
+		
+		
+		<!-- ***********************************�������� start by 20000************************************************************************* -->
+		<!--	��������
+					10001	ҧ��˦ͷ
+					10002	ɨβ
+					10003	��ͷ���ӵ��涥��
+		-->
+		
+		<!-- ����Ŀ��0.5s[����0-5] -->
+		<skill id="20000" lvl="1" type="0" action="1" 		rangetype="0" rangetypevalue="0,5" 				skillmode="3" skillmodevalue="0.1" />	
+		<!-- ��ͨ˺ҧ 100�˺�-->
+		<skill id="20001" lvl="1" type="0" action="10001" 	rangetype="1" rangetypevalue="-1,6,60,0" 	skillmode="1" skillmodevalue="0.5" func="5" valuex="100" valuey="0"/>
+		
+		<!-- ����Ŀ��0.5s[����15-40] -->
+		<skill id="20002" lvl="1" type="0" action="1" 		rangetype="0" rangetypevalue="15,50" 			skillmode="3" skillmodevalue="0.3" />	
+		<!-- ��ʯͷ 200%�˺�-->
+		<skill id="20003" lvl="1" type="0" action="10003" rangetype="0" rangetypevalue="15,50" 	skillmode="5" skillmodevalue="0.5,170,6,25,0,45,1" func="5,11" valuex="200,4" valuey="0"/>
+		
+		<!-- ����Ŀ��0.5s[����0-10] -->
+		<skill id="20004" lvl="1" type="0" action="1" 		rangetype="0" rangetypevalue="0,10" 			skillmode="3" skillmodevalue="0.1" />	
+		<!-- ��β 120�˺� ����5��-->
+		<skill id="20005" lvl="1" type="0" action="10002" rangetype="1" rangetypevalue="0,7,360,0" 	skillmode="1" skillmodevalue="0.3" func="5,4" valuex="150,5" valuey="0,100"/>
+
+		<!-- ����Ŀ�� [����5-40]-->
+		<skill id="20006" lvl="1" type="0" action="2504" 	rangetype="0" rangetypevalue="5,50" 			skillmode="4" skillmodevalue="1, -4,-1" />	
+		<!-- ˺ҧĿ��,���ɽ�ɫ�˺�140%���˺� -->
+		<skill id="20007" lvl="1" type="0" action="10001" 	rangetype="1" rangetypevalue="-1,6,60,0" 	skillmode="1" skillmodevalue="0.5" func="5" valuex="100" valuey="0"/>
+		
+		<!-- ����Ŀ�� -->
+		<skill id="20008" lvl="1" type="0" action="2504" 	rangetype="0" rangetypevalue="10,25" 			skillmode="4" skillmodevalue="0, -5,-1" />	
+		<!-- ˺ҧĿ��,���ɽ�ɫ�˺�200%���˺� ����5�� -->
+		<skill id="20009" lvl="1" type="0" action="10001" 	rangetype="0" rangetypevalue="0,10" 			skillmode="1" skillmodevalue="0.3" func="5,4" valuex="200,5" valuey="0,0"/>
+		
+		<!-- ����Ŀ�� [����5-50]-->
+		<skill id="20010" lvl="1" type="0" action="2504" 	rangetype="0" rangetypevalue="5,50" 			skillmode="4" skillmodevalue="1, -5,-1" />
+		<!-- ����˦β,���ɽ�ɫ�˺�150%���˺� ����4�� -->
+		<skill id="20011" lvl="1" type="0" action="10002" rangetype="1" rangetypevalue="0,7,360,0" 	skillmode="1" skillmodevalue="0.3" func="5,4" valuex="150,4" valuey="0,0"/>
+		
+		<!-- ����Ŀ��0.5s[����10-30] -->
+		<skill id="20012" lvl="1" type="0" action="1" 		rangetype="0" rangetypevalue="10,30" 			skillmode="3" skillmodevalue="0.5" />	
+		<!-- ��ʯͷ 2�� -->
+		<skill id="20013" lvl="1" type="0" action="10002" rangetype="0" rangetypevalue="10,30" 			skillmode="5" skillmodevalue="0.2,170,7,40,0,73,2" func="5,11" valuex="100,2" valuey="0"/>
+		
+		<!-- ����Ŀ��0.5s[����5-30] -->
+		<skill id="20014" lvl="1" type="0" action="1" 		rangetype="0" rangetypevalue="5,50" 			skillmode="3" skillmodevalue="0.3" />	
+		<!-- ɨβ��ʯͷ 4�� 100%�˺�-->
+		<skill id="20015" lvl="1" type="0" action="10002" rangetype="0" rangetypevalue="5,50" 			skillmode="5" skillmodevalue="0.2,175,7,30,0,45,4" func="5,11" valuex="100,2" valuey="0"/>
+		
+		<!-- ������������ �ƶ��ٶ�����25% -->
+		<skill id="20050" lvl="1" type="1" func="1" valuex="2" valuey="65561"/>
+		<!-- ������������ �ƶ��ٶ�����25% -->
+		<skill id="20051" lvl="1" type="1" func="1" valuex="2" valuey="65561"/>			
+		<!-- ������������ �ƶ��ٶ�����50% -->
+		<skill id="20052" lvl="1" type="1" func="1" valuex="2" valuey="65586"/>
+		<!-- ������������ �ƶ��ٶ�����100% -->
+		<skill id="20053" lvl="1" type="1" func="1" valuex="2" valuey="65636"/>	
+		<!-- ����״̬��30%Ѫ�� -->
+		<skill id="20054" lvl="1" type="1" func="1" valuex="65537" valuey="65566"/>		
+		<!-- ���￹����1�� -->
+		<skill id="20061" lvl="1" type="1" func="1" valuex="8" valuey="1"/>		
+		<skill id="20062" lvl="1" type="1" func="1" valuex="8" valuey="2"/>		
+		<skill id="20063" lvl="1" type="1" func="1" valuex="8" valuey="3"/>		
+		<skill id="20064" lvl="1" type="1" func="1" valuex="8" valuey="4"/>		
+		<skill id="20065" lvl="1" type="1" func="1" valuex="8" valuey="5"/>		
+		<skill id="20066" lvl="1" type="1" func="1" valuex="8" valuey="6"/>		
+		<skill id="20067" lvl="1" type="1" func="1" valuex="8" valuey="7"/>		
+		<skill id="20068" lvl="1" type="1" func="1" valuex="8" valuey="8"/>		
+		<skill id="20069" lvl="1" type="1" func="1" valuex="8" valuey="9"/>		
+		
+		<!-- ***********************************Ѹ�������� start by 30000************************************************************************* -->
+		<!--	Ѹ��������
+					10001	Ԥ����ײ
+					10002	��ײ
+					10003	��ײ����
+					10004 Ԥ����Ծ
+					10005 ����
+					10006 ����
+		-->
+		
+		<!-- ����Ŀ��0.1s[����0-3] -->
+		<skill id="30000" lvl="1" type="0" action="1" 		rangetype="0" rangetypevalue="0,3" 				skillmode="3" skillmodevalue="0.1" />	
+		<!-- ��ͨ˺ҧ �˺�100%-->
+		<skill id="30001" lvl="1" type="0" action="1000" 	rangetype="1" rangetypevalue="-1,5,60,0" 	skillmode="1" skillmodevalue="0.3" func="5" valuex="100" valuey="0"/>
+		
+		<!-- ����Ŀ��0.5s[����5-18] -->
+		<skill id="30002" lvl="1" type="0" action="1" 		rangetype="0" rangetypevalue="5,20" 			skillmode="3" skillmodevalue="0.5" />	
+		<!-- ���� -->
+		<skill id="30003" lvl="1" type="0" action="2504" 	rangetype="0" rangetypevalue="5,22" 			skillmode="4" skillmodevalue="1.2,-2,-1" />
+		<!-- ���̺�˺ҧ �˺�140%-->
+		<skill id="30011" lvl="1" type="0" action="1000" 	rangetype="0" rangetypevalue="0,4" 				skillmode="1" skillmodevalue="0.4" func="5" valuex="140" valuey="0" />
+		
+		<!-- ����Ŀ��1.8s[����8-18] -->
+		<skill id="30004" lvl="1" type="0" action="10004" actionloop="0" rangetype="0" rangetypevalue="8,18" 			skillmode="3" skillmodevalue="1.8" />	
+		<!-- ���� -->
+		<skill id="30005" lvl="1" type="0" action="1" 		rangetype="0" rangetypevalue="8,20" 			skillmode="4" skillmodevalue="0,-2" />
+		
+		<!-- ����Ŀ��0.7s[����4-12] -->
+		<skill id="30006" lvl="1" type="0" action="10001" rangetype="0" rangetypevalue="4,22" 			skillmode="3" skillmodevalue="0.5" />	
+		<!-- ��ײ 50%�˺�-->
+		<skill id="30007" lvl="1" type="0" action="10002" rangetype="0" rangetypevalue="0,3" 				skillmode="6" skillmodevalue="20,1,0.25,-1" func="5,4" valuex="50,2" valuey="0,0" />
+		<!-- ��ײ���� -->
+		<skill id="30008" lvl="1" type="0" action="10003" rangetype="0" rangetypevalue="0,4" 				skillmode="1" skillmodevalue="0.3" func="5" valuex="100" valuey="0" />
+		
+		<!-- ����Ŀ��0.1s[����0-3] -->
+		<skill id="30009" lvl="1" type="0" action="1" 		rangetype="0" rangetypevalue="0,4" 				skillmode="3" skillmodevalue="0.1" />	
+		<!-- BOSS��ͨ˺ҧ �˺�100%-->
+		<skill id="30010" lvl="1" type="0" action="1000" 	rangetype="1" rangetypevalue="-1,5,60,0" 	skillmode="1" skillmodevalue="0.3" func="5" valuex="100" valuey="0"/>
+		
+		<!-- ����Ŀ��1s[����0-3] -->
+		<skill id="30011" lvl="1" type="0" action="1" rangetype="0" rangetypevalue="0,4" 				skillmode="3" skillmodevalue="1" />	
+		
+		
+		<!-- �������� ������+50 -->
+		<skill id="30100" lvl="1" type="1" func="1" valuex="9" valuey="50" />
+		
+		<!-- ����Ծ -->
+		<skill id="30012" lvl="1" type="0" action="10005" actionloop="0"	rangetype="0" rangetypevalue="0,20" skillmode="8" skillmodevalue="0.4,0,0,-6" />	
+		
+		<!-- ����Ծ -->
+		<skill id="30013" lvl="1" type="0" action="10006" actionloop="0"	rangetype="0" rangetypevalue="0,20" skillmode="8" skillmodevalue="0.4,0,0,6" />	
+		
+		
+		<!-- ***********************************˫�������� start by 40000************************************************************************* -->
+		<!--	˫��������
+					10001	Ԥ����
+					10002	��ǰ��
+					10003	������
+					10004 ������
+					10005 ������
+		-->
+		
+		
+		<!-- ǰ���� ����Ŀ��0.1s[����5-20] -->
+		<skill id="40000" lvl="1" type="0" action="10001" rangetype="0" rangetypevalue="5,16" skillmode="3" skillmodevalue="0.1" />	
+		<!-- ��ͨ���� 100%�˺�-->
+		<skill id="40001" lvl="1" type="0" action="10002" rangetype="0" rangetypevalue="5,16" skillmode="5" skillmodevalue="0.5,171,6,30,0,0,1" func="5" valuex="100" valuey="0"/>
+		
+		<!-- ������ ����Ŀ��0.1s[����5-40] -->
+		<skill id="40002" lvl="1" type="0" action="10001" rangetype="0" rangetypevalue="0,15" skillmode="3" skillmodevalue="0.5" />	
+		<!-- ��ͨ���� -->
+		<skill id="40003" lvl="1" type="0" action="10002" rangetype="1" rangetypevalue="0,20" skillmode="5" skillmodevalue="0.5,173,6,30,0,0,5" func="5" valuex="80" valuey="0"/>
+		<!-- ǰ���� -->
+		<skill id="40004" lvl="1" type="0" action="10002" rangetype="0" rangetypevalue="0,20" skillmode="5" skillmodevalue="0.5,173,6,30,0,0,1" func="5" valuex="80" valuey="0"/>
+		<!-- ������ -->
+		<skill id="40005" lvl="1" type="0" action="10004" rangetype="0" rangetypevalue="0,20" skillmode="5" skillmodevalue="0.5,173,6,30,15,0,1" func="5" valuex="80" valuey="0"/>
+		<!-- ������ -->
+		<skill id="40006" lvl="1" type="0" action="10003" rangetype="0" rangetypevalue="0,20" skillmode="5" skillmodevalue="0.5,173,6,30,-15,0,1" func="5" valuex="80" valuey="0"/>
+		<!-- ��������4�� 180�˺�-->
+		<skill id="40007" lvl="1" type="0" action="10005" rangetype="1" rangetypevalue="0,15" skillmode="5" skillmodevalue="0.7,173,6,7,0,70,4" func="5" valuex="120" valuey="0"/>
+		<!-- ��������8�� 180�˺�-->
+		<skill id="40008" lvl="1" type="0" action="10005" rangetype="1" rangetypevalue="0,15" skillmode="5" skillmodevalue="0.7,173,6,7,0,70,8" func="5" valuex="120" valuey="0"/>
+		
+		<!-- ��ƨ���� ����Ŀ��0.1s[����0-40] -->
+		<skill id="40009" lvl="1" type="0" action="10001" rangetype="0" rangetypevalue="0,8" skillmode="3" skillmodevalue="0.1" />	
+		<!-- ��ƨ���� 50%�˺� ����5�� ��ѣ4��-->
+		<skill id="40010" lvl="1" type="0" action="10006" rangetype="1" rangetypevalue="0,8,0,0" skillmode="1" skillmodevalue="0.8" func="5,4,11" valuex="50,5,2" valuey="0"/>
+		
+		
+		
+		
+		<!-- ***********************************���������� start by 50000************************************************************************* -->
+		<!--	����������
+					10001 ��ͷ�ӵ��涥��
+					10002	Ԥ����ײ
+					10003	��ײ
+					10004	��ײ����
+		-->
+		
+		<!-- ����Ŀ��0.1s[����0-3] -->
+		<skill id="50000" lvl="1" type="0" action="1" rangetype="0" rangetypevalue="0,3" skillmode="3" skillmodevalue="0.1" />	
+		<!-- ��ͨ˺ҧ 100�˺�-->
+		<skill id="50001" lvl="1" type="0" action="1000" rangetype="0" rangetypevalue="0,4" skillmode="1" skillmodevalue="0.5" func="5" valuex="100" valuey="0"/>
+		
+		<!-- ����Ŀ��0.1s[����10-30] -->
+		<skill id="50002" lvl="1" type="0" action="1" rangetype="0" rangetypevalue="10,30" skillmode="3" skillmodevalue="0.1" />	
+		<!-- ��ʯͷ3��ʯͷ 100%�˺� -->
+		<skill id="50003" lvl="1" type="0" action="10001" rangetype="0" rangetypevalue="10,30" skillmode="5" skillmodevalue="0.5,175,6,45,0,45,3" func="5,11" valuex="150,2" valuey="0"/>
+		
+		<!-- ����Ŀ��1s[����5-30] -->
+		<skill id="50004" lvl="1" type="0" action="10002" actionloop="0" rangetype="0" rangetypevalue="5,30" skillmode="3" skillmodevalue="1" />	
+		<!-- BOSS��ײ 50%�˺�-->
+		<skill id="50005" lvl="1" type="0" action="10003" rangetype="0" rangetypevalue="0,4" skillmode="6" skillmodevalue="30,1.2,0.25,1405" func="5,4" valuex="50,2" valuey="0,0" actionbuff="201"/>
+		
+		<!-- ����Ŀ��0.5s[����5-20] -->
+		<skill id="50006" lvl="1" type="0" action="1" rangetype="0" rangetypevalue="5,20" skillmode="3" skillmodevalue="0.5" />
+		<!-- ���ذ� -->
+		<skill id="50007" lvl="1" type="0" action="10004" rangetype="1" rangetypevalue="0,3,0" skillmode="1" skillmodevalue="0.2" func="5,4" valuex="100,5" valuey="0,0"/>	
+
+<!-- ����Ŀ��2.5s[����5-15] -->
+		<skill id="50008" lvl="1" type="0" action="10002" actionloop="0" rangetype="0" rangetypevalue="3,15" skillmode="3" skillmodevalue="2.5" />	
+		<!-- С�ֳ�ײ 30%�˺�-->
+		<skill id="50009" lvl="1" type="0" action="10003" rangetype="0" rangetypevalue="0,3" skillmode="6" skillmodevalue="15,1.8,0.25,1405" func="5,4" valuex="30,3" valuey="0,0"/>
+
+
+
+		<!-- ***********************************���������� start by 60000************************************************************************* -->
+		<!--	����������
+					10001 ҧ��˦ͷ
+					10002	ͷײ����
+					10003	����
+					10004	Ԥ������
+					10005 ��������
+		-->
+		
+		<!-- ����Ŀ��0s[����0-5] -->
+		<skill id="60000" lvl="1" type="0" action="1" rangetype="0" rangetypevalue="0,5" skillmode="3" skillmodevalue="0.1" />	
+		<!-- ��ͨ˺ҧ 100�˺�-->
+		<skill id="60001" lvl="1" type="0" action="1000" rangetype="1" rangetypevalue="0,6,60,0" skillmode="1" skillmodevalue="0.5" func="5" valuex="100" valuey="0"/>
+		
+		<!-- ����Ŀ��0.1s[����0-7] -->
+		<skill id="60002" lvl="1" type="0" action="1" rangetype="0" rangetypevalue="0,7" skillmode="3" skillmodevalue="0.1" />	
+		<!-- ��˺ҧ 120�˺�-->
+		<skill id="60003" lvl="1" type="0" action="10001" rangetype="1" rangetypevalue="0,8,60,0" skillmode="1" skillmodevalue="0.5" func="5" valuex="120" valuey="0"/>
+		
+		<!-- ����Ŀ��0.1s[����10-20] -->
+		<skill id="60004" lvl="1" type="0" action="1" rangetype="0" rangetypevalue="10,20" skillmode="3" skillmodevalue="0.1" />	
+		<!-- ���� -->
+		<skill id="60005" lvl="1" type="0" action="2504" rangetype="0" rangetypevalue="10,20" skillmode="4" skillmodevalue="1.2,-5,-1"/>
+		<!-- ������ͨ˺ҧ 120�˺�-->
+		<skill id="60011" lvl="1" type="0" action="1000" rangetype="1" rangetypevalue="0,6,60,0" skillmode="1" skillmodevalue="0.5" func="5" valuex="100" valuey="0"/>
+		<!-- ���̴�˺ҧ 150�˺�-->
+		<skill id="60012" lvl="1" type="0" action="10001" rangetype="1" rangetypevalue="0,8,60,0" skillmode="1" skillmodevalue="0.5" func="5" valuex="120" valuey="0"/>
+		
+		<!-- ����Ŀ��0.5s[����0-25] -->
+		<skill id="60006" lvl="1" type="0" action="1" rangetype="0" rangetypevalue="0,60" skillmode="3" skillmodevalue="0.5" />	
+		<!-- �ػ�������4��ʯͷ 100%�˺�-->
+		<skill id="60007" lvl="1" type="0" action="10002" rangetype="1" rangetypevalue="0,60" skillmode="5" skillmodevalue="0.7,175,1,50,0,2,6" func="5,11" valuex="100,2" valuey="0"/>
+		
+		<!-- ����Ŀ��1.5s[����15-40] -->
+		<skill id="60008" lvl="1" type="0" action="10004" actionloop="0" rangetype="0" rangetypevalue="15,40" skillmode="3" skillmodevalue="1.5" />	
+		<!-- ���� 150%�˺�-->
+		<skill id="60009" lvl="1" type="0" action="10003" acitonbuff="201" rangetype="0" rangetypevalue="0,4" skillmode="6" skillmodevalue="25,1.5,0.25,1404" func="5,4" valuex="150,2" valuey="0,0"/>
+		<!-- �������� -->
+		<skill id="60010" lvl="1" type="0" action="10005" rangetype="0" rangetypevalue="0,5" skillmode="1" skillmodevalue="0.5"/>
+	
+	<!-- ����Ŀ��0.1s[����0-10] -->
+		<skill id="60011" lvl="1" type="0" action="1" rangetype="0" rangetypevalue="0,10" skillmode="3" skillmodevalue="0.1" />	
+	<!-- �ػ��������˼���ѣ-->
+		<skill id="60012" lvl="1" type="0" action="10002" rangetype="1" rangetypevalue="0,10,0,0" skillmode="1" skillmodevalue="0.7" func="4,11" valuex="5,4" valuey="0"/>>
+	
+	
+	
+		<!-- ***********************************���� start by 70000************************************************************************* -->
+		<!--	��������
+					10001 ɨβ
+					10002	��������
+					10003	��������
+					10004	����״̬
+		-->
+		
+		<!-- ����Ŀ��0.5s[����0-4] -->
+		<skill id="70000" lvl="1" type="0" action="1" rangetype="0" rangetypevalue="0,5" skillmode="3" skillmodevalue="0.5" />	
+		<!-- ��ͨ˺ҧ 100%�˺�-->
+		<skill id="70001" lvl="1" type="0" action="10001" rangetype="0" rangetypevalue="0,5" skillmode="1" skillmodevalue="1" func="5" valuex="100" valuey="0"/>
+		
+		<!-- ��������-->
+		<skill id="70002" lvl="1" type="1" func="1,1" valuex="5001,5002" valuey="10,50"/>	
+		
+		<!-- Ư�� -->
+		<skill id="70010" lvl="1" type="0" action="4" rangetype="0" rangetypevalue="0,10" skillmode="8" skillmodevalue="0.5,-5,0" func="5" valuex="100" valuey="0" />
+		<skill id="70011" lvl="1" type="0" action="4" rangetype="0" rangetypevalue="0,5" skillmode="8" skillmodevalue="0.5,0,5" func="5" valuex="100" valuey="0" />
+		<skill id="70012" lvl="1" type="0" action="4" rangetype="0" rangetypevalue="0,5" skillmode="8" skillmodevalue="0.5,0,-10" func="5" valuex="100" valuey="0" />
+		<skill id="70013" lvl="1" type="0" action="4" rangetype="0" rangetypevalue="0,5" skillmode="8" skillmodevalue="0.5,0,5" func="5" valuex="100" valuey="0" />
+		<skill id="70014" lvl="1" type="0" action="4" rangetype="0" rangetypevalue="0,5" skillmode="8" skillmodevalue="0.5,10,0" func="5" valuex="100" valuey="0" />
+		
+		<!-- ���ع��� -->
+	
+		<skill id="70020" lvl="1" type="0" action="10002" actionloop="0" rangetype="0" rangetypevalue="3,20" skillmode="3" skillmodevalue="2" />
+		<skill id="70021" lvl="1" type="0" action="10004" rangetype="0" rangetypevalue="3,20" skillmode="4" skillmodevalue="1.2, -2,1921" />
+		<skill id="70022" lvl="1" type="0" action="10003" rangetype="0" rangetypevalue="0,5" skillmode="1" skillmodevalue="0.4" func="5" valuex="100" valuey="0"/>
+		
+		<!-- ***********************************���� start by 80000************************************************************************* -->
+		<!--	��������
+					��
+		-->
+		
+		<!-- ����Ŀ��0.5s[����0-4] -->
+		<skill id="80000" lvl="1" type="0" action="1" rangetype="0" rangetypevalue="0,4" skillmode="3" skillmodevalue="0.5" />	
+		<!-- ��ͨ˺ҧ 100%�˺�-->
+		<skill id="80001" lvl="1" type="0" action="1000" targetlimit="2" rangetype="0" rangetypevalue="0,4" skillmode="7" skillmodevalue="1,6" func="5" valuex="200" valuey="0"/>
+		
+	
+		
+		<!-- �������� ����ID10 ��������2 -->
+		<skill id="80003" lvl="1" type="1" func="1,1" valuex="5005,5006" valuey="23,2"/>	
+
+		<!-- ***********************************�ƽ��� start by 90000************************************************************************* -->
+		<!-- ����Ŀ��0.5s[����0-4] -->
+		<skill id="90000" lvl="1" type="0" action="1" rangetype="0" rangetypevalue="0,5" skillmode="3" skillmodevalue="0.5" />	
+		<!-- ��ͨ˺ҧ 100%�˺�-->
+		<skill id="90001" lvl="1" type="0" action="1000" rangetype="0" rangetypevalue="0,5" skillmode="1" skillmodevalue="0.5" func="5" valuex="100" valuey="0"/>
+		
+		
+		<!-- �ƽ���Я������ valuey=1��ʾ��������ֵ�ֳ�����ʽ����-->
+		<skill id="90003" lvl="1" type="1"   func="1" valuex="4001" valuey="1"/>	
+
+
+		<!-- ***********************************ˮ���� start by 100000************************************************************************* -->
+		<!-- ����Ŀ��0.5s[����0-4] -->
+		<skill id="100000" lvl="1" type="0" action="1" rangetype="0" rangetypevalue="0,5" skillmode="3" skillmodevalue="0.5" />	
+		<!-- ��ͨ˺ҧ 100%�˺�-->
+		<skill id="100001" lvl="1" type="0" action="1000" rangetype="0" rangetypevalue="0,5" skillmode="1" skillmodevalue="0.5" func="5" valuex="100" valuey="0"/>
+	
+		<!-- ˮ����Я������  valuey=1��ʾ��������ֵ�ֳ�����ʽ����-->
+		<skill id="100003" lvl="1" type="1"   func="1" valuex="4002" valuey="1"/>	
+	
+			
+		<!-- ***********************************���� start by 110000************************************************************************* -->
+		<!--	��������
+					10001 �˵ذ�
+					10002	Ԥ��ײ
+					10003	ײ
+					10004	ײ����
+					10005	Ԥ����
+					10006	��
+					10007	������
+					10008 ����
+		-->
+		
+		<!-- �˵�����-->
+		<skill id="110020" lvl="1" type="0" action="1" 			rangetype="0" rangetypevalue="0,15" skillmode="3" skillmodevalue="0.5" />	
+		<!-- �˵�����-->
+		<skill id="110021" lvl="1" type="0" action="10001" 	rangetype="1" rangetypevalue="0,15,0,0" skillmode="1" skillmodevalue="0.5" func="4,11" valuex="5,4" valuey="0"/>
+		
+	
+		<!-- ��ײԤ�� -->
+		<skill id="110030" lvl="1" type="0" action="10002" actionloop="0"	rangetype="0" rangetypevalue="2,17" skillmode="3" skillmodevalue="2,1" />	
+		<!-- ��ײ -->
+		<skill id="110031" lvl="1" type="0" action="10003" actionloop="0" rangetype="0" rangetypevalue="0,2" skillmode="6" skillmodevalue="15,0.6,0.2" func="5" valuex="100" valuey="0"/>
+		<!-- ���� -->
+		<skill id="110032" lvl="1" type="0" action="10004"	rangetype="0" rangetypevalue="0,5" skillmode="1" skillmodevalue="0.3" func="5" valuex="100" valuey="0" />	
+		
+		<!-- ��Ԥ�� -->
+		<skill id="110040" lvl="1" type="0" action="10005" actionloop="0"	rangetype="0" rangetypevalue="0,30" skillmode="3" skillmodevalue="2,0,1" />	
+		<!-- ��ͨ���ֹ��� -->
+		<skill id="110041" lvl="1" type="0" action="10006" acitonbuff="201" rangetype="0" rangetypevalue="0,5" skillmode="6" skillmodevalue="30,2,0.25,1932" func="5" valuex="100" valuey="0" actionbuff="201"/>
+		<!-- ���ٹ��ֹ��� -->
+		<skill id="110042" lvl="1" type="0" action="10006" acitonbuff="201" rangetype="0" rangetypevalue="0,5" skillmode="9" skillmodevalue="3,15,1,0.25,1932" func="5" valuex="100" valuey="0" actionbuff="201"/>
+		<!-- �������� -->
+		<skill id="110045" lvl="1" type="0" action="10007" actionloop="0"	rangetype="0" rangetypevalue="0,20" skillmode="3" skillmodevalue="1" />	
+			
+		<!-- ���� -->
+		<skill id="110050" lvl="1" type="0" action="10008"	rangetype="0" rangetypevalue="0,20" skillmode="8" skillmodevalue="2,-8,0" />	
+		
+		
+		<!-- ��������Ŀ��0.5s[����5-20] -->
+		<skill id="110060" lvl="1" type="0" action="1" 		rangetype="0" rangetypevalue="5,20" 			skillmode="3" skillmodevalue="0.5" />	
+		<!-- ���� -->
+		<skill id="110061" lvl="1" type="0" action="2504" 	rangetype="0" rangetypevalue="5,22" 			skillmode="4" skillmodevalue="1.2,-2,-1" />
+		
+			<!-- ������֮���Լ���-->
+		<skill id="110046" lvl="1" type="0" action="1" 			targetlimit="3"  skillmode="1" skillmodevalue="0.1"  func="11" valuex="6"/>	
+			
+						
+		<!-- ***********************************˫������ start by 120000************************************************************************* -->
+		<!--	˫����������
+		
+	        ����
+					10001 ҧ
+					10002	����תһȦ����
+					10003	��������
+					10004	����Ԥ����
+					10005	��
+					10006	ץһ������
+					10007	����
+					
+					����
+					10011 �ȶ����򹥻�һ��
+					10012	�ȶ����򹥻�����
+					10013	Ԥ����
+					10014	��
+					10015	ץһ������
+					10016	Ԥ����
+					10017	��
+					10018 ץһ�²�����
+					10019	����idle
+					10020 ����idle
+		-->
+		
+		<!-- �����չ����� -->
+		<skill id="120000" lvl="1" type="0" action="10019" 		rangetype="0" rangetypevalue="0,5" skillmode="3" skillmodevalue="0.5" />	
+		<!-- ������ͨ˺ҧ-->
+		<skill id="120001" lvl="1" type="0" action="10001" rangetype="0" rangetypevalue="0,5" skillmode="1" skillmodevalue="0.5" func="5" valuex="100" valuey="0"/>
+		
+		<!-- ����ɨβ���� -->
+		<skill id="120010" lvl="1" type="0" action="10019" 		rangetype="0" rangetypevalue="0,10" skillmode="3" skillmodevalue="0.5"/>
+		<!-- ����ɨβ -->
+		<skill id="120011" lvl="1" type="0" action="10002" 		rangetype="1" rangetypevalue="0,7,360,0" skillmode="1" skillmodevalue="0.8" func="5,4" valuex="100,5" valuey="0"/>
+		
+		<!-- �������𣨽������ܣ� -->
+		<skill id="120020" lvl="1" type="0" action="10007" 		rangetype="0" rangetypevalue="0,5" skillmode="3" skillmodevalue="0.5"/>
+		<!-- ����һ�������繥�� -->
+		<skill id="120021" lvl="1" type="0" action="10011" 		rangetype="0" rangetypevalue="0,5" skillmode="5" skillmodevalue="0.5,176,6,45,0,45,1" func="5,11" valuex="200,4" valuey="0"/>
+		<!-- �����������г̼��ܣ� -->
+		<skill id="120022" lvl="1" type="0" action="10007" 		rangetype="0" rangetypevalue="3,20" skillmode="3" skillmodevalue="0.5"/>
+		<!-- ����������Զ�̼��ܣ� -->
+		<skill id="120023" lvl="1" type="0" action="10007" 		rangetype="0" rangetypevalue="5,40" skillmode="3" skillmodevalue="0.5"/>
+		
+		<!-- ��������Ŀ�� -->
+		<skill id="120030" lvl="1" type="0" action="10019" 		rangetype="0" rangetypevalue="5,25" skillmode="3" skillmodevalue="0.5"/>
+		<!-- ��������Ŀ�� -->
+		<skill id="120031" lvl="1" type="0" action="10020" 		rangetype="0" rangetypevalue="5,50" skillmode="3" skillmodevalue="0.5"/>
+
+		
+
+		<!-- �������е���״̬ -->
+		<skill id="120041" lvl="1" type="0" action="10019" targetlimit="3"		rangetype="0" rangetypevalue="0,5" skillmode="1" skillmodevalue="0.5" func="104" valuex="220101" valuey="0"/>
+		<!-- �������п���״̬ -->
+		<skill id="120042" lvl="1" type="0" action="10020" 	targetlimit="3"	rangetype="0" rangetypevalue="0,5" skillmode="1" skillmodevalue="0.5" func="104" valuex="220102" valuey="0"/>
+	
+		
+		
+		
+		
+		<!-- ��������Ŀ�� -->
+		<skill id="120060" lvl="1" type="0" action="10019" 		rangetype="0" rangetypevalue="0,10" skillmode="3" skillmodevalue="0.5"/>
+		<!-- �����ȵذ� -->
+		<skill id="120061" lvl="1" type="0" action="10003" 	rangetype="1" rangetypevalue="0,10,0,0" skillmode="1" skillmodevalue="0.7" func="4,11" valuex="5,4" valuey="0"/>
+		
+		<!-- ��������׼�� -->
+		<skill id="120070" lvl="1" type="0" action="10004" actionloop1="0" 		rangetype="0" rangetypevalue="0,35" skillmode="3" skillmodevalue="1.2"/>
+		<!-- �������� -->
+		<skill id="120071" lvl="1" type="0" action="10005" 		rangetype="0" rangetypevalue="0,5" skillmode="4" skillmodevalue="1,0,1940" func="5,4" valuex="50,2" valuey="0,0"/>
+		
+		<!-- ���г���׼�� -->
+		<skill id="120080" lvl="1" type="0" action="10013" actionloop="0"		rangetype="0" rangetypevalue="0,50" skillmode="3" skillmodevalue="1.2"/>
+		<!-- ���г��� -->
+		<skill id="120081" lvl="1" type="0" action="10014" 		rangetype="0" rangetypevalue="0,5" skillmode="4" skillmodevalue="0.8,0,1940" func="5,4" valuex="50,2" valuey="0,0"/>
+		
+		<!-- ������������ -->
+		<skill id="120091" lvl="1" type="0" action="10006" 		rangetype="0" rangetypevalue="0,5" skillmode="1" skillmodevalue="0.5"/>
+		<!-- �������в����� -->
+		<skill id="120092" lvl="1" type="0" action="10018" 		rangetype="0" rangetypevalue="0,5" skillmode="1" skillmodevalue="0.5"/>
+        <!-- �ڻ����� -->
+		<skill id="120093" lvl="1" type="0" action="2502" targetlimit="3"	rangetype="0" rangetypevalue="0,100" skillmode="1" skillmodevalue="0.9" func="13" valuex="5" valuey="0"/>
+	</skillinfo>
+
+	<comboinfo>	
+		<!-- ***********************************ͨ�úڻ�comobo ID  start by 1000000��˫���������⣩************************************************************************ -->
+		<combo id="1000000" skilllist="1000000" coldown="3" freezetime="2" usecount='1'/> 
+		<combo id="1000001" skilllist="1000000" coldown="3" freezetime="2" usecount='1'/> 
+		<combo id="1000002" skilllist="1000000" coldown="3" freezetime="2" usecount='1'/> 
+		
+		
+		
+		
+		
+		
+		
+		<!-- ***********************************������������ start by 10000************************************************************************* -->
+		<!-- ��ͨ˺ҧ -->
+		<combo id="10000" skilllist="10000,10001" coldown="3" freezetime="2" usecount='0'/> 
+		<!-- ���� -->
+		<combo id="10001" skilllist="10002,10003" coldown="7" freezetime="0" usecount='0'/> 
+		<!-- �������� -->
+		<combo id="10002" skilllist="10004,10005" coldown="10" freezetime="0" usecount='0'/> 
+		<!-- BOSS��ͨ˺ҧ -->
+		<combo id="10003" skilllist="10006,10007" coldown="3" freezetime="2" usecount='0'/> 
+		<!-- BOSS����˺ҧ -->
+		<combo id="10004" skilllist="10004,10008,10007" coldown="5" usecount='0'/> 
+		
+		
+		<!-- ***********************************������������ start by 20000************************************************************************* -->
+		<!-- ��ͨ˺ҧ -->
+		<combo id="20000" skilllist="20000,20001" coldown="4" freezetime="2" usecount='0'/> 
+		<!-- ��ʯͷ -->
+		<combo id="20001" skilllist="20002,20003" coldown="6" freezetime="2.5" usecount='0'/>
+		<!-- ɨβ -->
+		<combo id="20002" skilllist="20004,20005" coldown="6" freezetime="2.5" usecount='0'/>
+		<!-- ����˺ҧ -->
+		<combo id="20003" skilllist="20010,20007" coldown="8" freezetime="2.5" usecount='0'/>
+		<!-- ����˺ҧ 
+		<combo id="20004" skilllist="20008,20009" />
+		-->
+		<!-- ����ɨβ -->
+		<combo id="20005" skilllist="20010,20011" coldown="6" freezetime="2.5" usecount='0'/>
+		<!-- ɨβ�׳�ʯͷ2�� -->
+		<combo id="20006" skilllist="20014,20015" coldown="6" freezetime="2.5" usecount='0'/>
+		<!-- ����ɨβ�׳�ʯͷ2�� -->
+		<combo id="20007" skilllist="20010,20015" coldown="10" freezetime="2.5" usecount='0'/>
+		<!-- ����˺ҧ+����ɨβ -->
+		<combo id="20008" skilllist="20010,20007,20010,20011" coldown="10" freezetime="3" usecount='0'/>
+		
+		<!-- ɨβ�׳�ʯͷ2�� 
+		<combo id="20007" skilllist="20014,20015" />
+		-->
+		
+		<!-- ***********************************Ѹ������������ start by 30000************************************************************************* -->
+		<!-- ��ͨ˺ҧ -->
+		<combo id="30000" skilllist="30000,30001" coldown="4" freezetime="2" usecount='0'/> 
+		<!-- ��ײ -->
+		<combo id="30001" skilllist="30006,30007,30008" coldown="6" freezetime="2.5" usecount='0'/> 
+		<!-- ����˺ҧ -->
+		<combo id="30002" skilllist="30002,30003,30010" coldown="7" freezetime="2.5" usecount='0'/> 
+		<!-- ����˺ҧ -->
+		<combo id="30003" skilllist="30004,30005,30011,30010" coldown="7" freezetime="2.5" usecount='0'/> 
+		<!-- BOSS˺ҧ -->
+		<combo id="30004" skilllist="30009,30010" coldown="4" freezetime="2" usecount='0'/> 
+		<!-- ���ֳ�ײ -->
+		<combo id="30005" skilllist="30004,30005,30011,30007,30008" coldown="7" freezetime="3" usecount='0'/> 
+		<!-- ���ֳ���˺ҧ -->
+		<combo id="30006" skilllist="30004,30005,30011,30003,30010" coldown="7" freezetime="3" usecount='0'/> 
+		<!-- ����Ծ+��ײ -->
+		<combo id="30007" skilllist="30004,30012,30006,30007,30008" coldown="6" freezetime="2.5" usecount='0'/>
+		
+		<!-- ����Ծ+��ײ -->
+		<combo id="30008" skilllist="30004,30013,30006,30007,30008" coldown="6" freezetime="2.5" usecount='0'/>
+		<!-- ����Ծ+����+˺ҧ -->
+		<combo id="30009" skilllist="30004,30012,30002,30003,30010" coldown="7" freezetime="2.5" usecount='0'/> 
+		<!-- ����Ծ+����+˺ҧ -->		
+		<combo id="30010" skilllist="30004,30013,30002,30003,30010" coldown="7" freezetime="2.5" usecount='0'/> 
+		
+		
+		<!-- ***********************************˫������������ start by 40000************************************************************************* -->
+		<!-- ��ͨ���� -->
+		<combo id="40000" skilllist="40000,40001" coldown="4" freezetime="2" usecount='0'/> 
+		<!-- ���� ��->�� -->
+		<combo id="40001" skilllist="40000,40005,40006" coldown="6" freezetime="2" usecount='0'/> 
+		<!-- ���� ��->�� -->
+		<combo id="40002" skilllist="40000,40006,40005" coldown="6" freezetime="2" usecount='0'/> 
+		<!-- ���� ��->��->�� -->
+		<combo id="40003" skilllist="40000,40005,40004,40006" coldown="6" freezetime="2" usecount='0'/> 
+		<!-- �������� ���� -->
+		<combo id="40004" skilllist="40002,40007" coldown="8" freezetime="2.5" usecount='0'/> 
+		<!-- �������� �ķ� -->
+		<combo id="40005" skilllist="40002,40008" coldown="8" freezetime="2.5" usecount='0'/> 
+		<!-- BOSS��ͨ���� -->
+		<combo id="40006" skilllist="40000,40003" coldown="4" freezetime="2" usecount='0'/> 		
+			<!-- ��ƨ -->
+		<combo id="40007" skilllist="40009,40010" coldown="8" freezetime="2.5" usecount='0'/> 		
+		
+		
+		<!-- ***********************************�������������� start by 50000************************************************************************* -->
+		<!-- ��ͨ���� -->
+		<combo id="50000" skilllist="50000,50001" coldown="4" freezetime="2" usecount='0'/> 
+		<!-- ��ʯͷ -->
+		<combo id="50001" skilllist="50002,50003" coldown="6" freezetime="2" usecount='0'/> 
+		<!-- ��ײ -->
+		<combo id="50002" skilllist="50004,50005,50001" coldown="8" freezetime="2.5" usecount='0'/>
+		<!-- 2��������ײ -->
+		<combo id="50003" skilllist="50004,50005,50004,50005,50001" coldown="12" freezetime="3.5" usecount='0'/>
+		<!-- 3��������ײ -->
+		<combo id="50004" skilllist="50004,50005,50004,50005,50004,50005,50001" coldown="15" freezetime="4" usecount='0'/>
+		<!-- ��ײ��ʯͷ -->
+		<combo id="50005" skilllist="50004,50005,50001,50002,50003" coldown="8" freezetime="3" usecount='0'/>
+		<!-- С�ֳ�ײ -->
+		<combo id="50006" skilllist="50008,50009" coldown="8" freezetime="2.5" usecount='0'/>
+		 
+		<!-- ��ײ���ν����ذ� 
+		<combo id="50003" skilllist="50004,50005,50007" /> 
+		-->
+		
+		<!-- ***********************************�������������� start by 60000************************************************************************* -->
+		<!-- ��ͨ˺ҧ -->
+		<combo id="60000" skilllist="60000,60001" coldown="4" freezetime="2"/> 
+		<!-- ��˺ҧ -->
+		<combo id="60001" skilllist="60002,60003" coldown="6" freezetime="2"/> 
+		<!-- ����˺ҧ -->
+		<combo id="60002" skilllist="60004,60005,60011" coldown="8" freezetime="2"/> 
+		<!-- ���̴�˺ҧ -->
+		<combo id="60003" skilllist="60004,60005,60012" coldown="10" freezetime="2"/> 
+		<!-- �ػ�������4ʯͷ -->
+		<combo id="60004" skilllist="60006,60007" coldown="12" freezetime="2"/> 
+		<!-- ���̽��ػ�������4ʯͷ -->
+		<combo id="60005" skilllist="60004,60005,60017" coldown="12" freezetime="2.5"/> 
+		<!-- ���� -->
+		<combo id="60006" skilllist="60008,60009,60010" coldown="12" freezetime="2.5"/> 
+		<!-- �ػ����� -->
+		<combo id="60007" skilllist="60011,60012" coldown="10" freezetime="2" usecount='0'/> 
+		
+		<!-- ***********************************������������ start by 70000************************************************************************* -->
+		<!-- ��ͨ˺ҧ -->
+		<combo id="70000" skilllist="70000,70001" coldown="3" freezetime="2" usecount='0'/> 
+		
+		<!-- �ұ��Q -->
+		<combo id="70001" skilllist="70010,70011,70012,70013,70014" coldown="5" freezetime="2" usecount='0'/> 
+		
+		<!-- ���ع��� -->
+		<combo id="70002" skilllist="70020,70021,70022" coldown="4" freezetime="2" usecount='0'/> 
+		
+		<!-- ***********************************������������ start by 80000************************************************************************* -->
+		<!-- ��ͨ˺ҧ -->
+		<combo id="80000" skilllist="80000,80001" coldown="4" freezetime="2" usecount='0'/> 	
+
+
+		<!-- ***********************************�ƽ����������� start by 90000************************************************************************* -->
+		<!-- ��ͨ˺ҧ -->
+		<combo id="90000" skilllist="90000,90001" coldown="4" freezetime="2" usecount='0'/> 			
+
+		<!-- ***********************************ˮ������������ start by 100000************************************************************************* -->
+		<!-- ��ͨ˺ҧ -->
+		<combo id="100000" skilllist="100000,100001" coldown="4" freezetime="2" usecount='0'/> 		
+	
+		<!-- ***********************************������������ start by 110000************************************************************************* -->
+		<!-- �˵����� -->
+		<combo id="110001" skilllist="110020,110021" 				 coldown="4" freezetime="2" usecount='0'/>
+		<!-- ��ײ -->
+		<combo id="110002" skilllist="110030,110031,110032"  coldown="3" freezetime="2" usecount='0'/>
+		<!-- ��ͨ���ֹ��� -->
+		<combo id="110003" skilllist="110040,110041,110045"  coldown="6" freezetime="2" usecount='0'/>
+		<!-- ���ٹ��ֹ��� -->
+		<combo id="110004" skilllist="110040,110042,110045"  coldown="6" freezetime="3" usecount='0'/>
+		<!-- ����Ų��+��ͨ���ֹ��� -->
+		<combo id="110005" skilllist="110050,110040,110041,110045"  coldown="8" freezetime="2" usecount='0'/>		
+		<!-- ����Ų��+���ٹ��ֹ��� -->
+		<combo id="110006" skilllist="110050,110040,110042,110045"  coldown="8" freezetime="2" usecount='0'/>		
+		<!-- ����+��ײ -->
+		<combo id="110007" skilllist="110060,110061,110030,110031,110032"  coldown="3" freezetime="2" usecount='0'/>		
+		<!-- ����+���ٹ��ֹ��� -->
+		<combo id="110008" skilllist="110060,110061,110040,110042,110045"  coldown="8" freezetime="3" usecount='0'/>
+		<!-- ����Ų��+����+���ٹ��ֹ��� -->
+		<combo id="110009" skilllist="110050,110060,110061,110040,110042,11004"  coldown="8" freezetime="3" usecount='0'/>		
+    <!-- ����Ų��+���ٹ��ֹ���+��ײ -->
+		<combo id="110010" skilllist="110050,110040,110042,110045,110030,110031,110032"  coldown="8" freezetime="3" usecount='0'/>		
+		<!-- ������ -->
+		<combo id="110011" skilllist="110040,110041,110045,110040,110041,110045,110040,110041,110045,110046"  coldown="15" freezetime="2" usecount='0'/>		
+		
+	
+	  <!-- ***********************************˫�������������� start by 110000************************************************************************* -->
+		<!-- �����չ� -->
+		<combo id="120000" skilllist="120000,120001" 					coldown="3" freezetime="2" usecount='0'/>
+		<!-- ����ɨβ -->
+		<combo id="120010" skilllist="120010,120011" 					coldown="4.5" freezetime="3" usecount='0'/>
+		<!-- ���������繥�����������п��У� -->
+		<combo id="120020" skilllist="120023,120021,120042" 	coldown="0" freezetime="0" usecount='0'/>
+		<!-- ���������繥��+���湥�����������е��棩 -->
+		<combo id="120030" skilllist="120023,120021,120080,120081,120091" 	coldown="5" freezetime="0" usecount='0'/>
+		<!-- ����һ�������繥��+���湥�����������п��У� -->
+		<combo id="120040" skilllist="120023,120021,120080,120081,120092" 	coldown="5" freezetime="0" usecount='0'/>
+		<!-- �������������繥�����������п��У� -->
+		<combo id="120050" skilllist="120023,120021,120031,120021,120031,120021,120042" 	coldown="3" freezetime="2" usecount='0'/>
+		<!-- ������������ -->
+		<combo id="120060" skilllist="120060,120061" 					coldown="4.5" freezetime="3" usecount='0'/>
+		<!-- �������棨�������е��棩 -->
+		<combo id="120070" skilllist="120022,120080,120081,120091" 	coldown="4.5" freezetime="3" usecount='0'/>
+		<!-- �������棨�������п��У� -->
+		<combo id="120080" skilllist="120022,120080,120081,120092" 	coldown="5" freezetime="0" usecount='0'/>
+		<!-- ���г��棨�������п��У� -->
+		<combo id="120090" skilllist="120080,120081,120092" 		coldown="5" freezetime="0" usecount='0'/>
+		<!-- ���г��棨�������е��棩 -->
+		<combo id="120100" skilllist="120080,120081,120091,120041" 	coldown="4.5" freezetime="3" usecount='0'/>
+		<!-- ����һ�������繥�� -->
+		<combo id="120110" skilllist="120031,120021" 					coldown="3" freezetime="2" usecount='0'/>
+		<!-- �������������繥�� -->
+		<combo id="120120" skilllist="120031,120021,120031,120021,120031,120021" 			coldown="4.5" freezetime="3" usecount='0'/>
+		<!-- ����һ�������繥��+���� -->
+		<combo id="120130" skilllist="120031,120021,120080,120081,120092"   coldown="4.5" freezetime="3" usecount='0'/>
+         <!-- ˫�������ڻ����� -->
+		<combo id="120140" skilllist="120093"   coldown="4.5" freezetime="3" usecount="1"/>
+		<combo id="120150" skilllist="120093"   coldown="4.5" freezetime="3" usecount="1"/>
+		<combo id="120160" skilllist="120093"   coldown="4.5" freezetime="3" usecount="1"/>
+
+
+	</comboinfo>
+	
+	
+</root> 

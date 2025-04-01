@@ -1,0 +1,154 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1059488823687785}
+  m_IsPrefabParent: 1
+--- !u!1 &1059488823687785
+GameObject:
+  m_ObjectHideFlags: 0
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4670198093488426}
+  - component: {fileID: 114503474065511293}
+  - component: {fileID: 114942512658569460}
+  m_Layer: 8
+  m_Name: NGUIMaterialTip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4670198093488426
+Transform:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1059488823687785}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -119.99028, y: -32.25586, z: 0}
+  m_LocalScale: {x: 1.000075, y: 1.000075, z: 1.000075}
+  m_Children:
+  - {fileID: 4570944323086215}
+  - {fileID: 4981638878380012}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
+--- !u!114 &114503474065511293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1059488823687785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 435e9f7a939848a40be320811c749b5a, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  mIcon: {fileID: 114458897747083395}
+  mLabel: {fileID: 114553589047221858}
+--- !u!114 &114942512658569460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1059488823687785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83b1d7cd0bf1d7345b8a9d012f5641bc, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+--- !u!1 &1846307389032643
+GameObject:
+  m_ObjectHideFlags: 0
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4570944323086215}
+  - component: {fileID: 114553589047221858}
+  m_Layer: 8
+  m_Name: Label
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4570944323086215
+Transform:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1846307389032643}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 17.281288, y: 0.056640625, z: 0}
+  m_LocalScale: {x: 35, y: 35, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4670198093488426}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
+--- !u!114 &114553589047221858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1846307389032643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27a6551c5986d554285ca39e1901f388, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  mMat: {fileID: 2100000, guid: e7d8ea523dbc07d498857de013188739, type: 2}
+  mTex: {fileID: 0}
+  mColor: {r: 0.98507464, g: 0.72803605, b: 0.24994434, a: 1}
+  mPivot: 4
+  mDepth: 0
+  mFont: {fileID: 114903929063861764, guid: 3bc4a4f5befad054281c7cecd5590f8c, type: 2}
+  mText: 999
+  mMaxLineWidth: 0
+  mEncoding: 1
+  mMaxLineCount: 0
+  mPassword: 0
+  mShowLastChar: 0
+  mEffectStyle: 1
+  mEffectColor: {r: 0, g: 0, b: 0, a: 1}
+  mSymbols: 0
+  mEffectDistance: {x: 1, y: 1}
+  mLineWidth: 0
+  mMultiline: 1
+--- !u!1 &1741265835468312
+GameObject:
+  m_ObjectHideFlags: 0
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4981638878380012}
+  - component: {fileID: 114458897747083395}
+  m_Layer: 8
+  m_Name: icon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4981638878380012
+Transform:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1741265835468312}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -26, y: 0, z: 0}
+  m_LocalScale: {x: 35, y: 35, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4670198093488426}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
+--- !u!114 &114458897747083395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1741265835468312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 936d114802148524db6510a9067ed636, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  mMat: {fileID: 2100000, guid: e7d8ea523dbc07d498857de013188739, type: 2}
+  mTex: {fileID: 2800000, guid: 12f6397017a355146a8256b881722d9a, type: 3}
+  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mPivot: 4
+  mDepth: 1
+  mAtlas: {fileID: 114871976505846263, guid: 1ae210e3e11ebf945af63b014da021a0, type: 2}
+  mSpriteName: title_jingbi

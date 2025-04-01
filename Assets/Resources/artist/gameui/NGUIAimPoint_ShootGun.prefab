@@ -1,0 +1,180 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1565429584784640}
+  m_IsPrefabParent: 1
+--- !u!1 &1565429584784640
+GameObject:
+  m_ObjectHideFlags: 0
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4592332513322560}
+  - component: {fileID: 114017185546338975}
+  m_Layer: 8
+  m_Name: NGUIAimPoint_ShootGun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4592332513322560
+Transform:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1565429584784640}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4052686712635908}
+  - {fileID: 4701471934274808}
+  - {fileID: 4058278134905506}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
+--- !u!114 &114017185546338975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1565429584784640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bfdec4c0af5972498c4f9494d5483bb, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  Min: 15
+  Max: 20
+  fExpand: 8
+  fRecover: 5
+  mArrow1: {fileID: 4052686712635908}
+  mArrow2: {fileID: 4701471934274808}
+  mArrow3: {fileID: 4058278134905506}
+--- !u!1 &1120355373630581
+GameObject:
+  m_ObjectHideFlags: 0
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4052686712635908}
+  - component: {fileID: 114735437191371857}
+  m_Layer: 8
+  m_Name: arrow1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4052686712635908
+Transform:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1120355373630581}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 21, y: 15, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4592332513322560}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
+--- !u!114 &114735437191371857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1120355373630581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 936d114802148524db6510a9067ed636, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  mMat: {fileID: 2100000, guid: e7d8ea523dbc07d498857de013188739, type: 2}
+  mTex: {fileID: 2800000, guid: 12f6397017a355146a8256b881722d9a, type: 3}
+  mColor: {r: 0, g: 1, b: 0, a: 1}
+  mPivot: 4
+  mDepth: 3
+  mAtlas: {fileID: 114871976505846263, guid: 1ae210e3e11ebf945af63b014da021a0, type: 2}
+  mSpriteName: aimpoint_shootgun2
+--- !u!1 &1259227465755610
+GameObject:
+  m_ObjectHideFlags: 0
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4701471934274808}
+  - component: {fileID: 114909868168045207}
+  m_Layer: 8
+  m_Name: arrow2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4701471934274808
+Transform:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1259227465755610}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -20.653141, y: 0, z: 0}
+  m_LocalScale: {x: 12, y: 18, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4592332513322560}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
+--- !u!114 &114909868168045207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1259227465755610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 936d114802148524db6510a9067ed636, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  mMat: {fileID: 2100000, guid: e7d8ea523dbc07d498857de013188739, type: 2}
+  mTex: {fileID: 2800000, guid: 12f6397017a355146a8256b881722d9a, type: 3}
+  mColor: {r: 0, g: 1, b: 0, a: 1}
+  mPivot: 4
+  mDepth: 3
+  mAtlas: {fileID: 114871976505846263, guid: 1ae210e3e11ebf945af63b014da021a0, type: 2}
+  mSpriteName: aimpoint_shootgun1
+--- !u!1 &1935604163532397
+GameObject:
+  m_ObjectHideFlags: 0
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4058278134905506}
+  - component: {fileID: 114378440973067408}
+  m_Layer: 8
+  m_Name: arrow3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4058278134905506
+Transform:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1935604163532397}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.6292068E-07}
+  m_LocalPosition: {x: 20, y: 0, z: -3.2344426E-06}
+  m_LocalScale: {x: 12, y: 18, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4592332513322560}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 180, y: 1.8669336E-05, z: 180}
+--- !u!114 &114378440973067408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1935604163532397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 936d114802148524db6510a9067ed636, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  mMat: {fileID: 2100000, guid: e7d8ea523dbc07d498857de013188739, type: 2}
+  mTex: {fileID: 2800000, guid: 12f6397017a355146a8256b881722d9a, type: 3}
+  mColor: {r: 0, g: 1, b: 0, a: 1}
+  mPivot: 4
+  mDepth: 3
+  mAtlas: {fileID: 114871976505846263, guid: 1ae210e3e11ebf945af63b014da021a0, type: 2}
+  mSpriteName: aimpoint_shootgun1

@@ -1,0 +1,533 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1374354027588756}
+  m_IsPrefabParent: 1
+--- !u!1 &1374354027588756
+GameObject:
+  m_ObjectHideFlags: 0
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4275024903077522}
+  - component: {fileID: 114915106413770159}
+  m_Layer: 0
+  m_Name: yanjiang01_open
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4275024903077522
+Transform:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1374354027588756}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4542179223502198}
+  - {fileID: 4680440178416255}
+  - {fileID: 4893896290937261}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
+--- !u!114 &114915106413770159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1374354027588756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b5dd2abf23675f43aa07eb2d1e9a13b, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  isAutoStart: 0
+  roamlist:
+  - cameraRoam: {fileID: 114700145205884810}
+    delaytime: 0
+    lasttime: 4
+  - cameraRoam: {fileID: 114232181584496121}
+    delaytime: 0.6
+    lasttime: 3.5
+  - cameraRoam: {fileID: 114797403315740839}
+    delaytime: 0.6
+    lasttime: 5
+--- !u!1 &1416732802552725
+GameObject:
+  m_ObjectHideFlags: 0
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4542179223502198}
+  - component: {fileID: 114232181584496121}
+  - component: {fileID: 114705467436280235}
+  m_Layer: 0
+  m_Name: Roam1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4542179223502198
+Transform:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1416732802552725}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4590738374641537}
+  - {fileID: 4844656021500049}
+  m_Father: {fileID: 4275024903077522}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
+--- !u!114 &114232181584496121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1416732802552725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95338762a95dd8247a0c9dcccea5ce17, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  type: 0
+  m_camera: {fileID: 0}
+  cameraPath: {fileID: 114609024494975073}
+  cameraTrackType: 0
+  cameraTime: 7
+  isCameraSmooth: 0
+  cameraFocusType: 0
+  cameraTrackPathType: 0
+  m_focus: {fileID: 1082007138264800}
+  focusPath: {fileID: 0}
+  focusTrackType: 0
+  focusTime: 0
+  isFocusSmooth: 0
+  focusTrackPathType: 0
+--- !u!114 &114705467436280235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1416732802552725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55d3518b84e86da4fbae2d736fdc8d69, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  isFadeIn: 1
+  fadeInTime: 0.3
+  isFadeOut: 1
+  fadeOutTime: 0.3
+--- !u!1 &1082007138264800
+GameObject:
+  m_ObjectHideFlags: 0
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4590738374641537}
+  m_Layer: 0
+  m_Name: focus1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4590738374641537
+Transform:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1082007138264800}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -123.73448, y: 40.48128, z: -2.17453}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4542179223502198}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
+--- !u!1 &1240629325251347
+GameObject:
+  m_ObjectHideFlags: 0
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4844656021500049}
+  - component: {fileID: 114609024494975073}
+  m_Layer: 0
+  m_Name: yanjiang01_open_camerpath01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4844656021500049
+Transform:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1240629325251347}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 52.032825, y: 10.883001, z: -38.91066}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4542179223502198}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
+--- !u!114 &114609024494975073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1240629325251347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9778fe545d9c80d499338a575660e464, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  pathName: yanjiang01_open_camerpath01
+  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  nodes:
+  - {x: 0, y: 0, z: 0}
+  - {x: 10.604332, y: -3.415371, z: 27.218994}
+  - {x: 10.257137, y: -3.1526833, z: 56.386387}
+  nodeCount: 3
+  type: 1
+  initialized: 1
+  initialName: New Path 1
+  showtype: 1
+--- !u!1 &1923605798362724
+GameObject:
+  m_ObjectHideFlags: 0
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4680440178416255}
+  - component: {fileID: 114700145205884810}
+  - component: {fileID: 114522250518059115}
+  m_Layer: 0
+  m_Name: Roam3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4680440178416255
+Transform:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1923605798362724}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4357366368679014}
+  - {fileID: 4260590149011454}
+  m_Father: {fileID: 4275024903077522}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
+--- !u!114 &114700145205884810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1923605798362724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95338762a95dd8247a0c9dcccea5ce17, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  type: 1
+  m_camera: {fileID: 0}
+  cameraPath: {fileID: 114528620226868607}
+  cameraTrackType: 0
+  cameraTime: 7
+  isCameraSmooth: 0
+  cameraFocusType: 0
+  cameraTrackPathType: 0
+  m_focus: {fileID: 0}
+  focusPath: {fileID: 114045754262487391}
+  focusTrackType: 0
+  focusTime: 4.5
+  isFocusSmooth: 0
+  focusTrackPathType: 0
+--- !u!114 &114522250518059115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1923605798362724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55d3518b84e86da4fbae2d736fdc8d69, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  isFadeIn: 1
+  fadeInTime: 0.3
+  isFadeOut: 1
+  fadeOutTime: 0.3
+--- !u!1 &1308835676353108
+GameObject:
+  m_ObjectHideFlags: 0
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4357366368679014}
+  - component: {fileID: 114528620226868607}
+  m_Layer: 0
+  m_Name: yanjiang01_open_camerpath03
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4357366368679014
+Transform:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1308835676353108}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -39.005512, y: 14.61377, z: -55.769745}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4680440178416255}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
+--- !u!114 &114528620226868607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1308835676353108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9778fe545d9c80d499338a575660e464, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  pathName: yanjiang01_open_camerpath03
+  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  nodes:
+  - {x: 10.421864, y: 3.2652397, z: -29.183365}
+  - {x: -1.1099434, y: 3.473114, z: -26.639816}
+  - {x: -16.421215, y: 3.3793182, z: -17.00354}
+  - {x: -22.262749, y: 1.9002132, z: 2.9969559}
+  - {x: -18.825844, y: 0.20633888, z: 27.48482}
+  nodeCount: 5
+  type: 1
+  initialized: 1
+  initialName: New Path 1
+  showtype: 1
+--- !u!1 &1019281352990075
+GameObject:
+  m_ObjectHideFlags: 0
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4260590149011454}
+  - component: {fileID: 114045754262487391}
+  m_Layer: 0
+  m_Name: yanjiang01_open_focuspath01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4260590149011454
+Transform:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1019281352990075}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.27533782, y: 4.1268244, z: -2.4959536}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4680440178416255}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
+--- !u!114 &114045754262487391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1019281352990075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9778fe545d9c80d499338a575660e464, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  pathName: yanjiang01_open_focuspath01
+  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  nodes:
+  - {x: -13.366025, y: -8.6956625, z: 35.1427}
+  - {x: 10.9005995, y: 0.10776615, z: -5.522208}
+  nodeCount: 2
+  type: 0
+  initialized: 1
+  initialName: New Path 2
+  showtype: 1
+--- !u!1 &1321132637865855
+GameObject:
+  m_ObjectHideFlags: 0
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4893896290937261}
+  - component: {fileID: 114797403315740839}
+  - component: {fileID: 114197603369487888}
+  m_Layer: 0
+  m_Name: Roam2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4893896290937261
+Transform:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1321132637865855}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.0659428, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4350840009270394}
+  - {fileID: 4907905369557561}
+  m_Father: {fileID: 4275024903077522}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
+--- !u!114 &114797403315740839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1321132637865855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95338762a95dd8247a0c9dcccea5ce17, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  type: 0
+  m_camera: {fileID: 0}
+  cameraPath: {fileID: 114046461434611363}
+  cameraTrackType: 0
+  cameraTime: 5
+  isCameraSmooth: 0
+  cameraFocusType: 0
+  cameraTrackPathType: 0
+  m_focus: {fileID: 1633023192162291}
+  focusPath: {fileID: 0}
+  focusTrackType: 0
+  focusTime: 5
+  isFocusSmooth: 0
+  focusTrackPathType: 0
+--- !u!114 &114197603369487888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1321132637865855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55d3518b84e86da4fbae2d736fdc8d69, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  isFadeIn: 1
+  fadeInTime: 0.3
+  isFadeOut: 0
+  fadeOutTime: 0.3
+--- !u!1 &1633023192162291
+GameObject:
+  m_ObjectHideFlags: 0
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4350840009270394}
+  - component: {fileID: 33317713191356396}
+  - component: {fileID: 65452242211698279}
+  - component: {fileID: 23148142899384159}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4350840009270394
+Transform:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1633023192162291}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -15.445715, y: 4.10981, z: -0.33112144}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4893896290937261}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
+--- !u!33 &33317713191356396
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1633023192162291}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &65452242211698279
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1633023192162291}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &23148142899384159
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1633023192162291}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1246689008897724
+GameObject:
+  m_ObjectHideFlags: 0
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4907905369557561}
+  - component: {fileID: 114046461434611363}
+  m_Layer: 0
+  m_Name: yanjiang01_open_camerpath02
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4907905369557561
+Transform:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1246689008897724}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.0804386, y: 9.96611, z: 19.831224}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4893896290937261}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
+--- !u!114 &114046461434611363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1246689008897724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9778fe545d9c80d499338a575660e464, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  pathName: yanjiang01_open_camerpath02
+  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  nodes:
+  - {x: -9.174184, y: 8.954763, z: 20.396261}
+  - {x: 8.427357, y: 3.0493546, z: 1.7130699}
+  - {x: 10.580898, y: -1.6832504, z: -24.366669}
+  - {x: -5.911524, y: -7.2214074, z: -42.79829}
+  nodeCount: 4
+  type: 1
+  initialized: 1
+  initialName: New Path 1
+  showtype: 1

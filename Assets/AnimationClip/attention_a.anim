@@ -1,0 +1,382 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  m_ObjectHideFlags: 0
+  m_Name: attention_a
+  serializedVersion: 6
+  m_Legacy: 1
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves: []
+  m_CompressedRotationCurves: []
+  m_EulerCurves: []
+  m_PositionCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.030296326, y: 1.3879458E-08, z: 0.116429344}
+        inSlope: {x: 0, y: -4.878489E-07, z: -4.092374}
+        outSlope: {x: 0, y: -4.878489E-07, z: -4.092374}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.10000001
+        value: {x: -0.030296326, y: -3.490544E-08, z: -0.2928081}
+        inSlope: {x: 0, y: -4.878489E-07, z: -4.092374}
+        outSlope: {x: 0, y: -4.878489E-07, z: -4.092374}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.46666664
+        value: {x: -0.030296326, y: -3.490544E-08, z: -0.2928081}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1
+        value: {x: -0.030296326, y: -3.490544E-08, z: -0.2928081}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: attention/Plane01
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0, y: 3.2714638E-08, z: 0.2744303}
+        inSlope: {x: 0, y: 2.508841E-08, z: 0.21045683}
+        outSlope: {x: 0, y: 2.508841E-08, z: 0.21045683}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.06666667
+        value: {x: 0, y: 3.43872E-08, z: 0.28846076}
+        inSlope: {x: 0, y: -4.2453394E-07, z: -3.5612493}
+        outSlope: {x: 0, y: -4.2453394E-07, z: -3.5612493}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.16666667
+        value: {x: 0, y: -5.302843E-08, z: -0.44483477}
+        inSlope: {x: 0, y: -3.5072418E-07, z: -2.9420881}
+        outSlope: {x: 0, y: -3.5072418E-07, z: -2.9420881}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.3
+        value: {x: 0, y: -3.0000706E-08, z: -0.2516642}
+        inSlope: {x: 0, y: 1.7270791E-07, z: 1.4487792}
+        outSlope: {x: 0, y: 1.7270791E-07, z: 1.4487792}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: attention/Object01
+  m_ScaleCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0.3, y: 0.05, z: 1}
+        inSlope: {x: 3.9999995, y: 11.5, z: 0}
+        outSlope: {x: 3.9999995, y: 11.5, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.10000001
+        value: {x: 0.7, y: 1.2, z: 1}
+        inSlope: {x: 5, y: 4.9999995, z: 0}
+        outSlope: {x: 5, y: 4.9999995, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.23333332
+        value: {x: 1.5, y: 1, z: 1}
+        inSlope: {x: 2.1457672E-06, y: -2.2499995, z: 0}
+        outSlope: {x: 2.1457672E-06, y: -2.2499995, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.26666668
+        value: {x: 1.3, y: 0.9, z: 1}
+        inSlope: {x: -6.749998, y: -0.7499989, z: 0}
+        outSlope: {x: -6.749998, y: -0.7499989, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.33333334
+        value: {x: 0.8, y: 1, z: 1}
+        inSlope: {x: -2.9999995, y: 0.75000024, z: 0}
+        outSlope: {x: -2.9999995, y: 0.75000024, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.46666664
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 1.5000004, y: 0, z: 0}
+        outSlope: {x: 1.5000004, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: attention/Plane01
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0.06666667
+        value: {x: 0.1, y: 0.1, z: 1}
+        inSlope: {x: 3.9999995, y: 12.999997, z: 0}
+        outSlope: {x: 3.9999995, y: 12.999997, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.16666669
+        value: {x: 0.5, y: 1.4, z: 1}
+        inSlope: {x: 5.75, y: 4.6249986, z: 0}
+        outSlope: {x: 5.75, y: 4.6249986, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.3
+        value: {x: 1.5, y: 0.9, z: 1}
+        inSlope: {x: 0.7499993, y: -1.8750001, z: 0}
+        outSlope: {x: 0.7499993, y: -1.8750001, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.33333334
+        value: {x: 1.3, y: 0.9, z: 1}
+        inSlope: {x: -6.750001, y: 0, z: 0}
+        outSlope: {x: -6.750001, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.4
+        value: {x: 0.8, y: 0.9, z: 1}
+        inSlope: {x: -3.375, y: 0, z: 0}
+        outSlope: {x: -3.375, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.53333336
+        value: {x: 0.9, y: 0.9, z: 1}
+        inSlope: {x: 0.7499996, y: 0, z: 0}
+        outSlope: {x: 0.7499996, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: attention/Object01
+  m_FloatCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 0
+        inSlope: 14.705882
+        outSlope: 14.705882
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.033333335
+        value: 0.49019608
+        inSlope: 7.352941
+        outSlope: 7.352941
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.46666667
+        value: 0.49019608
+        inSlope: -0.23529412
+        outSlope: -0.23529412
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.5
+        value: 0.4745098
+        inSlope: -0.70980394
+        outSlope: -0.70980394
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1
+        value: 0
+        inSlope: -0.9490196
+        outSlope: -0.9490196
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: _Color.a
+    path: attention/Plane01
+    classID: 21
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 0
+        inSlope: 14.705882
+        outSlope: 14.705882
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.033333335
+        value: 0.49019608
+        inSlope: 7.3865547
+        outSlope: 7.3865547
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.5
+        value: 0.52156866
+        inSlope: -0.4369748
+        outSlope: -0.4369748
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.53333336
+        value: 0.49019608
+        inSlope: -0.9957984
+        outSlope: -0.9957984
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1
+        value: 0
+        inSlope: -1.0504203
+        outSlope: -1.0504203
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: _Color.a
+    path: attention/Object01
+    classID: 21
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0.5
+        value: 0.76119405
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: _Color.r
+    path: attention/Object01
+    classID: 21
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0.5
+        value: 0.76119405
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: _Color.g
+    path: attention/Object01
+    classID: 21
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0.5
+        value: 0.76119405
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: _Color.b
+    path: attention/Object01
+    classID: 21
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0.5
+        value: 0.7761194
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: _Color.r
+    path: attention/Plane01
+    classID: 21
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0.5
+        value: 0.7761194
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: _Color.g
+    path: attention/Plane01
+    classID: 21
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0.5
+        value: 0.7761194
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: _Color.b
+    path: attention/Plane01
+    classID: 21
+    script: {fileID: 0}
+  m_PPtrCurves: []
+  m_SampleRate: 30
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_ClipBindingConstant:
+    genericBindings: []
+    pptrCurveMapping: []
+  m_AnimationClipSettings:
+    serializedVersion: 2
+    m_AdditiveReferencePoseClip: {fileID: 0}
+    m_AdditiveReferencePoseTime: 0
+    m_StartTime: 0
+    m_StopTime: 1
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_HasAdditiveReferencePose: 0
+    m_LoopTime: 0
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_HasGenericRootTransform: 0
+  m_HasMotionFloatCurves: 0
+  m_GenerateMotionCurves: 0
+  m_Events:
+  - time: 0.1
+    functionName: PlayAudio
+    data: UI_Velo_Attention
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

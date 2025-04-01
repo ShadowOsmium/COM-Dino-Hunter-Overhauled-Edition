@@ -1,0 +1,259 @@
+<!--
+	date ���� "w1:h	" ÿ��һ12�� 
+						"h12" ÿ��12�� 
+						"d20:h12"ÿ��20��12�� 
+						"w1:d20:h12" ÿ��20��ͬʱ������һ12��
+						h:12Сʱ��
+		time ����ʱ��(��λ:Сʱ)
+	  itemtype	��Ʒ����(1���� 2ʯͷ 3ʱװ)
+	  itemid		��ƷID
+	  iscrystal	�Ƿ�ˮ������
+	  price			��Ǯ
+	  time			����ʱ��(��λ:Сʱ) ����û������,��ô��blackmarket�е�time
+-->
+
+<root>
+<!--
+	<blackmarket date="h0" time="24">
+		<node itemtype="3" itemid="1001" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="1002" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="1003" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="1004" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="1005" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="105" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="106" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="201" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="202" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="203" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="204" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="205" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="305" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="306" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="405" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="406" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="505" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="506" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="601" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="602" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="603" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="604" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="605" iscrystal="true" price="50" />
+	</blackmarket>
+
+	<blackmarket date="d17:h10" time="1">
+		<node itemtype="3" itemid="105" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="202" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="603" iscrystal="true" price="50" />
+	</blackmarket>
+	
+	<blackmarket date="d2:h11" time="1">
+		<node itemtype="3" itemid="203" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="602" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="1001" iscrystal="true" price="50" />
+	</blackmarket>
+
+	<blackmarket date="d3:h24" time="1">
+		<node itemtype="3" itemid="305" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="203" iscrystal="true" price="50" />
+		<node i
+	</blackmarket>
+
+	<blackmarket date="d26:h0" time="24">
+		<node itemtype="3" itemid="305" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="203" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="604" iscrystal="true" price="50" />
+	</blackmarket>
+	
+	<blackmarket date="d27:h0" time="24">
+		<node itemtype="3" itemid="204" iscrystal="true" price="50" />temtype="3" itemid="604" iscrystal="true" price="50" />
+	</blackmarket>
+	
+	<blackmarket date="d4:h13" time="1">
+		<node itemtype="3" itemid="204" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="603" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="1002"   iscrystal="true" price="50" />
+	</blackmarket>
+
+
+-->
+
+
+
+	<blackmarket date="d12:h0" time="24">
+		<node itemtype="3" itemid="105" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="202" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="603" iscrystal="true" price="50" />
+	</blackmarket>
+	
+	<blackmarket date="d25:h0" time="24">
+		<node itemtype="3" itemid="203" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="602" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="1001" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="603" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="1002"   iscrystal="true" price="50" />
+	</blackmarket>
+
+	<blackmarket date="d28:h0" time="24">
+		<node itemtype="3" itemid="9992" iscrystal="true" price="750" />
+		<node itemtype="3" itemid="204" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="605" iscrystal="true" price="50" />
+	</blackmarket>
+	
+	<blackmarket date="d29:h0" time="24">
+		<node itemtype="3" itemid="205" iscrystal="true" price="75" />
+		<node itemtype="3" itemid="604" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="1003"   iscrystal="true" price="50" />
+	</blackmarket>
+
+	<blackmarket date="d30:h0" time="24">
+		<node itemtype="3" itemid="505" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="205" iscrystal="true" price="75" />
+		<node itemtype="3" itemid="601" iscrystal="true" price="50" />
+	</blackmarket>
+
+	<blackmarket date="d31:h0" time="24">
+		<node itemtype="3" itemid="201" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="605" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="1004"  iscrystal="true" price="50" />
+	</blackmarket>
+	
+	<blackmarket date="d1:h0" time="24">
+		<node itemtype="3" itemid="106" iscrystal="true" price="100" />
+		<node itemtype="3" itemid="201" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="602" iscrystal="true" price="50" />
+	</blackmarket>
+
+	<blackmarket date="d2:h0" time="24">
+		<node itemtype="3" itemid="202" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="601" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="1005"   iscrystal="true" price="50" />
+	</blackmarket>
+	
+	<blackmarket date="d3:h0" time="24">
+		<node itemtype="3" itemid="105" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="602" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="1003"   iscrystal="true" price="50" />
+	</blackmarket>
+
+	<blackmarket date="d4:h0" time="24">
+		<node itemtype="3" itemid="305" iscrystal="true" price="75" />
+		<node itemtype="3" itemid="601" iscrystal="true" price="65" />
+		<node itemtype="3" itemid="1002"   iscrystal="true" price="50" />
+	</blackmarket>
+	
+	<blackmarket date="d5:h0" time="24">
+		<node itemtype="3" itemid="305" iscrystal="true" price="75" />
+		<node itemtype="3" itemid="603" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="1004"   iscrystal="true" price="50" />
+	</blackmarket>
+
+	<blackmarket date="d6:h0" time="24">
+		<node itemtype="3" itemid="405" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="602" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="1003"   iscrystal="true" price="50" />
+	</blackmarket>
+
+	<blackmarket date="d7:h0" time="24">
+		<node itemtype="3" itemid="9991" iscrystal="true" price="1000" />
+		<node itemtype="3" itemid="604" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="1005"   iscrystal="true" price="50" />
+	</blackmarket>
+	
+	<blackmarket date="d8:h0" time="24">
+		<node itemtype="3" itemid="505" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="603" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="1004"   iscrystal="true" price="50" />
+	</blackmarket>
+
+	<blackmarket date="d9:h0" time="24">
+		<node itemtype="3" itemid="505" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="605" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="1001"   iscrystal="true" price="50" />
+	</blackmarket>
+	
+	<blackmarket date="d10:h0" time="24">
+		<node itemtype="3" itemid="306" iscrystal="true" price="100" />
+		<node itemtype="3" itemid="604" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="1005"   iscrystal="true" price="50" />
+	</blackmarket>
+
+	<blackmarket date="d11:h0" time="24">
+		<node itemtype="3" itemid="406" iscrystal="true" price="100" />
+		<node itemtype="3" itemid="601" iscrystal="true" price="65" />
+		<node itemtype="3" itemid="1002"   iscrystal="true" price="50" />
+	</blackmarket>
+	
+	<blackmarket date="d12:h0" time="24">
+		<node itemtype="3" itemid="105" iscrystal="true" price="75" />
+		<node itemtype="3" itemid="605" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="1001"   iscrystal="true" price="50" />
+	</blackmarket>
+
+	<blackmarket date="d13:h0" time="24">
+		<node itemtype="3" itemid="105" iscrystal="true" price="75" />
+		<node itemtype="3" itemid="305" iscrystal="true" price="75" />
+		<node itemtype="3" itemid="1001"   iscrystal="true" price="50" />
+	</blackmarket>
+
+	<blackmarket date="d14:h0" time="24">
+		<node itemtype="3" itemid="305" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="9993" iscrystal="true" price="1000" />
+		<node itemtype="3" itemid="202" iscrystal="true" price="50" />
+	</blackmarket>
+	
+	<blackmarket date="d15:h0" time="24">
+		<node itemtype="3" itemid="405" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="505" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="203" iscrystal="true" price="50" />
+	</blackmarket>
+
+	<blackmarket date="d16:h0" time="24">
+		<node itemtype="3" itemid="505" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="506" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="204" iscrystal="true" price="50" />
+	</blackmarket>
+	
+	<blackmarket date="d17:h0" time="24">
+		<node itemtype="3" itemid="106" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="105" iscrystal="true" price="75" />
+		<node itemtype="3" itemid="205" iscrystal="true" price="75" />
+	</blackmarket>
+
+	<blackmarket date="d18:h0" time="24">
+		<node itemtype="3" itemid="601" iscrystal="true" price="65" />
+		<node itemtype="3" itemid="405"   iscrystal="true" price="50" />
+		<node itemtype="3" itemid="1002"   iscrystal="true" price="50" />
+	</blackmarket>
+	
+	<blackmarket date="d19:h0" time="24">
+		<node itemtype="3" itemid="602" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="1002"   iscrystal="true" price="50" />
+		<node itemtype="3" itemid="1003"   iscrystal="true" price="50" />
+	</blackmarket>
+
+	<blackmarket date="d20:h0" time="24">
+		<node itemtype="3" itemid="603" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="1003"   iscrystal="true" price="50" />
+		<node itemtype="3" itemid="1004"   iscrystal="true" price="50" />
+	</blackmarket>
+
+	<blackmarket date="d21:h0" time="24">
+		<node itemtype="3" itemid="604" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="1004"   iscrystal="true" price="50" />
+		<node itemtype="3" itemid="9994"   iscrystal="true" price="750" />
+	</blackmarket>
+
+	<blackmarket date="d22:h0" time="24">
+		<node itemtype="3" itemid="605" iscrystal="true" price="50" />
+		<node itemtype="3" itemid="1005"   iscrystal="true" price="50" />
+		<node itemtype="3" itemid="1001"   iscrystal="true" price="50" />
+	</blackmarket>
+
+	<blackmarket date="d23:h0" time="24 ">
+		<node itemtype="3" itemid="306" iscrystal="true" price="100" />
+		<node itemtype="3" itemid="406" iscrystal="true" price="100" />
+		<node itemtype="3" itemid="506" iscrystal="true" price="100" />
+	</blackmarket>
+
+	
+</root>

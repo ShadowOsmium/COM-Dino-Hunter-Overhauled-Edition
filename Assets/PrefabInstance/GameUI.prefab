@@ -1,0 +1,1412 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1747463653725619}
+  m_IsPrefabParent: 1
+--- !u!1 &1747463653725619
+GameObject:
+  m_ObjectHideFlags: 0
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4616701212313256}
+  - component: {fileID: 114871976505846263}
+  m_Layer: 0
+  m_Name: GameUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4616701212313256
+Transform:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1747463653725619}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
+--- !u!114 &114871976505846263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1747463653725619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 886e013b8f8f3704a9d91965f8bad1c3, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  material: {fileID: 2100000, guid: e7d8ea523dbc07d498857de013188739, type: 2}
+  sprites:
+  - name: youxizhong_dengjibg
+    outer:
+      serializedVersion: 2
+      x: 131
+      y: 396
+      width: 48
+      height: 48
+    inner:
+      serializedVersion: 2
+      x: 131
+      y: 396
+      width: 48
+      height: 48
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: youxizhong_renwumubiaobg
+    outer:
+      serializedVersion: 2
+      x: 594
+      y: 436
+      width: 170
+      height: 48
+    inner:
+      serializedVersion: 2
+      x: 594
+      y: 436
+      width: 170
+      height: 48
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: youxizhong_wuqibg
+    outer:
+      serializedVersion: 2
+      x: 495
+      y: 485
+      width: 98
+      height: 102
+    inner:
+      serializedVersion: 2
+      x: 495
+      y: 485
+      width: 98
+      height: 102
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: youxizhong_jingyanbg
+    outer:
+      serializedVersion: 2
+      x: 503
+      y: 602
+      width: 242
+      height: 74
+    inner:
+      serializedVersion: 2
+      x: 503
+      y: 602
+      width: 242
+      height: 74
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: youxizhong_shejibg
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 494
+      width: 182
+      height: 182
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 494
+      width: 182
+      height: 182
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: youxizhong_zidan
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 1
+      width: 40
+      height: 30
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 1
+      width: 40
+      height: 30
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: tishijiantou
+    outer:
+      serializedVersion: 2
+      x: 970
+      y: 438
+      width: 42
+      height: 46
+    inner:
+      serializedVersion: 2
+      x: 970
+      y: 438
+      width: 42
+      height: 46
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: baoxiang
+    outer:
+      serializedVersion: 2
+      x: 495
+      y: 145
+      width: 70
+      height: 66
+    inner:
+      serializedVersion: 2
+      x: 495
+      y: 145
+      width: 70
+      height: 66
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: youxizhong_zanting
+    outer:
+      serializedVersion: 2
+      x: 131
+      y: 445
+      width: 48
+      height: 48
+    inner:
+      serializedVersion: 2
+      x: 131
+      y: 445
+      width: 48
+      height: 48
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: youxizhong_guaiwuxuetiaobg
+    outer:
+      serializedVersion: 2
+      x: 765
+      y: 436
+      width: 154
+      height: 24
+    inner:
+      serializedVersion: 2
+      x: 765
+      y: 436
+      width: 154
+      height: 24
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: youxizhong_fangxiang
+    outer:
+      serializedVersion: 2
+      x: 290
+      y: 428
+      width: 86
+      height: 82
+    inner:
+      serializedVersion: 2
+      x: 290
+      y: 428
+      width: 86
+      height: 82
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: dan
+    outer:
+      serializedVersion: 2
+      x: 433
+      y: 305
+      width: 58
+      height: 68
+    inner:
+      serializedVersion: 2
+      x: 433
+      y: 305
+      width: 58
+      height: 68
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: arvilblack-bold_0
+    outer:
+      serializedVersion: 2
+      x: 257
+      y: 768
+      width: 256
+      height: 256
+    inner:
+      serializedVersion: 2
+      x: 257
+      y: 768
+      width: 256
+      height: 175
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: whitepixel
+    outer:
+      serializedVersion: 2
+      x: 772
+      y: 770
+      width: 2
+      height: 2
+    inner:
+      serializedVersion: 2
+      x: 772
+      y: 770
+      width: 2
+      height: 2
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: youxizhong_renwuxuetiao
+    outer:
+      serializedVersion: 2
+      x: 822
+      y: 388
+      width: 164
+      height: 20
+    inner:
+      serializedVersion: 2
+      x: 822
+      y: 388
+      width: 164
+      height: 20
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: youxizhong_renwuxuetiaobai
+    outer:
+      serializedVersion: 2
+      x: 657
+      y: 388
+      width: 164
+      height: 20
+    inner:
+      serializedVersion: 2
+      x: 657
+      y: 388
+      width: 164
+      height: 20
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: jizhong_temp2
+    outer:
+      serializedVersion: 2
+      x: 41
+      y: 7
+      width: 32
+      height: 24
+    inner:
+      serializedVersion: 2
+      x: 41
+      y: 7
+      width: 32
+      height: 24
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: title_jingbi
+    outer:
+      serializedVersion: 2
+      x: 433
+      y: 179
+      width: 58
+      height: 62
+    inner:
+      serializedVersion: 2
+      x: 433
+      y: 179
+      width: 58
+      height: 62
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: guang2
+    outer:
+      serializedVersion: 2
+      x: 388
+      y: 123
+      width: 44
+      height: 250
+    inner:
+      serializedVersion: 2
+      x: 388
+      y: 123
+      width: 44
+      height: 250
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: guang1
+    outer:
+      serializedVersion: 2
+      x: 771
+      y: 774
+      width: 250
+      height: 250
+    inner:
+      serializedVersion: 2
+      x: 771
+      y: 774
+      width: 250
+      height: 250
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: level-complete
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 677
+      width: 586
+      height: 90
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 677
+      width: 586
+      height: 90
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: xiaokonglong
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 355
+      width: 130
+      height: 138
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 355
+      width: 130
+      height: 138
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: neikuang2
+    outer:
+      serializedVersion: 2
+      x: 951
+      y: 604
+      width: 72
+      height: 72
+    inner:
+      serializedVersion: 2
+      x: 967
+      y: 621
+      width: 40
+      height: 37
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: neikuang1
+    outer:
+      serializedVersion: 2
+      x: 111
+      y: 71
+      width: 71
+      height: 71
+    inner:
+      serializedVersion: 2
+      x: 120
+      y: 82
+      width: 55
+      height: 40
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: lvanniu
+    outer:
+      serializedVersion: 2
+      x: 183
+      y: 511
+      width: 204
+      height: 76
+    inner:
+      serializedVersion: 2
+      x: 183
+      y: 511
+      width: 204
+      height: 76
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: title_shuijing
+    outer:
+      serializedVersion: 2
+      x: 433
+      y: 242
+      width: 58
+      height: 62
+    inner:
+      serializedVersion: 2
+      x: 433
+      y: 242
+      width: 58
+      height: 62
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: cangkukuang1
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 32
+      width: 110
+      height: 110
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 32
+      width: 110
+      height: 110
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: chongfeng
+    outer:
+      serializedVersion: 2
+      x: 183
+      y: 8
+      width: 74
+      height: 74
+    inner:
+      serializedVersion: 2
+      x: 183
+      y: 8
+      width: 74
+      height: 74
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: youxizhong_sheji
+    outer:
+      serializedVersion: 2
+      x: 290
+      y: 220
+      width: 79
+      height: 76
+    inner:
+      serializedVersion: 2
+      x: 290
+      y: 220
+      width: 79
+      height: 76
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: dunxing
+    outer:
+      serializedVersion: 2
+      x: 290
+      y: 115
+      width: 74
+      height: 74
+    inner:
+      serializedVersion: 2
+      x: 290
+      y: 115
+      width: 74
+      height: 74
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: kuangbao
+    outer:
+      serializedVersion: 2
+      x: 107
+      y: 185
+      width: 74
+      height: 74
+    inner:
+      serializedVersion: 2
+      x: 107
+      y: 185
+      width: 74
+      height: 74
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: huti
+    outer:
+      serializedVersion: 2
+      x: 290
+      y: 40
+      width: 74
+      height: 74
+    inner:
+      serializedVersion: 2
+      x: 290
+      y: 40
+      width: 74
+      height: 74
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: zhiliao
+    outer:
+      serializedVersion: 2
+      x: 495
+      y: 212
+      width: 74
+      height: 74
+    inner:
+      serializedVersion: 2
+      x: 495
+      y: 212
+      width: 74
+      height: 74
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: youxizhongzhalanxuetiaok
+    outer:
+      serializedVersion: 2
+      x: 594
+      y: 409
+      width: 290
+      height: 26
+    inner:
+      serializedVersion: 2
+      x: 594
+      y: 409
+      width: 290
+      height: 26
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: youxizhongzhalan
+    outer:
+      serializedVersion: 2
+      x: 495
+      y: 15
+      width: 74
+      height: 58
+    inner:
+      serializedVersion: 2
+      x: 495
+      y: 15
+      width: 74
+      height: 58
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: renwushibai
+    outer:
+      serializedVersion: 2
+      x: 183
+      y: 588
+      width: 319
+      height: 88
+    inner:
+      serializedVersion: 2
+      x: 183
+      y: 588
+      width: 319
+      height: 88
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: aimpoint_melee1
+    outer:
+      serializedVersion: 2
+      x: 74
+      y: 6
+      width: 25
+      height: 25
+    inner:
+      serializedVersion: 2
+      x: 74
+      y: 6
+      width: 25
+      height: 25
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: aimpoint_melee2
+    outer:
+      serializedVersion: 2
+      x: 1008
+      y: 745
+      width: 9
+      height: 9
+    inner:
+      serializedVersion: 2
+      x: 1008
+      y: 745
+      width: 9
+      height: 9
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: aimpoint_autorifle
+    outer:
+      serializedVersion: 2
+      x: 1008
+      y: 755
+      width: 8
+      height: 12
+    inner:
+      serializedVersion: 2
+      x: 1008
+      y: 755
+      width: 8
+      height: 12
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: aimpoint_handgun
+    outer:
+      serializedVersion: 2
+      x: 290
+      y: 194
+      width: 25
+      height: 25
+    inner:
+      serializedVersion: 2
+      x: 290
+      y: 194
+      width: 25
+      height: 25
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: aimpoint_holdgun
+    outer:
+      serializedVersion: 2
+      x: 290
+      y: 405
+      width: 23
+      height: 22
+    inner:
+      serializedVersion: 2
+      x: 290
+      y: 405
+      width: 23
+      height: 22
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: aimpoint_rocket
+    outer:
+      serializedVersion: 2
+      x: 131
+      y: 355
+      width: 40
+      height: 40
+    inner:
+      serializedVersion: 2
+      x: 131
+      y: 355
+      width: 40
+      height: 40
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: aimpoint_shootgun1
+    outer:
+      serializedVersion: 2
+      x: 324
+      y: 2
+      width: 24
+      height: 37
+    inner:
+      serializedVersion: 2
+      x: 324
+      y: 2
+      width: 24
+      height: 37
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: aimpoint_shootgun2
+    outer:
+      serializedVersion: 2
+      x: 107
+      y: 153
+      width: 42
+      height: 31
+    inner:
+      serializedVersion: 2
+      x: 107
+      y: 153
+      width: 42
+      height: 31
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: guanbi
+    outer:
+      serializedVersion: 2
+      x: 495
+      y: 74
+      width: 64
+      height: 70
+    inner:
+      serializedVersion: 2
+      x: 495
+      y: 74
+      width: 64
+      height: 70
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: youxizhong_chengjiuxx2
+    outer:
+      serializedVersion: 2
+      x: 144
+      y: 263
+      width: 32
+      height: 30
+    inner:
+      serializedVersion: 2
+      x: 144
+      y: 263
+      width: 32
+      height: 30
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: youxizhong_chengjiuxx1
+    outer:
+      serializedVersion: 2
+      x: 150
+      y: 153
+      width: 30
+      height: 31
+    inner:
+      serializedVersion: 2
+      x: 150
+      y: 153
+      width: 30
+      height: 31
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: youxizhong_qiaoji
+    outer:
+      serializedVersion: 2
+      x: 388
+      y: 20
+      width: 106
+      height: 102
+    inner:
+      serializedVersion: 2
+      x: 388
+      y: 20
+      width: 106
+      height: 102
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: youxizhong_huanwuqi
+    outer:
+      serializedVersion: 2
+      x: 111
+      y: 1
+      width: 68
+      height: 69
+    inner:
+      serializedVersion: 2
+      x: 111
+      y: 1
+      width: 68
+      height: 69
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: youxizhong_iapzidangoumai
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 260
+      width: 143
+      height: 94
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 260
+      width: 143
+      height: 94
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Lithos_24size_0
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 768
+      width: 256
+      height: 256
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 768
+      width: 256
+      height: 256
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: cangkuxiangzi
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 143
+      width: 106
+      height: 116
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 143
+      width: 106
+      height: 116
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: rewards
+    outer:
+      serializedVersion: 2
+      x: 587
+      y: 678
+      width: 420
+      height: 89
+    inner:
+      serializedVersion: 2
+      x: 587
+      y: 678
+      width: 420
+      height: 89
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: kuangdj_4
+    outer:
+      serializedVersion: 2
+      x: 183
+      y: 404
+      width: 106
+      height: 106
+    inner:
+      serializedVersion: 2
+      x: 183
+      y: 404
+      width: 106
+      height: 106
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: kuangdj_3
+    outer:
+      serializedVersion: 2
+      x: 388
+      y: 374
+      width: 106
+      height: 106
+    inner:
+      serializedVersion: 2
+      x: 388
+      y: 374
+      width: 106
+      height: 106
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: kuangdj_1
+    outer:
+      serializedVersion: 2
+      x: 388
+      y: 481
+      width: 106
+      height: 106
+    inner:
+      serializedVersion: 2
+      x: 388
+      y: 481
+      width: 106
+      height: 106
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: kuangdj_5
+    outer:
+      serializedVersion: 2
+      x: 183
+      y: 83
+      width: 106
+      height: 106
+    inner:
+      serializedVersion: 2
+      x: 183
+      y: 83
+      width: 106
+      height: 106
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: kuangdj_2
+    outer:
+      serializedVersion: 2
+      x: 183
+      y: 190
+      width: 106
+      height: 106
+    inner:
+      serializedVersion: 2
+      x: 183
+      y: 190
+      width: 106
+      height: 106
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: kuangdj_6
+    outer:
+      serializedVersion: 2
+      x: 183
+      y: 297
+      width: 106
+      height: 106
+    inner:
+      serializedVersion: 2
+      x: 183
+      y: 297
+      width: 106
+      height: 106
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: xinshouk
+    outer:
+      serializedVersion: 2
+      x: 314
+      y: 407
+      width: 20
+      height: 20
+    inner:
+      serializedVersion: 2
+      x: 324
+      y: 417
+      width: 0
+      height: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: youxizhong_shenjijiantou
+    outer:
+      serializedVersion: 2
+      x: 290
+      y: 1
+      width: 33
+      height: 38
+    inner:
+      serializedVersion: 2
+      x: 290
+      y: 1
+      width: 33
+      height: 38
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: sucaib_2
+    outer:
+      serializedVersion: 2
+      x: 144
+      y: 294
+      width: 28
+      height: 60
+    inner:
+      serializedVersion: 2
+      x: 144
+      y: 294
+      width: 28
+      height: 60
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: sucaib_4
+    outer:
+      serializedVersion: 2
+      x: 258
+      y: 22
+      width: 28
+      height: 60
+    inner:
+      serializedVersion: 2
+      x: 258
+      y: 22
+      width: 28
+      height: 60
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: sucaib_1
+    outer:
+      serializedVersion: 2
+      x: 990
+      y: 527
+      width: 28
+      height: 60
+    inner:
+      serializedVersion: 2
+      x: 990
+      y: 527
+      width: 28
+      height: 60
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: sucaib_3
+    outer:
+      serializedVersion: 2
+      x: 560
+      y: 84
+      width: 28
+      height: 60
+    inner:
+      serializedVersion: 2
+      x: 560
+      y: 84
+      width: 28
+      height: 60
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: loading_hunterlv_bg
+    outer:
+      serializedVersion: 2
+      x: 765
+      y: 461
+      width: 204
+      height: 23
+    inner:
+      serializedVersion: 2
+      x: 765
+      y: 461
+      width: 204
+      height: 23
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: icon_bg_info
+    outer:
+      serializedVersion: 2
+      x: 316
+      y: 195
+      width: 24
+      height: 24
+    inner:
+      serializedVersion: 2
+      x: 316
+      y: 195
+      width: 24
+      height: 24
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: juesekuang
+    outer:
+      serializedVersion: 2
+      x: 290
+      y: 320
+      width: 83
+      height: 83
+    inner:
+      serializedVersion: 2
+      x: 290
+      y: 320
+      width: 83
+      height: 83
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: first
+    outer:
+      serializedVersion: 2
+      x: 433
+      y: 129
+      width: 54
+      height: 49
+    inner:
+      serializedVersion: 2
+      x: 433
+      y: 129
+      width: 54
+      height: 49
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: dead_icon
+    outer:
+      serializedVersion: 2
+      x: 594
+      y: 346
+      width: 62
+      height: 62
+    inner:
+      serializedVersion: 2
+      x: 594
+      y: 346
+      width: 62
+      height: 62
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: zan
+    outer:
+      serializedVersion: 2
+      x: 594
+      y: 300
+      width: 40
+      height: 45
+    inner:
+      serializedVersion: 2
+      x: 594
+      y: 300
+      width: 40
+      height: 45
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: zanhui
+    outer:
+      serializedVersion: 2
+      x: 594
+      y: 254
+      width: 40
+      height: 45
+    inner:
+      serializedVersion: 2
+      x: 594
+      y: 254
+      width: 40
+      height: 45
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: lvanniu_hui
+    outer:
+      serializedVersion: 2
+      x: 746
+      y: 600
+      width: 204
+      height: 76
+    inner:
+      serializedVersion: 2
+      x: 746
+      y: 600
+      width: 204
+      height: 76
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: D3_Stonism_32size_0
+    outer:
+      serializedVersion: 2
+      x: 514
+      y: 768
+      width: 256
+      height: 256
+    inner:
+      serializedVersion: 2
+      x: 514
+      y: 768
+      width: 256
+      height: 256
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: jineng_tx2
+    outer:
+      serializedVersion: 2
+      x: 792
+      y: 489
+      width: 98
+      height: 98
+    inner:
+      serializedVersion: 2
+      x: 792
+      y: 489
+      width: 98
+      height: 98
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: jineng_tx1
+    outer:
+      serializedVersion: 2
+      x: 891
+      y: 489
+      width: 98
+      height: 98
+    inner:
+      serializedVersion: 2
+      x: 891
+      y: 489
+      width: 98
+      height: 98
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: jineng_tx4
+    outer:
+      serializedVersion: 2
+      x: 495
+      y: 386
+      width: 98
+      height: 98
+    inner:
+      serializedVersion: 2
+      x: 495
+      y: 386
+      width: 98
+      height: 98
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: jineng_tx5
+    outer:
+      serializedVersion: 2
+      x: 495
+      y: 287
+      width: 98
+      height: 98
+    inner:
+      serializedVersion: 2
+      x: 495
+      y: 287
+      width: 98
+      height: 98
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: jineng_tx6
+    outer:
+      serializedVersion: 2
+      x: 594
+      y: 489
+      width: 98
+      height: 98
+    inner:
+      serializedVersion: 2
+      x: 594
+      y: 489
+      width: 98
+      height: 98
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: jineng_tx3
+    outer:
+      serializedVersion: 2
+      x: 693
+      y: 489
+      width: 98
+      height: 98
+    inner:
+      serializedVersion: 2
+      x: 693
+      y: 489
+      width: 98
+      height: 98
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  mCoordinates: 0
+  mPixelSize: 1
+  mReplacement: {fileID: 0}

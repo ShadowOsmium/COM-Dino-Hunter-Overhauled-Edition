@@ -1,0 +1,196 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1284895447637790}
+  m_IsPrefabParent: 1
+--- !u!1 &1284895447637790
+GameObject:
+  m_ObjectHideFlags: 0
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4171599992409857}
+  - component: {fileID: 111259026088884381}
+  m_Layer: 0
+  m_Name: weapon_015
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4171599992409857
+Transform:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1284895447637790}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -100, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4211579714734427}
+  - {fileID: 4534209621393069}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
+--- !u!111 &111259026088884381
+Animation:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1284895447637790}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 1
+--- !u!1 &1817921114008475
+GameObject:
+  m_ObjectHideFlags: 0
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4211579714734427}
+  - component: {fileID: 137044152495992062}
+  m_Layer: 0
+  m_Name: Dummy01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4211579714734427
+Transform:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1817921114008475}
+  m_LocalRotation: {x: -0.70710677, y: -4.6670723E-15, z: -1.0677016E-07, w: 0.7071068}
+  m_LocalPosition: {x: 3.401967E-08, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4243801223037629}
+  - {fileID: 4271741178498348}
+  m_Father: {fileID: 4171599992409857}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 8.651423E-06, z: 8.651423E-06}
+--- !u!137 &137044152495992062
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1817921114008475}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: bb0908a8a0e3f71489639af52e9eafb2, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_skinnedMotionVectors: 0
+  m_Mesh: {fileID: 4300000, guid: 4c476a897fe0d3b47962b241b44e6b78, type: 2}
+  m_Bones:
+  - {fileID: 4211579714734427}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 0}
+  m_AABB:
+    m_Center: {x: 0.00010897964, y: -0.21076864, z: -0.003714025}
+    m_Extent: {x: 0.09148032, y: 0.77954626, z: 0.2998861}
+  m_DirtyAABB: 0
+--- !u!1 &1933896919570151
+GameObject:
+  m_ObjectHideFlags: 0
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4243801223037629}
+  m_Layer: 0
+  m_Name: texiao01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4243801223037629
+Transform:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1933896919570151}
+  m_LocalRotation: {x: -1.9470718E-07, y: 4.371138E-08, z: 4.3711395E-08, w: 1}
+  m_LocalPosition: {x: 2.0253859E-07, y: -1.0382814, z: 0.082895555}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4211579714734427}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -2.23118E-05, y: -5.008956E-06, z: -5.008956E-06}
+--- !u!1 &1089155346315691
+GameObject:
+  m_ObjectHideFlags: 0
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4271741178498348}
+  m_Layer: 0
+  m_Name: texiao02
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4271741178498348
+Transform:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1089155346315691}
+  m_LocalRotation: {x: -1.9470718E-07, y: 4.371138E-08, z: 4.3711395E-08, w: 1}
+  m_LocalPosition: {x: 0.11481836, y: -0.04484603, z: 0.08289549}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4211579714734427}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -2.23118E-05, y: -5.008956E-06, z: -5.008956E-06}
+--- !u!1 &1114604399482441
+GameObject:
+  m_ObjectHideFlags: 0
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4534209621393069}
+  m_Layer: 0
+  m_Name: weapon_015
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4534209621393069
+Transform:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1114604399482441}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 3.3527613E-08, y: 0, z: 4.0842405E-08}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4171599992409857}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -90, y: -0, z: 0}

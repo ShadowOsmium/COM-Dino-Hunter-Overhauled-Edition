@@ -1,0 +1,20 @@
+public enum AttributeAddType
+{
+	None,
+	Attack,
+	Defend,
+	HealthPoint,
+	MoveSpeed,
+	Ammo,
+	AllAmmo,
+	CriticalChancem,
+	CriticalDamage,
+	CloseWeaponAttackSpeed,
+	CrossbowAttackSpeed,
+	LiquidFireGunAttackSpeed,
+	MachineGunAttackSpeed,
+	RPGAttackSpeed,
+	ViolenceGunAttackSpeed,
+	AddHPBySeconds,
+	AddAmmoBySeconds
+}

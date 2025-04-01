@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_Name: Defense_UP_03
+  m_Shader: {fileID: 4800000, guid: 1e696c0b7f09cf649941a353b3442f0f, type: 3}
+  m_ShaderKeywords:
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 784aafa201a3f5c4bb702ce0444002c7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Parallax: 0.02
+    m_Colors:
+    - _Color: {r: 0.8283582, g: 0.7158499, b: 0.092726685, a: 0.36078432}

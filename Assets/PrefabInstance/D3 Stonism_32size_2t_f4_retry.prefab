@@ -1,0 +1,1858 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1599842218350023}
+  m_IsPrefabParent: 1
+--- !u!1 &1599842218350023
+GameObject:
+  m_ObjectHideFlags: 0
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4571693532474450}
+  - component: {fileID: 114277270417309106}
+  m_Layer: 0
+  m_Name: D3 Stonism_32size_2t_f4_retry
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4571693532474450
+Transform:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1599842218350023}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
+--- !u!114 &114277270417309106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1599842218350023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e907b57c1485dda43aa98708af8e6032, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  fontTxt: {fileID: 4900000, guid: 06011285d1c807547959e4635eff79c2, type: 3}
+  material: {fileID: 2100000, guid: 39bfe8ec679a10e4fad1ffca6c1633cd, type: 2}
+  mSpacingX: -4
+  mSpacingY: 0
+  m_reload: 0
+  mUVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  mFont:
+    mGlyphs:
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 32
+      advance: 17
+    - x: 159
+      y: 0
+      width: 19
+      height: 37
+      offsetX: -4
+      offsetY: 3
+      advance: 18
+    - x: 298
+      y: 147
+      width: 24
+      height: 18
+      offsetX: -4
+      offsetY: 3
+      advance: 24
+    - x: 187
+      y: 42
+      width: 31
+      height: 35
+      offsetX: -4
+      offsetY: 2
+      advance: 29
+    - x: 236
+      y: 78
+      width: 30
+      height: 34
+      offsetX: -4
+      offsetY: 6
+      advance: 29
+    - x: 370
+      y: 0
+      width: 40
+      height: 36
+      offsetX: -4
+      offsetY: 3
+      advance: 40
+    - x: 198
+      y: 78
+      width: 38
+      height: 34
+      offsetX: -4
+      offsetY: 4
+      advance: 36
+    - x: 281
+      y: 147
+      width: 17
+      height: 18
+      offsetX: -4
+      offsetY: 3
+      advance: 16
+    - x: 22
+      y: 0
+      width: 22
+      height: 42
+      offsetX: -4
+      offsetY: 2
+      advance: 20
+    - x: 0
+      y: 0
+      width: 22
+      height: 42
+      offsetX: -4
+      offsetY: 2
+      advance: 20
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 235
+      y: 113
+      width: 29
+      height: 31
+      offsetX: -3
+      offsetY: 6
+      advance: 29
+    - x: 261
+      y: 147
+      width: 20
+      height: 21
+      offsetX: -4
+      offsetY: 20
+      advance: 18
+    - x: 341
+      y: 147
+      width: 27
+      height: 16
+      offsetX: -4
+      offsetY: 11
+      advance: 27
+    - x: 322
+      y: 147
+      width: 19
+      height: 17
+      offsetX: -3
+      offsetY: 21
+      advance: 18
+    - x: 98
+      y: 113
+      width: 24
+      height: 33
+      offsetX: -4
+      offsetY: 4
+      advance: 22
+    - x: 266
+      y: 78
+      width: 29
+      height: 34
+      offsetX: -3
+      offsetY: 3
+      advance: 29
+    - x: 295
+      y: 78
+      width: 23
+      height: 34
+      offsetX: -3
+      offsetY: 2
+      advance: 24
+    - x: 367
+      y: 42
+      width: 30
+      height: 35
+      offsetX: -4
+      offsetY: 4
+      advance: 29
+    - x: 178
+      y: 0
+      width: 30
+      height: 37
+      offsetX: -4
+      offsetY: 2
+      advance: 29
+    - x: 337
+      y: 42
+      width: 30
+      height: 35
+      offsetX: -4
+      offsetY: 4
+      advance: 29
+    - x: 306
+      y: 42
+      width: 31
+      height: 35
+      offsetX: -4
+      offsetY: 3
+      advance: 29
+    - x: 440
+      y: 0
+      width: 30
+      height: 36
+      offsetX: -4
+      offsetY: 2
+      advance: 29
+    - x: 277
+      y: 42
+      width: 29
+      height: 35
+      offsetX: -3
+      offsetY: 2
+      advance: 29
+    - x: 410
+      y: 0
+      width: 30
+      height: 36
+      offsetX: -4
+      offsetY: 3
+      advance: 29
+    - x: 247
+      y: 42
+      width: 30
+      height: 35
+      offsetX: -3
+      offsetY: 4
+      advance: 29
+    - x: 241
+      y: 147
+      width: 20
+      height: 26
+      offsetX: -4
+      offsetY: 12
+      advance: 18
+    - x: 318
+      y: 113
+      width: 20
+      height: 30
+      offsetX: -4
+      offsetY: 12
+      advance: 18
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 212
+      y: 147
+      width: 29
+      height: 26
+      offsetX: -4
+      offsetY: 8
+      advance: 29
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 218
+      y: 42
+      width: 29
+      height: 35
+      offsetX: -4
+      offsetY: 4
+      advance: 27
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 164
+      y: 78
+      width: 34
+      height: 35
+      offsetX: -4
+      offsetY: 3
+      advance: 32
+    - x: 65
+      y: 113
+      width: 33
+      height: 34
+      offsetX: -4
+      offsetY: 3
+      advance: 32
+    - x: 130
+      y: 78
+      width: 34
+      height: 35
+      offsetX: -4
+      offsetY: 2
+      advance: 32
+    - x: 31
+      y: 113
+      width: 34
+      height: 34
+      offsetX: -4
+      offsetY: 3
+      advance: 32
+    - x: 338
+      y: 0
+      width: 32
+      height: 37
+      offsetX: -4
+      offsetY: 1
+      advance: 31
+    - x: 0
+      y: 113
+      width: 31
+      height: 34
+      offsetX: -4
+      offsetY: 4
+      advance: 29
+    - x: 96
+      y: 78
+      width: 34
+      height: 35
+      offsetX: -3
+      offsetY: 3
+      advance: 34
+    - x: 61
+      y: 78
+      width: 35
+      height: 35
+      offsetX: -3
+      offsetY: 2
+      advance: 34
+    - x: 168
+      y: 42
+      width: 19
+      height: 36
+      offsetX: -3
+      offsetY: 2
+      advance: 20
+    - x: 31
+      y: 78
+      width: 30
+      height: 35
+      offsetX: -5
+      offsetY: 2
+      advance: 29
+    - x: 302
+      y: 0
+      width: 36
+      height: 37
+      offsetX: -4
+      offsetY: 1
+      advance: 34
+    - x: 140
+      y: 42
+      width: 28
+      height: 36
+      offsetX: -3
+      offsetY: 3
+      advance: 29
+    - x: 101
+      y: 42
+      width: 39
+      height: 36
+      offsetX: -4
+      offsetY: 2
+      advance: 38
+    - x: 66
+      y: 42
+      width: 35
+      height: 36
+      offsetX: -3
+      offsetY: 2
+      advance: 34
+    - x: 32
+      y: 42
+      width: 34
+      height: 36
+      offsetX: -3
+      offsetY: 2
+      advance: 34
+    - x: 0
+      y: 42
+      width: 32
+      height: 36
+      offsetX: -4
+      offsetY: 2
+      advance: 31
+    - x: 44
+      y: 0
+      width: 35
+      height: 42
+      offsetX: -4
+      offsetY: 3
+      advance: 34
+    - x: 124
+      y: 0
+      width: 35
+      height: 38
+      offsetX: -4
+      offsetY: 0
+      advance: 32
+    - x: 205
+      y: 113
+      width: 30
+      height: 33
+      offsetX: -3
+      offsetY: 4
+      advance: 31
+    - x: 458
+      y: 78
+      width: 32
+      height: 34
+      offsetX: -4
+      offsetY: 4
+      advance: 31
+    - x: 171
+      y: 113
+      width: 34
+      height: 33
+      offsetX: -3
+      offsetY: 3
+      advance: 34
+    - x: 0
+      y: 78
+      width: 31
+      height: 35
+      offsetX: -3
+      offsetY: 3
+      advance: 32
+    - x: 470
+      y: 0
+      width: 41
+      height: 36
+      offsetX: -4
+      offsetY: 2
+      advance: 40
+    - x: 267
+      y: 0
+      width: 35
+      height: 37
+      offsetX: -5
+      offsetY: 3
+      advance: 32
+    - x: 458
+      y: 42
+      width: 32
+      height: 35
+      offsetX: -3
+      offsetY: 2
+      advance: 32
+    - x: 426
+      y: 78
+      width: 32
+      height: 34
+      offsetX: -4
+      offsetY: 3
+      advance: 31
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 288
+      y: 113
+      width: 30
+      height: 31
+      offsetX: -4
+      offsetY: 7
+      advance: 29
+    - x: 140
+      y: 113
+      width: 31
+      height: 33
+      offsetX: -4
+      offsetY: 4
+      advance: 29
+    - x: 183
+      y: 147
+      width: 29
+      height: 27
+      offsetX: -4
+      offsetY: 10
+      advance: 29
+    - x: 427
+      y: 42
+      width: 31
+      height: 35
+      offsetX: -4
+      offsetY: 3
+      advance: 29
+    - x: 153
+      y: 147
+      width: 30
+      height: 27
+      offsetX: -4
+      offsetY: 10
+      advance: 29
+    - x: 101
+      y: 0
+      width: 23
+      height: 38
+      offsetX: -4
+      offsetY: 0
+      advance: 20
+    - x: 238
+      y: 0
+      width: 29
+      height: 37
+      offsetX: -4
+      offsetY: 8
+      advance: 28
+    - x: 397
+      y: 78
+      width: 29
+      height: 34
+      offsetX: -3
+      offsetY: 3
+      advance: 29
+    - x: 378
+      y: 78
+      width: 19
+      height: 34
+      offsetX: -4
+      offsetY: 4
+      advance: 18
+    - x: 79
+      y: 0
+      width: 22
+      height: 38
+      offsetX: -5
+      offsetY: 3
+      advance: 20
+    - x: 347
+      y: 78
+      width: 31
+      height: 34
+      offsetX: -4
+      offsetY: 4
+      advance: 29
+    - x: 122
+      y: 113
+      width: 18
+      height: 33
+      offsetX: -3
+      offsetY: 4
+      advance: 18
+    - x: 86
+      y: 147
+      width: 40
+      height: 28
+      offsetX: -3
+      offsetY: 9
+      advance: 40
+    - x: 0
+      y: 147
+      width: 31
+      height: 29
+      offsetX: -4
+      offsetY: 9
+      advance: 29
+    - x: 56
+      y: 147
+      width: 30
+      height: 28
+      offsetX: -4
+      offsetY: 9
+      advance: 29
+    - x: 397
+      y: 42
+      width: 30
+      height: 35
+      offsetX: -4
+      offsetY: 9
+      advance: 29
+    - x: 208
+      y: 0
+      width: 30
+      height: 37
+      offsetX: -3
+      offsetY: 8
+      advance: 29
+    - x: 31
+      y: 147
+      width: 25
+      height: 28
+      offsetX: -4
+      offsetY: 9
+      advance: 23
+    - x: 468
+      y: 113
+      width: 28
+      height: 29
+      offsetX: -4
+      offsetY: 9
+      advance: 27
+    - x: 264
+      y: 113
+      width: 24
+      height: 31
+      offsetX: -4
+      offsetY: 8
+      advance: 22
+    - x: 369
+      y: 113
+      width: 31
+      height: 30
+      offsetX: -4
+      offsetY: 8
+      advance: 29
+    - x: 440
+      y: 113
+      width: 28
+      height: 29
+      offsetX: -3
+      offsetY: 9
+      advance: 27
+    - x: 400
+      y: 113
+      width: 40
+      height: 29
+      offsetX: -4
+      offsetY: 9
+      advance: 38
+    - x: 338
+      y: 113
+      width: 31
+      height: 30
+      offsetX: -4
+      offsetY: 9
+      advance: 29
+    - x: 318
+      y: 78
+      width: 29
+      height: 34
+      offsetX: -4
+      offsetY: 10
+      advance: 27
+    - x: 126
+      y: 147
+      width: 27
+      height: 27
+      offsetX: -4
+      offsetY: 12
+      advance: 25
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    - x: 0
+      y: 0
+      width: 0
+      height: 0
+      offsetX: 0
+      offsetY: 0
+      advance: 0
+    mSize: 50
+    mBase: 26
+    mWidth: 512
+    mHeight: 512
+    mTextureName: D3
+  test: 0

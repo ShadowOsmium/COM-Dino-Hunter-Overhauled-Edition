@@ -1,0 +1,157 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1147700571873651}
+  m_IsPrefabParent: 1
+--- !u!1 &1147700571873651
+GameObject:
+  m_ObjectHideFlags: 0
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4180936370536946}
+  - component: {fileID: 114125007065182754}
+  - component: {fileID: 114713248939391154}
+  m_Layer: 8
+  m_Name: ScrollList_Weapon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4180936370536946
+Transform:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1147700571873651}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 84.250725, y: 15.37462, z: -3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4548087490339304}
+  - {fileID: 4071618735304162}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
+--- !u!114 &114125007065182754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1147700571873651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef99828e8ca729e40b8c07cfc10ef7e3, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  item_prefab: {fileID: 114805277433771281, guid: 4b784efa36975134db5e9ea19dff2b92, type: 2}
+  grid: {fileID: 114974733354623641}
+--- !u!114 &114713248939391154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1147700571873651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d1e5bd18b1d50444a67608cbb420dd4, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  invokeOnEvent: 0
+  invokeObject: {fileID: 0}
+  componentName:
+  invokeFunctionName:
+  m_showClipObj: {fileID: 0}
+  m_hideClipObj: {fileID: 0}
+  size: {x: 288, y: 108}
+  items_list: []
+  open_child_event: 0
+  min_x: 0
+  min_y: 0
+  size_scale: 0.5
+  move_z: -10
+  offset_y: 26
+  open_fade: 1
+  circle_r: 144
+  now_index: 0
+--- !u!1 &1231407338293876
+GameObject:
+  m_ObjectHideFlags: 0
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4548087490339304}
+  - component: {fileID: 114974733354623641}
+  m_Layer: 8
+  m_Name: Grid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4548087490339304
+Transform:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1231407338293876}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -14, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4180936370536946}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
+--- !u!114 &114974733354623641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1231407338293876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4fba9279c2d4b344bbc8a1b2d715ff7, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  arrangement: 0
+  maxPerLine: 0
+  cellWidth: 70
+  cellHeight: 200
+  repositionStart: 0
+  repositionNow: 0
+  sorted: 0
+  hideInactive: 1
+--- !u!1 &1738531986483891
+GameObject:
+  m_ObjectHideFlags: 0
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4071618735304162}
+  - component: {fileID: 114874348952242034}
+  m_Layer: 8
+  m_Name: Rect_Show
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4071618735304162
+Transform:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1738531986483891}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4180936370536946}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
+--- !u!114 &114874348952242034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 1738531986483891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e82af83493623446939cab04fc672dc, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  updateForever: 0
+  size: {x: 288, y: 106}
+  currentCamera: {fileID: 0}
