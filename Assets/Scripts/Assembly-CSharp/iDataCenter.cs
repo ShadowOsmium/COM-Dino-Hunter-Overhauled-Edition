@@ -825,8 +825,8 @@ public class iDataCenter
 		m_bMusic = true;
 		m_bSound = true;
 		m_bAutoAim = false;
-		m_nGold.Set(1999999);
-		m_nCrystal.Set(50000);
+		m_nGold.Set(2500);
+		m_nCrystal.Set(35);
 		m_ltCrystalInBackground.Clear();
 		m_nStashLevel.Set(1);
 		m_nCrystalTotalGain = 0;
