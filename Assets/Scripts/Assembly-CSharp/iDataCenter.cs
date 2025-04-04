@@ -819,9 +819,9 @@ public class iDataCenter
         m_nLatestLevel = 1001;
         m_bUnLockLevel = false;
         m_ltLevelSaveInfo.Clear();
-        m_bFirstTimePlay = false;
+        m_bFirstTimePlay = true;
         m_fSceneProccess = 0f;
-        m_bTutorial = false;
+        m_bTutorial = true;
         m_nTutorialVillageState = 25;
         m_bEvaluate = false;
         m_nEnterAppCount = 0;
@@ -841,8 +841,8 @@ public class iDataCenter
         m_nBeAdmired.Set(0);
         m_nRank = 0;
         m_nLastRank = 0;
-        m_nBeAdmired.Set(0);
-        m_sSignature = "Let's go hunting!";
+        m_nBeAdmired.Set(999);
+        m_sSignature = "Let's not go hunting!";
         m_ltFriends.Clear();
         m_ltTitle.Clear();
         m_ltTitle.Add(1);
@@ -2665,7 +2665,7 @@ public class iDataCenter
         CDailyTaskInfo cDailyTaskInfo = dailyTaskCenter.Get((int)dayofweek);
         if (cDailyTaskInfo == null || cDailyTaskInfo.ltTask == null || cDailyTaskInfo.ltTask.Count < 1)
         {
-            Debug.LogError("dailyrask is null/..");
+            Debug.LogError("dailytask is null/..");
             return;
         }
         List<CAchievementInfo> dailyAchievementList = achievementCenter.GetDailyAchievementList();

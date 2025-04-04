@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using gyAchievementSystem;
 using gyEvent;
@@ -1112,7 +1112,9 @@ public class iGameSceneBase
 		m_CameraTrail.Active = false;
 		m_CameraFocus.Active = false;
 		m_CameraReveal.Active = false;
-		foreach (CCharMob value2 in m_MobMap.Values)
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        foreach (CCharMob value2 in m_MobMap.Values)
 		{
 			value2.SetActive(false);
 		}
