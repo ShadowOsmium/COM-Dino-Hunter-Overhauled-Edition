@@ -10,13 +10,13 @@
 		<MonsterNumLimit>
 			<limit type="1" maxnumber="8"/>
 		</MonsterNumLimit>
-		<RewardMaterial material="100001" mincount="0" maxcount="1"/>
+		<RewardMaterial material="100003" mincount="0" maxcount="1"/>
 	</gamelevel>
 	<gamelevel id="1003" BGM="BGM_Map01" BGM_ambience="Amb_Map01_Rainforest" scenename="SceneForest" isskyscene="false" nav_plane="0" bp_cfg="20102" gamewave="1003001,1003002,1003003" task="1003" sp_cfg_ground="20112" tpbegin_cfg="20302" tpend_cfg="20402" exp="22" gold="14" desc="Get dino egg x 1" limitmelee="false">
 		<MonsterNumLimit>
 			<limit type="1" maxnumber="8"/>
 		</MonsterNumLimit>
-		<RewardMaterial material="100003" mincount="4" maxcount="4"/>
+		<RewardMaterial material="100001" mincount="4" maxcount="4"/>
 	</gamelevel>
 	<gamelevel id="1004" BGM="BGM_Map01" BGM_ambience="Amb_Map01_Rainforest" scenename="SceneForest" isskyscene="false" nav_plane="0" bp_cfg="20101" gamewave="1004001,1004002,1004003" task="1004" sp_cfg_ground="20111" exp="23" gold="14" desc="Kill all dinos" limitmelee="false">
 		<MonsterNumLimit>
@@ -28,7 +28,7 @@
 		<MonsterNumLimit>
 			<limit type="1" maxnumber="8"/>
 		</MonsterNumLimit>
-		<RewardMaterial material="100012,100013" mincount="-1,-1" maxcount="1,1"/>
+		<RewardMaterial material="100011,100012,100013" mincount="-1,-1,-1" maxcount="1,1,1"/>
 	</gamelevel>
 	<gamelevel id="1006" BGM="BGM_Map01" BGM_ambience="Amb_Map01_Rainforest" scenename="SceneForest" isskyscene="false" nav_plane="0" bp_cfg="20101" gamewave="1006001,1006002" task="1006" sp_cfg_ground="20111" exp="24" gold="14" desc="Kill all dinos\nMelee weapons only" limitmelee="true">
 		<MonsterNumLimit>
@@ -52,7 +52,7 @@
 		<MonsterNumLimit>
 			<limit type="1" maxnumber="8"/>
 		</MonsterNumLimit>
-		<RewardMaterial material="100011" mincount="2" maxcount="4"/>
+		<RewardMaterial material="100010" mincount="2" maxcount="4"/>
 	</gamelevel>
 	<gamelevel id="1010" BGM="BGM_Map04" BGM_ambience="Amb_Map01_Rainforest" scenename="SceneForest" isskyscene="false" nav_plane="0" bp_cfg="20101" gamewave="1010001,1010002,1010003,1010004" task="1010" sp_cfg_ground="20111" exp="27" gold="14" desc="Hunt Triterrortops x 1" limitmelee="false">
 		<MonsterNumLimit>
@@ -150,7 +150,7 @@
 		</MonsterNumLimit>
 		<RewardMaterial material="200007,200008" mincount="-2,-2" maxcount="1,1"/>
 	</gamelevel>
-	<gamelevel id="3006" BGM="BGM_Map01" BGM_ambience="Amb_Map02_WindValley" scenename="SceneGorge" isskyscene="true" nav_plane="225" bp_cfg="10101" gamewave="3006001,3006002,3006003" task="3006" sp_cfg_ground="10111" exp="38" gold="15" desc="Survive 2:00" limitmelee="false" sp_cfg_sky="10201" hp_cfg_def="10501">
+	<gamelevel id="3006" BGM="BGM_Map01" BGM_ambience="Amb_Map02_WindValley" scenename="SceneGorge" isskyscene="true" nav_plane="225" bp_cfg="10101" gamewave="3006001,3006002,3006003" task="3007" sp_cfg_ground="10111" exp="38" gold="15" desc="Kill all dinos\nMelee weapons only" limitmelee="true" sp_cfg_sky="10201" hp_cfg_def="10501">
 		<MonsterNumLimit>
 			<limit type="1" maxnumber="10"/>
 		</MonsterNumLimit>
@@ -2916,24 +2916,24 @@
 		</MonsterNumLimit>
 		<RewardMaterial material="400007,400016,600001,500002,700005" mincount="-16,2,1,2,-1" maxcount="1,3,2,3,1"/>
 	</gamelevel>
-		<gamelevelgroup id="1" icon="1" name="1.Set out on Your Journey" levellist="1001,1002,1003,1004,1005,1006,1007,1008,1009,1010"/>
-	<gamelevelgroup id="2" icon="2" name="2.Scorching Poison" levellist="2001,2002,2003,2004,2005,2006,2007,2008,2009,2010"/>
-	<gamelevelgroup id="3" icon="6" name="3.Echoes in the Valley" levellist="3001,3002,3003,3004,3005,3006,3007,3008,3009,3010"/>
-	<gamelevelgroup id="4" icon="5" name="4.Fight or Frozen to Death" levellist="4001,4002,4003,4004,4005,4006,4007,4008,4009,4010"/>
-	<gamelevelgroup id="5" icon="4" name="5.Unstoppable Charge" levellist="5001,5002,5003,5004,5005,5006,5007,5008,5009,5010"/>
-	<gamelevelgroup id="6" icon="6" name="6.The King of the Sky" levellist="6001,6002,6003,6004,6005,6006,6007,6008,6009,6010"/>
-	<gamelevelgroup id="7" icon="4" name="7.Attack of the Ancient Giants" levellist="7001,7002,7003,7004,7005,7006,7007,7008,7009,7010"/>
-	<gamelevelgroup id="8" icon="1" name="8.The Shadow in the Forest" levellist="8001,8002,8003,8004,8005,8006,8007,8008,8009,8010"/>
-	<gamelevelgroup id="9" icon="5" name="9.The Wind with Fangs" levellist="9001,9002,9003,9004,9005,9006,9007,9008,9009,9010"/>
-	<gamelevelgroup id="10" icon="3" name="10.The Lake of Boiling Lava" levellist="10001,10002,10003,10004,10005,10006,10007,10008,10009,10010"/>
-	<gamelevelgroup id="11" icon="1" name="11.Chase the Poison Killosaurus!" levellist="11001,11002,11003,11004,11005,11006,11007,11008,11009,11010"/>
-	<gamelevelgroup id="12" icon="6" name="12.The Looming Danger" levellist="12001,12002,12003,12004,12005,12006,12007,12008,12009,12010"/>
-	<gamelevelgroup id="13" icon="5" name="13.Overwhelming Power" levellist="13001,13002,13003,13004,13005,13006,13007,13008,13009,13010"/>
-	<gamelevelgroup id="14" icon="4" name="14.Lightening Flashes" levellist="14001,14002,14003,14004,14005,14006,14007,14008,14009,14010"/>
-	<gamelevelgroup id="15" icon="2" name="15.Last Stand" levellist="15001,15002,15003,15004,15005,15006,15007,15008,15009,15010"/>
-	<gamelevelgroup id="16" icon="3" name="16.The Cave Expedition" levellist="16001,16002,16003,16004,16005,16006,16007,16008,16009,16010"/>
-	<gamelevelgroup id="17" icon="6" name="17.An Unprecedented Challenge" levellist="17001,17002,17003,17004,17005,17006,17007,17008,17009,17010"/>
-	<gamelevelgroup id="18" icon="1" name="18.The Path to Glory" levellist="18001,18002,18003,18004,18005,18006,18007,18008,18009,18010"/>
-	<gamelevelgroup id="19" icon="4" name="19.Unrelenting Force" levellist="19001,19002,19003,19004,19005,19006,19007,19008,19009,19010"/>
-	<gamelevelgroup id="20" icon="5" name="20.Triumphant Return" levellist="20001,20002,20003,20004,20005,20006,20007,20008,20009,20010"/>
+		<gamelevelgroup id="1" icon="1" name="1. The Glooming Forest" levellist="1001,1002,1003,1004,1005,1006,1007,1008,1009,1010"/>
+	<gamelevelgroup id="2" icon="2" name="2. Molten Abyss" levellist="2001,2002,2003,2004,2005,2006,2007,2008,2009,2010"/>
+	<gamelevelgroup id="3" icon="6" name="3. Echoes in the Valley" levellist="3001,3002,3003,3004,3005,3006,3007,3008,3009,3010"/>
+	<gamelevelgroup id="4" icon="5" name="4. The Shattered Iceland's" levellist="4001,4002,4003,4004,4005,4006,4007,4008,4009,4010"/>
+	<gamelevelgroup id="5" icon="4" name="5. The Frigid Reach" levellist="5001,5002,5003,5004,5005,5006,5007,5008,5009,5010"/>
+	<gamelevelgroup id="6" icon="6" name="6. Skyward Heights" levellist="6001,6002,6003,6004,6005,6006,6007,6008,6009,6010"/>
+	<gamelevelgroup id="7" icon="4" name="7. Tempest's Grasp" levellist="7001,7002,7003,7004,7005,7006,7007,7008,7009,7010"/>
+	<gamelevelgroup id="8" icon="1" name="8. Twilight Forest" levellist="8001,8002,8003,8004,8005,8006,8007,8008,8009,8010"/>
+	<gamelevelgroup id="9" icon="5" name="9. Tundra's Edge" levellist="9001,9002,9003,9004,9005,9006,9007,9008,9009,9010"/>
+	<gamelevelgroup id="10" icon="3" name="10. Scorched Earth" levellist="10001,10002,10003,10004,10005,10006,10007,10008,10009,10010"/>
+	<gamelevelgroup id="11" icon="1" name="11. The Enchanted Forest" levellist="11001,11002,11003,11004,11005,11006,11007,11008,11009,11010"/>
+	<gamelevelgroup id="12" icon="6" name="12. Ethereal Skies" levellist="12001,12002,12003,12004,12005,12006,12007,12008,12009,12010"/>
+	<gamelevelgroup id="13" icon="5" name="13. Permafrost Plateau" levellist="13001,13002,13003,13004,13005,13006,13007,13008,13009,13010"/>
+	<gamelevelgroup id="14" icon="4" name="14. Arctic Veil" levellist="14001,14002,14003,14004,14005,14006,14007,14008,14009,14010"/>
+	<gamelevelgroup id="15" icon="2" name="15. Emberforge Isles" levellist="15001,15002,15003,15004,15005,15006,15007,15008,15009,15010"/>
+	<gamelevelgroup id="16" icon="3" name="16. Blazeheart Caverns" levellist="16001,16002,16003,16004,16005,16006,16007,16008,16009,16010"/>
+	<gamelevelgroup id="17" icon="6" name="17. Skyborn Isles" levellist="17001,17002,17003,17004,17005,17006,17007,17008,17009,17010"/>
+	<gamelevelgroup id="18" icon="1" name="18. Whisperfall Woods" levellist="18001,18002,18003,18004,18005,18006,18007,18008,18009,18010"/>
+	<gamelevelgroup id="19" icon="4" name="19. Frozen Gale's End" levellist="19001,19002,19003,19004,19005,19006,19007,19008,19009,19010"/>
+	<gamelevelgroup id="20" icon="5" name="20. Snowdrift Hollow" levellist="20001,20002,20003,20004,20005,20006,20007,20008,20009,20010"/>
 </root>
