@@ -347,126 +347,98 @@ public class iGameSceneBase
 		return false;
 	}
 
-	public virtual void Initialize()
-	{
-		m_GameState = iGameApp.GetInstance().m_GameState;
-		m_GameData = iGameApp.GetInstance().m_GameData;
-		if (m_GameUI == null)
-		{
-			GameObject gameObject = GameObject.Find("Game");
-			m_GameUI = gameObject.GetComponent<iGameUIBase>();
-			m_GameUI.Initialize();
-		}
-		if (m_GameLogic == null)
-		{
-			m_GameLogic = new iGameLogic();
-			m_GameLogic.Initialize();
-		}
-		if (m_CameraTrail == null)
-		{
-			m_CameraTrail = Camera.main.GetComponent<iCameraTrail>();
-			if (m_CameraTrail == null)
-			{
-				m_CameraTrail = Camera.main.gameObject.AddComponent<iCameraTrail>();
-			}
-		}
-		if (m_CameraReveal == null)
-		{
-			m_CameraReveal = Camera.main.GetComponent<iCameraReveal>();
-			if (m_CameraReveal == null)
-			{
-				m_CameraReveal = Camera.main.gameObject.AddComponent<iCameraReveal>();
-			}
-		}
-		if (m_CameraFocus == null)
-		{
-			m_CameraFocus = Camera.main.GetComponent<iCameraFocus>();
-			if (m_CameraFocus == null)
-			{
-				m_CameraFocus = Camera.main.gameObject.AddComponent<iCameraFocus>();
-			}
-		}
-		if (m_MobMap == null)
-		{
-			m_MobMap = new Dictionary<int, CCharMob>();
-		}
-		if (m_PathWalkerManager == null)
-		{
-			m_PathWalkerManager = new CPathWalkerManager();
-		}
-		if (m_dictWaveMobNumber == null)
-		{
-			m_dictWaveMobNumber = new Dictionary<int, int>();
-		}
-		if (m_dictStealItem == null)
-		{
-			m_dictStealItem = new Dictionary<int, int>();
-		}
-		if (m_PlayerMap == null)
-		{
-			m_PlayerMap = new Dictionary<int, CCharPlayer>();
-		}
-		if (m_ltMonsterNumInfo == null)
-		{
-			m_ltMonsterNumInfo = new List<MonsterNumInfo>();
-		}
-		if (m_dictSPManager == null)
-		{
-			m_dictSPManager = new Dictionary<int, CStartPointManager>();
-		}
-		if (m_dictHPManager == null)
-		{
-			m_dictHPManager = new Dictionary<int, CStartPointManager>();
-		}
-		if (m_EventManager == null)
-		{
-			m_EventManager = new CEventManager();
-		}
-		if (m_MGManager == null)
-		{
-			m_MGManager = new CMonsterGenerateManager();
-		}
-		if (m_TaskManager == null)
-		{
-			m_TaskManager = new CTaskManager();
-			m_TaskManager.Initialize();
-		}
-		if (m_ltScreenTipTriggerEnd == null)
-		{
-			m_ltScreenTipTriggerEnd = new List<CPointScreenTip>();
-		}
-		if (m_ltItem == null)
-		{
-			m_ltItem = new List<GameObject>();
-		}
-		if (m_ltSceneGameObject == null)
-		{
-			m_ltSceneGameObject = new List<GameObject>();
-		}
-		if (m_Input == null)
-		{
-			if (MyUtils.isWindows)
-			{
-				m_Input = new CControlWindows();
-			}
-			else if (MyUtils.isIOS || MyUtils.isAndroid)
-			{
-				m_Input = new CControlIphone();
-			}
-		}
-		if (m_ltCGWave == null)
-		{
-			m_ltCGWave = new List<int>();
-		}
-		if (m_NavPath == null)
-		{
-			m_NavPath = new UnityEngine.AI.NavMeshPath();
-		}
-		m_ltRefreshWorldMonster = new List<CWorldMonster>();
-		m_nBlackMonsterCount = 0;
-	}
+    public virtual void Initialize()
+    {
+        m_GameState = iGameApp.GetInstance().m_GameState;
+        m_GameData = iGameApp.GetInstance().m_GameData;
 
-	public void InitializeGameLevel(int nLevel)
+        // Safely find and initialize Game UI
+        if (m_GameUI == null)
+        {
+            GameObject gameObject = GameObject.Find("Game");
+            if (gameObject == null)
+            {
+                Debug.LogError("GameObject named 'Game' not found in scene. Make sure it exists.");
+                return;
+            }
+
+            m_GameUI = gameObject.GetComponent<iGameUIBase>();
+            if (m_GameUI == null)
+            {
+                Debug.LogError("Component 'iGameUIBase' not found on 'Game' object.");
+                return;
+            }
+
+            m_GameUI.Initialize();
+        }
+
+        // Game Logic
+        if (m_GameLogic == null)
+        {
+            m_GameLogic = new iGameLogic();
+            m_GameLogic.Initialize();
+        }
+
+        // Camera components (safe check on Camera.main)
+        if (Camera.main == null)
+        {
+            Debug.LogError("Main camera not found. Make sure your main camera is tagged as 'MainCamera'.");
+            return;
+        }
+
+        // Initialize camera components safely
+        m_CameraTrail = GetOrAddComponent<iCameraTrail>(Camera.main.gameObject);
+        m_CameraReveal = GetOrAddComponent<iCameraReveal>(Camera.main.gameObject);
+        m_CameraFocus = GetOrAddComponent<iCameraFocus>(Camera.main.gameObject);
+
+        // Other data structures
+        if (m_MobMap == null) m_MobMap = new Dictionary<int, CCharMob>();
+        if (m_PathWalkerManager == null) m_PathWalkerManager = new CPathWalkerManager();
+        if (m_dictWaveMobNumber == null) m_dictWaveMobNumber = new Dictionary<int, int>();
+        if (m_dictStealItem == null) m_dictStealItem = new Dictionary<int, int>();
+        if (m_PlayerMap == null) m_PlayerMap = new Dictionary<int, CCharPlayer>();
+        if (m_ltMonsterNumInfo == null) m_ltMonsterNumInfo = new List<MonsterNumInfo>();
+        if (m_dictSPManager == null) m_dictSPManager = new Dictionary<int, CStartPointManager>();
+        if (m_dictHPManager == null) m_dictHPManager = new Dictionary<int, CStartPointManager>();
+        if (m_EventManager == null) m_EventManager = new CEventManager();
+        if (m_MGManager == null) m_MGManager = new CMonsterGenerateManager();
+
+        if (m_TaskManager == null)
+        {
+            m_TaskManager = new CTaskManager();
+            m_TaskManager.Initialize();
+        }
+
+        if (m_ltScreenTipTriggerEnd == null) m_ltScreenTipTriggerEnd = new List<CPointScreenTip>();
+        if (m_ltItem == null) m_ltItem = new List<GameObject>();
+        if (m_ltSceneGameObject == null) m_ltSceneGameObject = new List<GameObject>();
+
+        // Platform-specific input
+        if (m_Input == null)
+        {
+            if (MyUtils.isWindows) m_Input = new CControlWindows();
+            else if (MyUtils.isIOS || MyUtils.isAndroid) m_Input = new CControlIphone();
+        }
+
+        if (m_ltCGWave == null) m_ltCGWave = new List<int>();
+        if (m_NavPath == null) m_NavPath = new UnityEngine.AI.NavMeshPath();
+
+        m_ltRefreshWorldMonster = new List<CWorldMonster>();
+        m_nBlackMonsterCount = 0;
+    }
+
+    // Helper for getting or adding components
+    private T GetOrAddComponent<T>(GameObject obj) where T : Component
+    {
+        T comp = obj.GetComponent<T>();
+        if (comp == null)
+        {
+            comp = obj.AddComponent<T>();
+        }
+        return comp;
+    }
+
+    public void InitializeGameLevel(int nLevel)
 	{
 		m_curGameLevelInfo = m_GameData.GetGameLevelInfo(nLevel);
 		if (m_curGameLevelInfo == null)

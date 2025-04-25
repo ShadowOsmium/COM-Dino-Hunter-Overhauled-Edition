@@ -7,6 +7,16 @@ using UnityEngine;
 
 public class iDataCenter
 {
+    public void ClampToLimits()
+    {
+        
+        if (m_nGold.Get() > 35000)
+            m_nGold.Set(35000);
+
+        if (m_nCrystal.Get() > 650)
+            m_nCrystal.Set(650);
+    }
+
     public class CCrystalInBackground
     {
         public float m_fMoney;
@@ -41,7 +51,7 @@ public class iDataCenter
 
     protected string m_sSaveVersion = "1.0.0";
 
-    protected string m_sGameVersion = "3.1.7a";
+    protected string m_sGameVersion = "1.7.0";
 
     protected SafeInteger m_nGold;
 
@@ -177,7 +187,7 @@ public class iDataCenter
 
     protected SafeInteger m_nTitle;
 
-    protected string m_sSignature = "Let's go hunting!";
+    protected string m_sSignature = "Let's not go hunting!";
 
     protected List<string> m_ltFriends;
 
@@ -822,7 +832,7 @@ public class iDataCenter
         m_bFirstTimePlay = true;
         m_fSceneProccess = 0f;
         m_bTutorial = true;
-        m_nTutorialVillageState = 25;
+        m_nTutorialVillageState = 0;
         m_bEvaluate = false;
         m_nEnterAppCount = 0;
         m_ltIAPTransactionInfo.Clear();
@@ -888,7 +898,7 @@ public class iDataCenter
         XmlElement xmlElement = doc.CreateElement("gamedata");
         doc.AppendChild(xmlElement);
         xmlElement.SetAttribute("version", m_sSaveVersion);
-        xmlElement.SetAttribute("gameversion", "3.1.7a");
+        xmlElement.SetAttribute("gameversion", "1.7.0");
         xmlElement.SetAttribute("gold", m_nGold.Get().ToString());
         xmlElement.SetAttribute("crystal", m_nCrystal.Get().ToString());
         xmlElement.SetAttribute("stashlevel", m_nStashLevel.Get().ToString());

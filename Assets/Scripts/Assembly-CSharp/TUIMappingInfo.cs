@@ -82,6 +82,7 @@ public class TUIMappingInfo
 
 	protected Dictionary<int, int> m_dictMaterialCount;
 
+
 	public TUIMappingInfo()
 	{
 		m_dictMaterialInfo = new Dictionary<int, CTUIMaterialInfo>();
@@ -188,7 +189,8 @@ public class TUIMappingInfo
 		skill_dictionary[1] = "kuangbao";
 		skill_dictionary[3] = "zhiliao";
 		skill_dictionary[6] = "kuangbao";
-		skill_dictionary[99002] = "chongfeng2";
+        skill_dictionary[7] = "kuangbao";
+        skill_dictionary[99002] = "chongfeng2";
 		skill_dictionary[99004] = "dunxing2";
 		skill_dictionary[99005] = "huti2";
 		skill_dictionary[99001] = "kuangbao2";
@@ -282,19 +284,22 @@ public class TUIMappingInfo
 		weapon_dictionary[20004] = "avatar_04_h";
 		weapon_dictionary[20005] = "avatar_05_h";
 		weapon_dictionary[20006] = "avatar_06_h";
-		weapon_dictionary[30001] = "avatar_01_u";
+        weapon_dictionary[20007] = "avatar_07_h";
+        weapon_dictionary[30001] = "avatar_01_u";
 		weapon_dictionary[30002] = "avatar_02_u";
 		weapon_dictionary[30003] = "avatar_03_u";
 		weapon_dictionary[30004] = "avatar_04_u";
 		weapon_dictionary[30005] = "avatar_05_u";
 		weapon_dictionary[30006] = "avatar_06_u";
-		weapon_dictionary[40001] = "avatar_01_l";
+        weapon_dictionary[30007] = "avatar_07_u";
+        weapon_dictionary[40001] = "avatar_01_l";
 		weapon_dictionary[40002] = "avatar_02_l";
 		weapon_dictionary[40003] = "avatar_03_l";
 		weapon_dictionary[40004] = "avatar_04_l";
 		weapon_dictionary[40005] = "avatar_05_l";
 		weapon_dictionary[40006] = "avatar_06_l";
-		weapon_dictionary[10001] = "Stoneskin_001";
+        weapon_dictionary[40007] = "avatar_07_l";
+        weapon_dictionary[10001] = "Stoneskin_001";
 		weapon_dictionary[10002] = "Stoneskin_002";
 		weapon_dictionary[10003] = "Stoneskin_003";
 		weapon_dictionary[10004] = "Stoneskin_004";
@@ -307,7 +312,8 @@ public class TUIMappingInfo
 		weapon_dictionary[50003] = "guanghuan_3";
 		weapon_dictionary[50004] = "guanghuan_4";
 		weapon_dictionary[50005] = "guanghuan_5";
-		weapon_dictionary[60001] = "shouzhuo_1";
+        weapon_dictionary[50006] = "guanghuan_6";
+        weapon_dictionary[60001] = "shouzhuo_1";
 		weapon_dictionary[60002] = "shouzhuo_2";
 		weapon_dictionary[60003] = "shouzhuo_3";
 		weapon_dictionary[60004] = "shouzhuo_4";
@@ -327,7 +333,8 @@ public class TUIMappingInfo
 		role_dictionary[4] = "avatar3";
 		role_dictionary[5] = "avatar2";
 		role_dictionary[6] = "avatar6";
-		map_dictionary = new Dictionary<int, string>();
+        role_dictionary[7] = "avatar7";
+        map_dictionary = new Dictionary<int, string>();
 		map_dictionary[0] = string.Empty;
 		map_dictionary[1] = "p7";
 		map_dictionary[2] = "p4";

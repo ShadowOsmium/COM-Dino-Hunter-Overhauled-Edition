@@ -65,7 +65,14 @@ public class CLevelUpAvatar
 		{
 			m_nAvatarLevelNext = m_nAvatarLevel + 1;
 		}
-		CAvatarInfoLevel cAvatarInfoLevel = cAvatarInfo.Get(m_nAvatarLevelNext);
+        int maxAvatarLevel = 5;
+        if (m_nAvatarLevelNext > maxAvatarLevel && (m_nAvatarID < 701 || m_nAvatarID > 707))
+        {
+            Debug.Log("Avatar level is over the max — clamping denied.");
+            return false;
+        }
+
+        CAvatarInfoLevel cAvatarInfoLevel = cAvatarInfo.Get(m_nAvatarLevelNext);
 		if (cAvatarInfoLevel == null)
 		{
 			return false;
