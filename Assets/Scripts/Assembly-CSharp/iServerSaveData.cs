@@ -396,7 +396,7 @@ public class iServerSaveData : MonoBehaviour
 	private void Awake()
 	{
 		string sysVersion = DevicePlugin.GetSysVersion();
-		Debug.Log(sysVersion);
+		//Debug.Log(sysVersion);
 		m_State = kState.None;
 	}
 
@@ -484,7 +484,7 @@ public class iServerSaveData : MonoBehaviour
 		float fTime = -1f;
 		if (m_GameData.m_BlackMarketCenter.CheckBlackMarketRefreshTime(ref fTime))
 		{
-			CLocalNotification.GetInstance().Register("Check new arrivals in blackmarket for the limited time only!", fTime);
+			//CLocalNotification.GetInstance().Register("Check new arrivals in blackmarket for the limited time only!", fTime);
 		}
 	}
 

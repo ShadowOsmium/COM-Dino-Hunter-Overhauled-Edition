@@ -159,7 +159,7 @@ public class iBlackMarketCenter : iBaseCenter
                 }
             }
         }
-        Debug.Log(num + " " + MyUtils.TimeToString(num));
+        //Debug.Log(num + " " + MyUtils.TimeToString(num));
         if (num > 0f)
         {
             fTime = num;

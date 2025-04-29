@@ -351,57 +351,70 @@ public class LevelMap : MonoBehaviour
 		}
 	}
 
-	public int FindLevelInArea(int m_level, MapEnterType m_enter_type = MapEnterType.Normal)
-	{
-		int num = 0;
-		if (m_level >= 1 && m_level <= 2)
-		{
-			return 1;
-		}
-		if (m_level >= 3 && m_level <= 5)
-		{
-			return 2;
-		}
-		if (m_level >= 6 && m_level <= 10)
-		{
-			return 3;
-		}
-		if (m_level >= 11 && m_level <= 15)
-		{
-			return 4;
-		}
-		if (m_level >= 16)
-		{
-			return 5;
-		}
-		if ((m_level >= 1001 && m_level <= 1010) || (m_level >= 2001 && m_level <= 2010))
-		{
-			return 1;
-		}
-		if ((m_level >= 3001 && m_level <= 3010) || (m_level >= 4001 && m_level <= 4010) || (m_level >= 5001 && m_level <= 5010))
-		{
-			return 2;
-		}
-		if ((m_level >= 6001 && m_level <= 6010) || (m_level >= 7001 && m_level <= 7010) || (m_level >= 8001 && m_level <= 8010) || (m_level >= 9001 && m_level <= 9010) || (m_level >= 10001 && m_level <= 10010))
-		{
-			return 3;
-		}
-		if ((m_level >= 11001 && m_level <= 11010) || (m_level >= 12001 && m_level <= 12010) || (m_level >= 13001 && m_level <= 13010) || (m_level >= 14001 && m_level <= 14010) || (m_level >= 15001 && m_level <= 15010))
-		{
-			return 4;
-		}
-		if ((m_level >= 16001 && m_level <= 16010) || (m_level >= 17001 && m_level <= 17010) || (m_level >= 18001 && m_level <= 18010) || (m_level >= 19001 && m_level <= 19010) || (m_level >= 20001 && m_level <= 20010))
-		{
-			return 5;
-		}
-		if (num == 0)
-		{
-			Debug.Log("Can't found level in any area!" + m_level);
-		}
-		return num;
-	}
+    public int FindLevelInArea(int m_level, MapEnterType m_enter_type = MapEnterType.Normal)
+    {
+        // Early exit if the level is invalid (e.g., 0 or negative levels)
+        if (m_level <= 0)
+        {
+            Debug.LogError("Invalid level: " + m_level + ". Level must be greater than 0.");
+            m_level = 1;  // Set to a default value or handle accordingly
+        }
 
-	public int FindSecondaryLevelInMainLevel(int m_level)
+        int num = 0;
+
+        // Original conditions for level areas
+        if (m_level >= 1 && m_level <= 2)
+        {
+            return 1;
+        }
+        if (m_level >= 3 && m_level <= 5)
+        {
+            return 2;
+        }
+        if (m_level >= 6 && m_level <= 10)
+        {
+            return 3;
+        }
+        if (m_level >= 11 && m_level <= 15)
+        {
+            return 4;
+        }
+        if (m_level >= 16)
+        {
+            return 5;
+        }
+        if ((m_level >= 1001 && m_level <= 1010) || (m_level >= 2001 && m_level <= 2010))
+        {
+            return 1;
+        }
+        if ((m_level >= 3001 && m_level <= 3010) || (m_level >= 4001 && m_level <= 4010) || (m_level >= 5001 && m_level <= 5010))
+        {
+            return 2;
+        }
+        if ((m_level >= 6001 && m_level <= 6010) || (m_level >= 7001 && m_level <= 7010) || (m_level >= 8001 && m_level <= 8010) || (m_level >= 9001 && m_level <= 9010) || (m_level >= 10001 && m_level <= 10010))
+        {
+            return 3;
+        }
+        if ((m_level >= 11001 && m_level <= 11010) || (m_level >= 12001 && m_level <= 12010) || (m_level >= 13001 && m_level <= 13010) || (m_level >= 14001 && m_level <= 14010) || (m_level >= 15001 && m_level <= 15010))
+        {
+            return 4;
+        }
+        if ((m_level >= 16001 && m_level <= 16010) || (m_level >= 17001 && m_level <= 17010) || (m_level >= 18001 && m_level <= 18010) || (m_level >= 19001 && m_level <= 19010) || (m_level >= 20001 && m_level <= 20010))
+        {
+            return 5;
+        }
+
+        // If no area was found for the level, log a warning
+        if (num == 0)
+        {
+            Debug.LogError("Can't find level " + m_level + " in any area!");
+        }
+
+        return num;
+    }
+
+
+    public int FindSecondaryLevelInMainLevel(int m_level)
 	{
 		int result = 0;
 		for (int i = 0; i < 20; i++)

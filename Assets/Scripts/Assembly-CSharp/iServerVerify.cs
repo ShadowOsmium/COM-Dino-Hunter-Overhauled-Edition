@@ -360,8 +360,8 @@ public class iServerVerify : MonoBehaviour
 				}
 				else if (item2.Name == "discount")
 				{
-					UnityEngine.Debug.Log("discount");
-					m_ltServerDiscount.Clear();
+					//UnityEngine.Debug.Log("discount");
+					//m_ltServerDiscount.Clear();
 					foreach (XmlNode item9 in item2)
 					{
 						if (!(item9.Name != "node") && GetAttribute(item9, "type", ref value))

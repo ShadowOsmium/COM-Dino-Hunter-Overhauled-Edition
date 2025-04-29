@@ -4,36 +4,36 @@ public class XAdManagerWrapper
 {
 	public static void SetVideoAdUrl(string url)
 	{
-		Debug.Log("SetVideoAdUrl");
+		//Debug.Log("SetVideoAdUrl");
 	}
 
 	public static void SetVideoAdFile(string filename)
 	{
-		Debug.Log("SetVideoAdFile");
+		//Debug.Log("SetVideoAdFile");
 	}
 
 	public static void SetImageAdUrl(string url)
 	{
-		Debug.Log("SetImageAdUrl");
+		//Debug.Log("SetImageAdUrl");
 	}
 
 	public static void SetImagePosition(int x, int y)
 	{
-		Debug.Log("SetImagePosition");
+		//Debug.Log("SetImagePosition");
 	}
 
 	public static void ShowVideoAdLocal()
 	{
-		Debug.Log("ShowVideoAdLocal");
+		//Debug.Log("ShowVideoAdLocal");
 	}
 
 	public static void ShowImageAd()
 	{
-		Debug.Log("ShowImageAd");
+		//Debug.Log("ShowImageAd");
 	}
 
 	public static void HideImageAd()
 	{
-		Debug.Log("HideImageAd");
+		//Debug.Log("HideImageAd");
 	}
 }

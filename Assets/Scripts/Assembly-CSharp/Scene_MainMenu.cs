@@ -118,7 +118,23 @@ public class Scene_MainMenu : MonoBehaviour
 
 	private bool music_open_now = true;
 
-	private List<TUIUnlockInfo> unlock_list;
+    private const float MinMusicVolume = 0f;
+    private const float MaxMusicVolume = 0.5f;
+
+    private const float MinSFXVolume = 0f;
+    private const float MaxSFXVolume = 0.5f;
+
+    private const float VolumeDecrement = 0.1f;  // Volume decrease per button press
+
+    private float currentSFXVolume;
+
+    private int musicPressCount = 0;
+
+    private int sfxPressCount = 0;
+
+    private int resetCounter = 0; // Tracks presses after hitting 0.1
+
+    private List<TUIUnlockInfo> unlock_list;
 
 	public Popup_Sale popup_sale;
 
@@ -150,19 +166,49 @@ public class Scene_MainMenu : MonoBehaviour
 		}
 	}
 
-	private void Start()
-	{
-		global::EventCenter.EventCenter.Instance.Publish(this, new TUIEvent.SendEvent_SceneMainMenu(TUIEvent.SceneMainMenuEventType.TUIEvent_TopBar));
-		global::EventCenter.EventCenter.Instance.Publish(this, new TUIEvent.SendEvent_SceneMainMenu(TUIEvent.SceneMainMenuEventType.TUIEvent_OptionInfo));
-		global::EventCenter.EventCenter.Instance.Publish(this, new TUIEvent.SendEvent_SceneMainMenu(TUIEvent.SceneMainMenuEventType.TUIEvent_AcheviementInfo));
-		global::EventCenter.EventCenter.Instance.Publish(this, new TUIEvent.SendEvent_SceneMainMenu(TUIEvent.SceneMainMenuEventType.TUIEvent_SaleInfo));
-		global::EventCenter.EventCenter.Instance.Publish(this, new TUIEvent.SendEvent_SceneMainMenu(TUIEvent.SceneMainMenuEventType.TUIEvent_DailyLoginBonusInfo));
-		global::EventCenter.EventCenter.Instance.Publish(this, new TUIEvent.SendEvent_SceneMainMenu(TUIEvent.SceneMainMenuEventType.TUIEvent_DailyMissionsInfo));
-		global::EventCenter.EventCenter.Instance.Publish(this, new TUIEvent.SendEvent_SceneMainMenu(TUIEvent.SceneMainMenuEventType.TUIEvent_EnterInfo));
-		DoNewHelp();
-	}
+    private void Start()
+    {
+        global::EventCenter.EventCenter.Instance.Publish(this, new TUIEvent.SendEvent_SceneMainMenu(TUIEvent.SceneMainMenuEventType.TUIEvent_TopBar));
+        global::EventCenter.EventCenter.Instance.Publish(this, new TUIEvent.SendEvent_SceneMainMenu(TUIEvent.SceneMainMenuEventType.TUIEvent_OptionInfo));
+        global::EventCenter.EventCenter.Instance.Publish(this, new TUIEvent.SendEvent_SceneMainMenu(TUIEvent.SceneMainMenuEventType.TUIEvent_AcheviementInfo));
+        global::EventCenter.EventCenter.Instance.Publish(this, new TUIEvent.SendEvent_SceneMainMenu(TUIEvent.SceneMainMenuEventType.TUIEvent_SaleInfo));
+        global::EventCenter.EventCenter.Instance.Publish(this, new TUIEvent.SendEvent_SceneMainMenu(TUIEvent.SceneMainMenuEventType.TUIEvent_DailyLoginBonusInfo));
+        global::EventCenter.EventCenter.Instance.Publish(this, new TUIEvent.SendEvent_SceneMainMenu(TUIEvent.SceneMainMenuEventType.TUIEvent_DailyMissionsInfo));
+        global::EventCenter.EventCenter.Instance.Publish(this, new TUIEvent.SendEvent_SceneMainMenu(TUIEvent.SceneMainMenuEventType.TUIEvent_EnterInfo));
+        DoNewHelp();
+        {
+            // MUSIC volume load (same pattern)
+            if (PlayerPrefs.HasKey("MusicVolume"))
+            {
+                float currentMusicVolume = PlayerPrefs.GetFloat("MusicVolume");
+                TAudioManager.instance.musicVolume = currentMusicVolume;
+            }
+            else
+            {
+                float defaultMusicVolume = 0.5f;
+                TAudioManager.instance.musicVolume = defaultMusicVolume;
+                PlayerPrefs.SetFloat("MusicVolume", defaultMusicVolume);
+                PlayerPrefs.Save();
+            }
 
-	private void Update()
+            // SFX volume load
+            if (PlayerPrefs.HasKey("SFXVolume"))
+            {
+                currentSFXVolume = PlayerPrefs.GetFloat("SFXVolume");
+            }
+            else
+            {
+                currentSFXVolume = 0.5f; // default value
+                PlayerPrefs.SetFloat("SFXVolume", currentSFXVolume);
+                PlayerPrefs.Save();
+            }
+
+            // Apply SFX volume
+            TAudioManager.instance.soundVolume = currentSFXVolume;
+        }
+    }
+
+        private void Update()
 	{
 		LookAtCamera();
 		UpdateArrowControl();
@@ -194,7 +240,7 @@ public class Scene_MainMenu : MonoBehaviour
 		}
 	}
 
-	private void OnDestroy()
+	    private void OnDestroy()
 	{
 		global::EventCenter.EventCenter.Instance.Unregister<TUIEvent.BackEvent_SceneMainMenu>(TUIEvent_SetUIInfo);
 	}
@@ -275,10 +321,11 @@ public class Scene_MainMenu : MonoBehaviour
 				}
 				if (villiage_enter_info.equip_sign == NewMarkType.New)
 				{
-					go_camp_new.gameObject.SetActiveRecursively(true);
-					go_camp_mark.gameObject.SetActiveRecursively(false);
-				}
-				else if (villiage_enter_info.equip_sign == NewMarkType.Mark)
+#pragma warning disable CS0618 // Type or member is obsolete
+                    go_camp_new.gameObject.SetActiveRecursively(true);
+                    go_camp_mark.gameObject.SetActiveRecursively(false);
+                }
+                else if (villiage_enter_info.equip_sign == NewMarkType.Mark)
 				{
 					go_camp_new.gameObject.SetActiveRecursively(false);
 					go_camp_mark.gameObject.SetActiveRecursively(true);
@@ -839,23 +886,118 @@ public class Scene_MainMenu : MonoBehaviour
 		}
 	}
 
-	public void TUIEvent_BtnMusic(TUIControl control, int event_type, float wparam, float lparam, object data)
-	{
-		if (event_type == 1 || event_type == 2)
-		{
-			global::EventCenter.EventCenter.Instance.Publish(this, new TUIEvent.SendEvent_SceneMainMenu(TUIEvent.SceneMainMenuEventType.TUIEvent_ChangeMusic));
-		}
-	}
+    // Method for adjusting music volume
+    public void TUIEvent_BtnMusic(TUIControl control, int event_type, float wparam, float lparam, object data)
+    {
+        if (event_type == 1 || event_type == 2)
+        {
+            // Call to adjust music volume if button is pressed twice
+            AdjustMusicVolume();
 
-	public void TUIEvent_BtnSFX(TUIControl control, int event_type, float wparam, float lparam, object data)
-	{
-		if (event_type == 1 || event_type == 2)
-		{
-			global::EventCenter.EventCenter.Instance.Publish(this, new TUIEvent.SendEvent_SceneMainMenu(TUIEvent.SceneMainMenuEventType.TUIEvent_ChangeSFX));
-		}
-	}
+            // Optionally, publish an event if needed
+            global::EventCenter.EventCenter.Instance.Publish(this, new TUIEvent.SendEvent_SceneMainMenu(TUIEvent.SceneMainMenuEventType.TUIEvent_ChangeMusic));
+        }
+    }
 
-	public void TUIEvent_BtnForum(TUIControl control, int event_type, float wparam, float lparam, object data)
+    // Method for adjusting SFX volume
+    public void TUIEvent_BtnSFX(TUIControl control, int event_type, float wparam, float lparam, object data)
+    {
+        if (event_type == 1 || event_type == 2)
+        {
+            // Call to adjust SFX volume if button is pressed twice
+            AdjustSFXVolume();
+
+            // Optionally, publish an event if needed
+            global::EventCenter.EventCenter.Instance.Publish(this, new TUIEvent.SendEvent_SceneMainMenu(TUIEvent.SceneMainMenuEventType.TUIEvent_ChangeSFX));
+        }
+    }
+
+    private void AdjustMusicVolume()
+    {
+        musicPressCount++;
+
+        float current = TAudioManager.instance.musicVolume;
+
+        if (musicPressCount >= 2)
+        {
+            musicPressCount = 0;
+
+            if (Mathf.Approximately(current, 0.1f))
+            {
+                resetCounter++;
+                if (resetCounter >= 2)
+                {
+                    current = 0.5f;
+                    resetCounter = 0;
+                    Debug.Log("Music volume reset to 0.6 after reaching 0.1 and 2 more presses.");
+                }
+                else
+                {
+                    Debug.Log("Music volume at 0.1. Press " + (2 - resetCounter) + " more time(s) to reset.");
+                }
+            }
+            else
+            {
+                resetCounter = 0;
+
+                if (current <= MinMusicVolume)
+                    current = MaxMusicVolume;
+                else
+                    current -= VolumeDecrement;
+
+                current = Mathf.Clamp(current, MinMusicVolume, MaxMusicVolume);
+                current = Mathf.Round(current * 10f) / 10f;
+                Debug.Log("Music volume decreased, current volume: " + current);
+            }
+
+            TAudioManager.instance.musicVolume = current;
+        }
+    }
+
+    private void AdjustSFXVolume()
+    {
+        sfxPressCount++;
+
+        float current = TAudioManager.instance.soundVolume;
+
+        if (sfxPressCount >= 2)
+        {
+            sfxPressCount = 0;
+
+            if (Mathf.Approximately(current, 0.1f))
+            {
+                resetCounter++;
+                if (resetCounter >= 2)
+                {
+                    current = 0.5f;
+                    resetCounter = 0;
+                    Debug.Log("SFX volume reset to 0.5 after reaching 0.1 and 2 more presses.");
+                }
+                else
+                {
+                    Debug.Log("SFX volume at 0.1. Press " + (2 - resetCounter) + " more time(s) to reset.");
+                }
+            }
+            else
+            {
+                resetCounter = 0;
+
+                if (current <= MinSFXVolume)
+                    current = MaxSFXVolume;
+                else
+                    current -= VolumeDecrement;
+
+                current = Mathf.Clamp(current, MinSFXVolume, MaxSFXVolume);
+                current = Mathf.Round(current * 10f) / 10f;
+                Debug.Log("SFX volume decreased, current volume: " + current);
+            }
+
+            TAudioManager.instance.soundVolume = current;
+        }
+    }
+
+
+    public void TUIEvent_BtnForum(TUIControl control, int event_type, float wparam, float lparam, object data)
 	{
 		if (event_type == 3)
 		{
@@ -1610,4 +1752,5 @@ public class Scene_MainMenu : MonoBehaviour
 		}
 		unlock_list.Remove(tUIUnlockInfo);
 	}
+#pragma warning restore CS0618 // Type or member is obsolete
 }

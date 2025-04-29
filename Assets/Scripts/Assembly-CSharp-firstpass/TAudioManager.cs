@@ -1,428 +1,385 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TAudioManager : MonoBehaviour
 {
-	private class AudioInfo
-	{
-		public ITAudioEvent audioEvt;
+    private class AudioInfo
+    {
+        public ITAudioEvent audioEvt;
+        public bool loop;
+        public bool sfx;
+        public float volume;
+    }
 
-		public bool loop;
+    private Dictionary<AudioSource, AudioInfo> m_playAudios = new Dictionary<AudioSource, AudioInfo>();
+    private Dictionary<string, List<ITAudioRule>> m_audio_rules = new Dictionary<string, List<ITAudioRule>>();
+    private bool m_isMusicOn = true;
+    private bool m_isSoundOn = true;
+    private float m_musicVolume = 0.5f;
+    private float m_soundVolume = 0.5f;
+    private AudioListener audioListener;
+    private static TAudioManager s_instance;
 
-		public bool sfx;
+    public static TAudioManager instance
+    
+    {
+        get
+        {
+            if (s_instance == null && Application.isPlaying)
+            {
+                GameObject target = new GameObject("TAudioManager", typeof(TAudioManager));
+                s_instance = target.GetComponent<TAudioManager>();  // <-- this line is missing
+                DontDestroyOnLoad(target);
+            }
+            return s_instance;
+        }
+    }
 
-		public float volume;
-	}
+    public static bool checkInstance
+    {
+        get { return s_instance != null; }
+    }
 
-	private Dictionary<AudioSource, AudioInfo> m_playAudios = new Dictionary<AudioSource, AudioInfo>();
+    public bool isMusicOn
+    {
+        get { return m_isMusicOn; }
+        set
+        {
+            if (m_isMusicOn == value) return;
+            m_isMusicOn = value;
 
-	private Dictionary<string, List<ITAudioRule>> m_audio_rules = new Dictionary<string, List<ITAudioRule>>();
+            Dictionary<AudioSource, AudioInfo>.Enumerator enumerator = m_playAudios.GetEnumerator();
+            while (enumerator.MoveNext())
+            {
+                KeyValuePair<AudioSource, AudioInfo> playAudio = enumerator.Current;
+                if (!playAudio.Value.sfx)
+                {
+                    if (m_isMusicOn)
+                        playAudio.Key.Play();
+                    else
+                        playAudio.Key.Pause();
+                }
+            }
 
-	private bool m_isMusicOn = true;
+            PlayerPrefs.SetInt("MusicOff", (!m_isMusicOn) ? 1 : 0);
+        }
+    }
 
-	private bool m_isSoundOn = true;
+    public bool isSoundOn
+    {
+        get { return m_isSoundOn; }
+        set
+        {
+            if (m_isSoundOn == value) return;
+            m_isSoundOn = value;
 
-	private float m_musicVolume = 1f;
+            Dictionary<AudioSource, AudioInfo>.Enumerator enumerator = m_playAudios.GetEnumerator();
+            while (enumerator.MoveNext())
+            {
+                KeyValuePair<AudioSource, AudioInfo> playAudio = enumerator.Current;
+                AudioInfo info = playAudio.Value;
+                if (info.sfx)
+                {
+                    if (m_isSoundOn)
+                    {
+                        if (info.loop && info.audioEvt != null)
+                            info.audioEvt.Trigger();
+                    }
+                    else
+                    {
+                        playAudio.Key.Stop();
+                    }
+                }
+            }
 
-	private float m_soundVolume = 1f;
+            PlayerPrefs.SetInt("SoundOff", (!m_isSoundOn) ? 1 : 0);
+        }
+    }
 
-	private AudioListener audioListener;
+    public float musicVolume
+    {
+        get { return m_musicVolume; }
+        set
+        {
+            m_musicVolume = Mathf.Clamp01(value);
+            foreach (var pair in m_playAudios)
+            {
+                if (!pair.Value.sfx)
+                    pair.Key.volume = pair.Value.volume * m_musicVolume;
+            }
+            PlayerPrefs.SetFloat("MusicVolume", m_musicVolume);
+            PlayerPrefs.Save();
+        }
+    }
 
-	private static TAudioManager s_instance;
+    public float soundVolume
+    {
+        get { return m_soundVolume; }
+        set
+        {
+            m_soundVolume = Mathf.Clamp01(value);
+            foreach (var pair in m_playAudios)
+            {
+                if (pair.Value.sfx)
+                    pair.Key.volume = pair.Value.volume * m_soundVolume;
+            }
+            PlayerPrefs.SetFloat("SFXVolume", m_soundVolume);
+            PlayerPrefs.Save();
+        }
+    }
 
-	public static TAudioManager instance
-	{
-		get
-		{
-			if (s_instance == null && Application.isPlaying)
-			{
-				GameObject target = new GameObject("TAudioManager", typeof(TAudioManager));
-				Object.DontDestroyOnLoad(target);
-			}
-			return s_instance;
-		}
-	}
+    private void Awake()
+    {
+        m_isMusicOn = PlayerPrefs.GetInt("MusicOff", 0) == 0;
+        m_isSoundOn = PlayerPrefs.GetInt("SoundOff", 0) == 0;
 
-	public static bool checkInstance
-	{
-		get
-		{
-			return s_instance != null;
-		}
-	}
+        m_musicVolume = PlayerPrefs.GetFloat("MusicVolume", 0.5f);
+        m_soundVolume = PlayerPrefs.GetFloat("SFXVolume", 0.5f);
 
-	public bool isMusicOn
-	{
-		get
-		{
-			return m_isMusicOn;
-		}
-		set
-		{
-			if (m_isMusicOn == value)
-			{
-				return;
-			}
-			m_isMusicOn = value;
-			if (m_isMusicOn)
-			{
-				foreach (KeyValuePair<AudioSource, AudioInfo> playAudio in m_playAudios)
-				{
-					AudioInfo value2 = playAudio.Value;
-					if (!value2.sfx)
-					{
-						playAudio.Key.Play();
-					}
-				}
-			}
-			else
-			{
-				foreach (KeyValuePair<AudioSource, AudioInfo> playAudio2 in m_playAudios)
-				{
-					AudioInfo value3 = playAudio2.Value;
-					if (!value3.sfx)
-					{
-						playAudio2.Key.Pause();
-					}
-				}
-			}
-			PlayerPrefs.SetInt("MusicOff", (!m_isMusicOn) ? 1 : 0);
-		}
-	}
+        if (s_instance != null)
+            Destroy(s_instance.gameObject);
 
-	public bool isSoundOn
-	{
-		get
-		{
-			return m_isSoundOn;
-		}
-		set
-		{
-			if (m_isSoundOn == value)
-			{
-				return;
-			}
-			m_isSoundOn = value;
-			if (m_isSoundOn)
-			{
-				foreach (KeyValuePair<AudioSource, AudioInfo> playAudio in m_playAudios)
-				{
-					AudioInfo value2 = playAudio.Value;
-					if (value2.sfx && value2.loop && (bool)value2.audioEvt)
-					{
-						value2.audioEvt.Trigger();
-					}
-				}
-			}
-			else
-			{
-				foreach (KeyValuePair<AudioSource, AudioInfo> playAudio2 in m_playAudios)
-				{
-					AudioInfo value3 = playAudio2.Value;
-					if (value3.sfx)
-					{
-						playAudio2.Key.Stop();
-					}
-				}
-			}
-			PlayerPrefs.SetInt("SoundOff", (!m_isSoundOn) ? 1 : 0);
-		}
-	}
+        AudioListener listener = FindObjectOfType<AudioListener>();
+        if (listener == null)
+        {
+            GameObject go = new GameObject("AudioListener", typeof(AudioListener));
+            DontDestroyOnLoad(go);
+            listener = go.GetComponent<AudioListener>();
+        }
 
-	public float musicVolume
-	{
-		get
-		{
-			return m_musicVolume;
-		}
-		set
-		{
-			m_musicVolume = Mathf.Clamp01(value);
-			foreach (KeyValuePair<AudioSource, AudioInfo> playAudio in m_playAudios)
-			{
-				AudioInfo value2 = playAudio.Value;
-				if (!value2.sfx)
-				{
-					AudioSource key = playAudio.Key;
-					key.volume = value2.volume * m_musicVolume;
-				}
-			}
-		}
-	}
+        audioListener = listener;
+        s_instance = this;
 
-	public float soundVolume
-	{
-		get
-		{
-			return m_soundVolume;
-		}
-		set
-		{
-			m_soundVolume = Mathf.Clamp01(value);
-			foreach (KeyValuePair<AudioSource, AudioInfo> playAudio in m_playAudios)
-			{
-				AudioInfo value2 = playAudio.Value;
-				if (value2.sfx)
-				{
-					AudioSource key = playAudio.Key;
-					key.volume = value2.volume * m_soundVolume;
-				}
-			}
-		}
-	}
+        // Apply the saved volumes to all currently tracked audio sources
+        //foreach (var pair in m_playAudios)
+       //{
+       //     var info = pair.Value;
+       //     pair.Key.volume = info.volume * (info.sfx ? m_soundVolume : m_musicVolume);
+       // }
+    }
 
-	public AudioListener AudioListener
-	{
-		get
-		{
-			return audioListener;
-		}
-	}
+    private void OnDestroy()
+    {
+        s_instance = null;
+    }
 
-	private void Awake()
-	{
-		m_isMusicOn = PlayerPrefs.GetInt("MusicOff") == 0;
-		m_isSoundOn = PlayerPrefs.GetInt("SoundOff") == 0;
-		if (s_instance != null)
-		{
-			Object.Destroy(s_instance.gameObject);
-		}
-		AudioListener audioListener = Object.FindObjectOfType(typeof(AudioListener)) as AudioListener;
-		if (!audioListener)
-		{
-			GameObject gameObject = new GameObject("AudioListener", typeof(AudioListener));
-			Object.DontDestroyOnLoad(gameObject);
-			audioListener = gameObject.GetComponent<AudioListener>();
-		}
-		this.audioListener = audioListener;
-		s_instance = this;
-	}
+    private void Update()
+    {
+        List<AudioSource> toRemove = new List<AudioSource>();
+        Dictionary<AudioSource, AudioInfo>.Enumerator enumerator = m_playAudios.GetEnumerator();
+        while (enumerator.MoveNext())
+        {
+            KeyValuePair<AudioSource, AudioInfo> pair = enumerator.Current;
+            if (pair.Value.audioEvt != null && !pair.Value.audioEvt.isPlaying)
+                toRemove.Add(pair.Key);
+        }
 
-	private void OnDestroy()
-	{
-		s_instance = null;
-	}
+        for (int i = 0; i < toRemove.Count; i++)
+            m_playAudios.Remove(toRemove[i]);
+    }
 
-	private void Update()
-	{
-		List<AudioSource> list = new List<AudioSource>();
-		foreach (KeyValuePair<AudioSource, AudioInfo> playAudio in m_playAudios)
-		{
-			AudioSource key = playAudio.Key;
-			AudioInfo value = playAudio.Value;
-			if ((bool)value.audioEvt && !value.audioEvt.isPlaying)
-			{
-				list.Add(key);
-			}
-		}
-		foreach (AudioSource item in list)
-		{
-			m_playAudios.Remove(item);
-		}
-	}
+    public void Pause(AudioSource audio)
+    {
+        audio.Pause();
+    }
 
-	public void Pause(AudioSource audio)
-	{
-		audio.Pause();
-	}
+    public void PlaySound(AudioSource audio, AudioClip clip, bool loop)
+    {
+        PlaySound(audio, clip, loop, false);
+    }
 
-	public void PlaySound(AudioSource audio, AudioClip clip, bool loop, bool cutoff)
-	{
-		if (!TryPlay(audio.gameObject, clip.length / audio.pitch))
-		{
-			return;
-		}
-		AudioInfo value;
-		if (m_playAudios.TryGetValue(audio, out value))
-		{
-			value.volume = audio.volume;
-		}
-		else
-		{
-			value = new AudioInfo();
-			value.audioEvt = audio.GetComponent<ITAudioEvent>();
-			value.loop = loop;
-			value.sfx = true;
-			value.volume = audio.volume;
-			m_playAudios.Add(audio, value);
-		}
-		audio.volume *= m_soundVolume;
-		if (loop)
-		{
-			audio.loop = true;
-			audio.clip = clip;
-			if (m_isSoundOn)
-			{
-				audio.Play();
-			}
-			return;
-		}
-		audio.loop = false;
-		if (cutoff)
-		{
-			audio.clip = clip;
-		}
-		if (m_isSoundOn)
-		{
-			if (cutoff)
-			{
-				audio.Play();
-			}
-			else
-			{
-				audio.PlayOneShot(clip);
-			}
-		}
-	}
+    public void PlaySound(AudioSource audio, AudioClip clip, bool loop, bool cutoff)
+    {
+        if (!TryPlay(audio.gameObject, clip.length / audio.pitch))
+            return;
 
-	public void PlaySound(AudioSource audio, AudioClip clip, bool loop)
-	{
-		PlaySound(audio, clip, loop, false);
-	}
+        AudioInfo info;
+        if (!m_playAudios.TryGetValue(audio, out info))
+        {
+            info = new AudioInfo();
+            info.audioEvt = audio.GetComponent<ITAudioEvent>();
+            info.loop = loop;
+            info.sfx = true;
+            info.volume = audio.volume;
+            m_playAudios.Add(audio, info);
+        }
+        else
+        {
+            info.volume = audio.volume;
+        }
 
-	public void StopSound(AudioSource audio)
-	{
-		audio.Stop();
-		TryStop(audio.gameObject);
-		if (m_playAudios.ContainsKey(audio))
-		{
-			m_playAudios.Remove(audio);
-		}
-	}
+        audio.volume *= m_soundVolume;
+        audio.loop = loop;
+        audio.clip = clip;
 
-	public void PlayMusic(AudioSource audio, AudioClip clip, bool loop)
-	{
-		PlayMusic(audio, clip, loop, false);
-	}
+        if (m_isSoundOn)
+        {
+            if (loop || cutoff)
+                audio.Play();
+            else
+                audio.PlayOneShot(clip);
+        }
+    }
 
-	public void PlayMusic(AudioSource audio, AudioClip clip, bool loop, bool cutoff)
-	{
-		if (!TryPlay(audio.gameObject, clip.length / audio.pitch))
-		{
-			return;
-		}
-		AudioInfo value;
-		if (m_playAudios.TryGetValue(audio, out value))
-		{
-			value.volume = audio.volume;
-		}
-		else
-		{
-			value = new AudioInfo();
-			value.audioEvt = audio.GetComponent<ITAudioEvent>();
-			value.loop = loop;
-			value.sfx = false;
-			value.volume = audio.volume;
-			m_playAudios.Add(audio, value);
-		}
-		audio.volume *= m_musicVolume;
-		if (loop)
-		{
-			audio.loop = true;
-			audio.clip = clip;
-			if (m_isMusicOn)
-			{
-				audio.Play();
-			}
-			return;
-		}
-		audio.loop = false;
-		if (cutoff)
-		{
-			audio.clip = clip;
-		}
-		if (m_isMusicOn)
-		{
-			if (cutoff)
-			{
-				audio.Play();
-			}
-			else
-			{
-				audio.PlayOneShot(clip);
-			}
-		}
-	}
+    public void StopSound(AudioSource audio)
+    {
+        audio.Stop();
+        TryStop(audio.gameObject);
+        m_playAudios.Remove(audio);
+    }
 
-	public void StopMusic(AudioSource audio)
-	{
-		audio.Stop();
-		TryStop(audio.gameObject);
-		if (m_playAudios.ContainsKey(audio))
-		{
-			m_playAudios.Remove(audio);
-		}
-	}
+    public void PlayMusic(AudioSource audio, AudioClip clip, bool loop)
+    {
+        PlayMusic(audio, clip, loop, false);
+    }
 
-	public void StopAll()
-	{
-		List<AudioInfo> list = new List<AudioInfo>();
-		foreach (KeyValuePair<AudioSource, AudioInfo> playAudio in m_playAudios)
-		{
-			list.Add(playAudio.Value);
-		}
-		foreach (AudioInfo item in list)
-		{
-			item.audioEvt.Stop();
-		}
-		m_playAudios.Clear();
-	}
+    public void PlayMusic(AudioSource audio, AudioClip clip, bool loop, bool cutoff)
+    {
+        if (!TryPlay(audio.gameObject, clip.length / audio.pitch))
+            return;
 
-	private bool TryPlay(GameObject go, float length)
-	{
-		string text = go.name;
-		for (int num = text.IndexOf("(Clone)"); num >= 0; num = text.IndexOf("(Clone)"))
-		{
-			text = text.Substring(0, num);
-		}
-		List<ITAudioRule> value = null;
-		if (m_audio_rules.TryGetValue(text, out value))
-		{
-			float over_time = Time.realtimeSinceStartup + length;
-			foreach (ITAudioRule item in value)
-			{
-				if (!item.Try(text, go, over_time))
-				{
-					return false;
-				}
-			}
-		}
-		return true;
-	}
+        AudioInfo info;
+        if (!m_playAudios.TryGetValue(audio, out info))
+        {
+            info = new AudioInfo();
+            info.audioEvt = audio.GetComponent<ITAudioEvent>();
+            info.loop = loop;
+            info.sfx = false;
+            info.volume = audio.volume;
+            m_playAudios.Add(audio, info);
+        }
+        else
+        {
+            info.volume = audio.volume;
+        }
 
-	private void TryStop(GameObject go)
-	{
-		string text = go.name;
-		for (int num = text.IndexOf("(Clone)"); num >= 0; num = text.IndexOf("(Clone)"))
-		{
-			text = text.Substring(0, num);
-		}
-		List<ITAudioRule> value = null;
-		if (!m_audio_rules.TryGetValue(text, out value))
-		{
-			return;
-		}
-		foreach (ITAudioRule item in value)
-		{
-			item.Stop(go);
-		}
-	}
+        audio.volume *= m_musicVolume;
+        audio.loop = loop;
+        audio.clip = clip;
 
-	public void RegistRule(string name, ITAudioRule rule)
-	{
-		List<ITAudioRule> value = null;
-		if (m_audio_rules.TryGetValue(name, out value))
-		{
-			value.Add(rule);
-			return;
-		}
-		value = new List<ITAudioRule>();
-		value.Add(rule);
-		m_audio_rules.Add(name, value);
-	}
+        if (m_isMusicOn)
+        {
+            if (loop || cutoff)
+                audio.Play();
+            else
+                audio.PlayOneShot(clip);
+        }
+    }
 
-	public void ClearRegistRule()
-	{
-		m_audio_rules.Clear();
-	}
+    public void StopMusic(AudioSource audio)
+    {
+        audio.Stop();
+        TryStop(audio.gameObject);
+        m_playAudios.Remove(audio);
+    }
+
+    public void StopAll()
+    {
+        List<AudioInfo> allAudios = new List<AudioInfo>();
+        Dictionary<AudioSource, AudioInfo>.Enumerator enumerator = m_playAudios.GetEnumerator();
+        while (enumerator.MoveNext())
+        {
+            allAudios.Add(enumerator.Current.Value);
+        }
+        for (int i = 0; i < allAudios.Count; i++)
+        {
+            if (allAudios[i].audioEvt != null)
+                allAudios[i].audioEvt.Stop();
+        }
+        m_playAudios.Clear();
+    }
+
+    private bool TryPlay(GameObject go, float length)
+    {
+        string name = go.name;
+        int cloneIndex = name.IndexOf("(Clone)");
+        if (cloneIndex >= 0)
+            name = name.Substring(0, cloneIndex);
+
+        List<ITAudioRule> rules;
+        if (!m_audio_rules.TryGetValue(name, out rules))
+            return true;
+
+        float overTime = Time.realtimeSinceStartup + length;
+        for (int i = 0; i < rules.Count; i++)
+        {
+            if (!rules[i].Try(name, go, overTime))
+                return false;
+        }
+        return true;
+    }
+
+    private void TryStop(GameObject go)
+    {
+        string name = go.name;
+        int cloneIndex = name.IndexOf("(Clone)");
+        if (cloneIndex >= 0)
+            name = name.Substring(0, cloneIndex);
+
+        List<ITAudioRule> rules;
+        if (!m_audio_rules.TryGetValue(name, out rules))
+            return;
+
+        for (int i = 0; i < rules.Count; i++)
+        {
+            rules[i].Stop(go);
+        }
+    }
+
+    public void RegistRule(string name, ITAudioRule rule)
+    {
+        List<ITAudioRule> rules;
+        if (!m_audio_rules.TryGetValue(name, out rules))
+        {
+            rules = new List<ITAudioRule>();
+            m_audio_rules.Add(name, rules);
+        }
+        rules.Add(rule);
+    }
+
+    public void ClearRegistRule()
+    {
+        m_audio_rules.Clear();
+    }
+
+    // NEW VOLUME CONTROL METHODS (for UI buttons or hotkeys)
+    public void AdjustMusicVolume(float delta)
+    {
+        musicVolume = Mathf.Clamp01(musicVolume + delta);
+    }
+
+    public void AdjustSoundVolume(float delta)
+    {
+        soundVolume = Mathf.Clamp01(soundVolume + delta);
+    }
+
+    public void ApplySavedVolumesToAllSources()
+    {
+        foreach (var pair in m_playAudios)
+        {
+            AudioSource source = pair.Key;
+            var info = pair.Value;
+
+            if (info.sfx)
+                source.volume = info.volume * m_soundVolume;
+            else
+                source.volume = info.volume * m_musicVolume;
+        }
+    }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        ApplySavedVolumesToAllSources();
+    }
 }

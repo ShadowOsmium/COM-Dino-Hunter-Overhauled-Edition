@@ -438,7 +438,7 @@ public class TUIDataServer
 		}
 		else if (m_event.GetEventName() == TUIEvent.SceneMainMenuEventType.TUIEvent_Forum)
 		{
-			Application.OpenURL("http://forum.trinitigame.com/forum/viewforum.php?f=124");
+			Application.OpenURL("https://web.archive.org/web/20150219025909/http://forum.trinitigame.com/forum/viewforum.php?f=124");
 		}
 		else if (m_event.GetEventName() == TUIEvent.SceneMainMenuEventType.TUIEvent_TakeAchievement)
 		{
@@ -747,20 +747,16 @@ public class TUIDataServer
 				}
 			}
 		}
-		else if (m_event.GetEventName() == TUIEvent.SceneMainMenuEventType.TUIEvent_OpenSupportURL)
-		{
-			string text4 = "http://www.trinitigame.com/support/support.html?ip=%25@&country=";
-			string countryCode = DevicePlugin.GetCountryCode();
-			string text5 = WWW.EscapeURL(DevicePlugin.GetDeviceModelDetail());
-			string sysVersion = DevicePlugin.GetSysVersion();
-			string text6 = "Call%20of%20Mini:%20Dino%20Hunter";
-			string appVersion = DevicePlugin.GetAppVersion();
-			string curDeviceId = iServerSaveData.GetInstance().CurDeviceId;
-			text4 = text4 + countryCode + "&device=" + text5 + "&os=" + sysVersion + "&game=" + text6 + "&gamever=" + appVersion + "&code=" + curDeviceId;
-			UnityEngine.Debug.Log(text4);
-			Application.OpenURL(text4);
-			global::EventCenter.EventCenter.Instance.Publish(this, new TUIEvent.BackEvent_SceneMainMenu(m_event.GetEventName()));
-		}
+        else if (m_event.GetEventName() == TUIEvent.SceneMainMenuEventType.TUIEvent_OpenSupportURL)
+        {
+            string discordInviteURL = "https://discord.com/invite/X2j3szhMzt";
+
+            // Just open the link directly
+            Application.OpenURL(discordInviteURL);
+
+            global::EventCenter.EventCenter.Instance.Publish(this, new TUIEvent.BackEvent_SceneMainMenu(m_event.GetEventName()));
+        }
+
 		else if (m_event.GetEventName() == TUIEvent.SceneMainMenuEventType.TUIEvent_OpenReviewURL)
 		{
 			Application.OpenURL(iMacroDefine.AddressForItunes);

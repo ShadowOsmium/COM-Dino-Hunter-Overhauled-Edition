@@ -52,7 +52,7 @@ public class iLocalNotification : MonoBehaviour
 
 	public void Register(string str, float time)
 	{
-		Debug.Log("register local notification :" + str + "  lefttime:" + MyUtils.TimeToString(time));
+		//Debug.Log("register local notification :" + str + "  lefttime:" + MyUtils.TimeToString(time));
 	}
 
 	public void Clear()

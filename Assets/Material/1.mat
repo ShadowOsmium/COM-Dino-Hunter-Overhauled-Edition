@@ -4,9 +4,11 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_Name: 1
   m_Shader: {fileID: 4800000, guid: 3a48c2a49ef7e70489d383f676412021, type: 3}
-  m_ShaderKeywords:
+  m_ShaderKeywords: 
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -16,14 +18,14 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 1d331b93eae69bb46bbbdd9e747dd446, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _LightMap:
         m_Texture: {fileID: 2800000, guid: 4b0e24d5de420bc4f9a3aacc66b307e1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Floats: {}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 1d331b93eae69bb46bbbdd9e747dd446, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
     m_Colors:
     - _Color: {r: 0.58208954, g: 0.58208954, b: 0.58208954, a: 1}

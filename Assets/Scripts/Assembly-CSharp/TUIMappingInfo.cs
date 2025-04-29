@@ -182,14 +182,14 @@ public class TUIMappingInfo
 		stash_dictionary[700003] = "duihuanquan_3";
 		stash_dictionary[700004] = "duihuanquan_4";
 		stash_dictionary[700005] = "duihuanquan_5";
-		skill_dictionary = new Dictionary<int, string>();
+        stash_dictionary[700006] = "duihuanquan_6";
+        skill_dictionary = new Dictionary<int, string>();
 		skill_dictionary[2] = "chongfeng";
 		skill_dictionary[4] = "dunxing";
 		skill_dictionary[5] = "huti";
 		skill_dictionary[1] = "kuangbao";
 		skill_dictionary[3] = "zhiliao";
 		skill_dictionary[6] = "kuangbao";
-        skill_dictionary[7] = "kuangbao";
         skill_dictionary[99002] = "chongfeng2";
 		skill_dictionary[99004] = "dunxing2";
 		skill_dictionary[99005] = "huti2";
@@ -278,7 +278,8 @@ public class TUIMappingInfo
 		weapon_dictionary[32] = "Weapon032";
 		weapon_dictionary[33] = "Weapon033";
 		weapon_dictionary[34] = "Weapon034";
-		weapon_dictionary[20001] = "avatar_01_h";
+        weapon_dictionary[35] = "Weapon035";
+        weapon_dictionary[20001] = "avatar_01_h";
 		weapon_dictionary[20002] = "avatar_02_h";
 		weapon_dictionary[20003] = "avatar_03_h";
 		weapon_dictionary[20004] = "avatar_04_h";
@@ -342,7 +343,7 @@ public class TUIMappingInfo
 		map_dictionary[4] = "p5";
 		map_dictionary[5] = "p8";
 		map_dictionary[6] = "p2";
-		current_angle = new Vector3(354.6f, 189.9f, 0f);
+        current_angle = new Vector3(354.6f, 189.9f, 0f);
 		SetSwitchSceneStr(DoSwitchSceneStr);
 		SetSwitchSceneInt(DoSwitchSceneInt);
 		SetFireEffect(DoFireEffect);

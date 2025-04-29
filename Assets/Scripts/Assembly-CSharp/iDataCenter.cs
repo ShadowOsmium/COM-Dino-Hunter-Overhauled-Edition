@@ -65,7 +65,9 @@ public class iDataCenter
 
     protected int m_nCrystalTotalConsume;
 
-    protected Dictionary<int, int> m_dictMaterials;
+    public Dictionary<int, int> m_dictMaterials;
+
+    public Dictionary<int, int> GetMaterials;
 
     protected Dictionary<int, int> m_dictWeapon;
 
@@ -1048,17 +1050,27 @@ public class iDataCenter
             xmlElement15.SetAttribute("id", item9.Key.ToString());
             xmlElement15.SetAttribute("level", item9.Value.ToString());
         }
-        XmlElement xmlElement16 = doc.CreateElement("materials");
-        xmlElement.AppendChild(xmlElement16);
-        foreach (KeyValuePair<int, int> dictMaterial in m_dictMaterials)
+        XmlElement xmlMaterials = doc.CreateElement("materials");
+        xmlElement.AppendChild(xmlMaterials);
+
+        Dictionary<int, int>.Enumerator enumerator = m_dictMaterials.GetEnumerator();
+        try
         {
-            if (dictMaterial.Value != 0)
+            while (enumerator.MoveNext())
             {
-                XmlElement xmlElement17 = doc.CreateElement("node");
-                xmlElement16.AppendChild(xmlElement17);
-                xmlElement17.SetAttribute("id", dictMaterial.Key.ToString());
-                xmlElement17.SetAttribute("count", dictMaterial.Value.ToString());
+                KeyValuePair<int, int> dictMaterial = enumerator.Current;
+                if (dictMaterial.Value != 0)
+                {
+                    XmlElement xmlNode = doc.CreateElement("node");
+                    xmlMaterials.AppendChild(xmlNode);
+                    xmlNode.SetAttribute("id", dictMaterial.Key.ToString());
+                    xmlNode.SetAttribute("count", dictMaterial.Value.ToString());
+                }
             }
+        }
+        finally
+        {
+            enumerator.Dispose();
         }
         XmlElement xmlElement18 = doc.CreateElement("unlocksign");
         xmlElement.AppendChild(xmlElement18);

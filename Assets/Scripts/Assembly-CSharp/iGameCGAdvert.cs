@@ -115,12 +115,12 @@ public class iGameCGAdvert : MonoBehaviour
 
 	protected void OnResult(string filename, string url = "")
 	{
-		Debug.Log(filename + " " + url);
-		if (filename.Length < 1 || url.Length < 1)
-		{
-			Application.LoadLevelAsync("Scene_Main");
-			return;
-		}
+//		Debug.Log(filename + " " + url);
+//		if (filename.Length < 1 || url.Length < 1)
+//		{
+//			Application.LoadLevelAsync("Scene_Main");
+//			return;
+//		}
 		try
 		{
 			XAdManagerWrapper.SetVideoAdFile(filename);

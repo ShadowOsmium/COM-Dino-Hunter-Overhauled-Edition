@@ -42,8 +42,9 @@ public class iGameUIBase : MonoBehaviour
 	protected Dictionary<int, gyUIPortrait> m_dictTeamMate;
 
 	protected CSlipAssistant m_SlipAssist;
+    internal object mGamePauseDialog;
 
-	public gyUIManager UIManager
+    public gyUIManager UIManager
 	{
 		get
 		{
