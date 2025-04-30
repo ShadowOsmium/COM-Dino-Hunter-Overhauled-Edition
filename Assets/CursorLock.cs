@@ -11,7 +11,8 @@ public class CursorLock : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
         SceneManager.sceneLoaded += OnSceneLoaded;
-        
+        Debug.Log("Save path: " + Application.persistentDataPath);
+
         // On startup, lock the cursor if required.
         if (IsSceneThatRequiresCursorLock(SceneManager.GetActiveScene().name))
             LockCursor();
@@ -43,8 +44,8 @@ public class CursorLock : MonoBehaviour
 
     private bool IsSceneThatRequiresCursorLock(string sceneName)
     {
-        return sceneName == "SceneForest" || sceneName == "SceneGorge" || 
-               sceneName == "SceneIce" || sceneName == "SceneLava" || 
+        return sceneName == "SceneForest" || sceneName == "SceneGorge" ||
+               sceneName == "SceneIce" || sceneName == "SceneLava" ||
                sceneName == "SceneLava2" || sceneName == "SceneSnow";
     }
 
