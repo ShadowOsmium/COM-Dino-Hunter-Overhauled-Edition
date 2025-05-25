@@ -2,7 +2,10 @@
 
   ![Game Banner](https://github.com/user-attachments/assets/23cfcbdd-a931-4cba-a2f0-0f09bf4e92e8)
 
-  What is this mod about?
+![Android](https://img.shields.io/badge/Platform-Android-green?logo=android&style=flat-square)
+![Windows](https://img.shields.io/badge/Platform-Windows-blue?logo=windows&style=flat-square)
+  
+What is this mod about?
   This mod aims to be the best rebalance mod for all types of players! The mod has so much changes that you once you sink into the game for a while, you will not want to return to the original (if you like this mod a lot)
 
   What has changed in this mod?
