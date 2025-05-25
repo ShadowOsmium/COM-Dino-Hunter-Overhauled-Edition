@@ -1,63 +1,79 @@
-  # COM-Dino-Hunter
+# COM-Dino-Hunter
 
-  ![Game Banner](https://github.com/user-attachments/assets/23cfcbdd-a931-4cba-a2f0-0f09bf4e92e8)
+![Game Banner](https://github.com/user-attachments/assets/23cfcbdd-a931-4cba-a2f0-0f09bf4e92e8)
 
 ![Android](https://img.shields.io/badge/Platform-Android-green?logo=android&style=flat-square)
 ![Windows](https://img.shields.io/badge/Platform-Windows-blue?logo=windows&style=flat-square)
-  
-What is this mod about?
-  This mod aims to be the best rebalance mod for all types of players! The mod has so much changes that you once you sink into the game for a while, you will not want to return to the original (if you like this mod a lot)
 
-  What has changed in this mod?
-  Currently there is so much changes that i have done to the point where I am going to summarize the big changes here:
+## 🦖 What is this mod about?
 
-╔══════════════════════════════════════════════════════════════════╗
+This mod aims to be the best rebalance mod for all types of players! Once you sink into the game, you won’t want to return to the original.
 
-Original:
+## 🔧 What has changed in this mod?
 
-  > - 	12 Achievements
-  > - 	16 Daily Missions
-  > -	Crazy Prices
-  > -	Unfair Stash Upgrade Costs
-  > -	No Great Rewards From Boss Raid
-  > -	Stages Were Too Easy
-  > -	Stages Were Not Very Rewarding With Materials
-  > -	Blackmarket Was Very Annoying To Get Good Rewards
-  > -	Expensive Crafting Costs
-  > -	Leveling Up Characters Took Too Long
-  > -	Not Much Variety With Armour Bonuses
-  > - 	Unnessacary Level Upgrades For Items
-  > - 	Upgrading Items Didn't Feel Enjoyable
+| Feature                          | Original                         | My Mod                                                      |
+|---------------------------------|---------------------------------|-------------------------------------------------------------|
+| Achievements                    | 12                              | 26                                                          |
+| Daily Missions                  | 16                              | 42                                                          |
+| Prices                         | Pay-to-Win (P2W)                | More Affordable and Less P2W                                |
+| Stash Upgrade Costs            | Unfair                         | Affordable                                                  |
+| Boss Raid Rewards              | Not Great Rewards               | More Rewarding                                              |
+| Difficulty                     | Stages Were Too Easy           | Somewhat Difficult But Balanced                             |
+| Stage Rewards                  | Not Very Rewarding             | Contain Greater Rewards                                     |
+| Blackmarket                   | Very Annoying To Get Good Rewards | Prices Rebalanced                                      |
+| Crafting Costs                | Expensive                      | Rebalanced                                                 |
+| Leveling Up Characters        | Took Too Long To Get Max Level                 | XP Requirements Reduced After Level 30                      |
+| Level Cap                     | Level 50 Cap For All Characters                              | Level 60 Cap For All Characters                             |
+| Armour Bonuses                | Not Much Variety               | Greater and Capped at Level 5                               |
+| Accessories                  | None                          | Accessories Are Now Upgradeable                             |
+| Armour Set                   | Original                      | New Armour Set                                              |
+| Weapon Upgrades             | Didn’t Feel Enjoyable To Upgrade         | Upgrades Improve Ammo Capacity And Fire Rate                |
+| UI                          | Original                      | Enhanced Main Menu Look                                      |
+| FPS Counter                 | None                         | Added                                                       |
+| Controls                    | Original                      | Enhanced PC Controls                                        |
+| Audio                      | No Adjustable Audio           | Adjustable Audio (Click Music/Sound Buttons Twice to Reduce by 10%) |
+| Bugs & Typos               | A Lot Of Visual Bugs                 | Fixed Lots                                                  |
+| Textures                   | Original                     | Restored Old Textures & Redone Most To Look Better         |
+| Weapon Balance             | Somewhat Decent                     | Buffed Crystal Weapons Slightly                             |
+| Stage Weapon Limits        | Only Melee Weapons Allowed                        | Limits Certain Weapon Types On Certain Stages For A Better Gameplay Flow |
 
-  My Mod:
+---
 
-  > -	26 Achievements
-  > -	42 Daily Missions
-  > -	Much Better Prices
-  > -	Affordable Stash Upgrade Costs
-  > -	More Rewarding Boss Raids
-  > -	Stages Are Now Some What Difficult But Not Too Much
-  > -	Stages Now Contain Greater Rewards
-  > -	Blackmarket Prices Have Been Rebalanced
-  > -	Accessories Are Now Upgradeable
-  > -	New Armour Set
-  > -	New Accesories
-  > -	Rebalanced Crafting Costs
-  > -	Leveling Up Characters XP Requirements Have Been Reduced By 2 Times When You Get Beyond Level 30
-  > -	New Level 60 Cap For All Characters
-  > -	Armour Bonuses Are More Greater
-  > -	Armour Now Is Capped At Level 5
-  > -	Upgrading Weapons Now Can Upgrade Ammo Capacity And Fire Rate 
-  > -	Enhanced Upgrade Descriptions
-  > -	Made The Main Menu Look More Pleasing
-  > -	FPS Counter (Because Why Not)
-  > -	Enhanced PC Controls
-  > -	Adjustable Audio (It's A Bit Tedious But It Gets The Job Done). You Have To Click The Music/Sound Buttons Twice To Reduce It Down By 10%
-  > -	Fixed Lots Of Annoying Typos/Bugs
-  > -	Restored Some Old Textures
-  > -	Redone Most Of The Textures To Look Way Better
-  > -	Made Most Weapons's Upgrades Stronger With Damage
-  > -	Buffed Crystal Weapons Slightly
-  > -	Limits Weapon Types On Certain Stages For A Better Flow And Forces You To Not Use Only Meta For Every Level
+## 🚀 Installation Instructions
 
-╚═══════════════════════════════════════════════════════════════════╝
+### Android
+
+1. Download the latest APK from the [Releases](https://github.com/ShadowOsmium/COM-Dino-Hunter-Overhauled-Edition/releases/tag/v1.9) page — file:  
+   `COMDH.-.Overhauled.Edition.apk`
+2. Allow installation from unknown sources on your Android device if needed.
+3. Open the APK to install the game.
+4. Launch and enjoy hunting dinos on the go!
+
+### PC (Windows)
+
+1. Download the latest ZIP file from the [Releases](https://github.com/ShadowOsmium/COM-Dino-Hunter-Overhauled-Edition/releases/tag/v1.9) page — file:  
+   `COMDH.-.Overhauled.Edition.zip`
+2. Extract the ZIP file to your preferred folder.
+3. Run the executable inside to start the game.
+4. Have fun playing on your PC!
+
+---
+
+## 🎮 Gameplay Controls
+
+### Android
+
+- Use touchscreen controls and on-screen buttons.  
+- Use settings to adjust audio.
+
+### PC (Windows)
+
+- **Move:** WASD  
+- **Shoot:** Left Mouse Button  
+- **Lock Cursor:** Right Click  
+- **Switch Weapons:** Q and E keys  
+- **Pause/Menu:** Esc key  
+- **Ability:** Middle Mouse and Left Ctrl  
+- Adjustable audio can be controlled within the game’s settings.
+
+---
