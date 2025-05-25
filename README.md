@@ -10,8 +10,10 @@ What is this mod about?
 
   What has changed in this mod?
   Currently there is so much changes that i have done to the point where I am going to summarize the big changes here:
-╔═══════════════════════════════════════════════════════════════════════════════════════╗
-  Original:
+
+╔══════════════════════════════════════════════════════════════════╗
+
+Original:
 
   > - 	12 Achievements
   > - 	16 Daily Missions
@@ -58,4 +60,4 @@ What is this mod about?
   > -	Buffed Crystal Weapons Slightly
   > -	Limits Weapon Types On Certain Stages For A Better Flow And Forces You To Not Use Only Meta For Every Level
 
-╚═══════════════════════════════════════════════════════════════════════════════════════╝
+╚═══════════════════════════════════════════════════════════════════╝
