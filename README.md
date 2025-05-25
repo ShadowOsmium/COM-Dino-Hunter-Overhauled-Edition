@@ -1,4 +1,4 @@
-# COM-Dino-Hunter
+# COM-Dino Hunter Overhauled Edition | By Nick 
 
 ![Game Banner](https://github.com/user-attachments/assets/23cfcbdd-a931-4cba-a2f0-0f09bf4e92e8)
 
