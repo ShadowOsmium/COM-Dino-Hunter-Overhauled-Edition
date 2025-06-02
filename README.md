@@ -9,7 +9,8 @@
 
 ## 🦖 What is this mod about?
 
-This mod aims to be the best rebalance mod for all types of players! Once you sink into the game, you won’t want to return to the original.
+This mod aims to be the best rebalance mod for all types of players! Once you sink into the game, you won’t want to return to the original. 
+The following changes are eihter current or future changes.
 
 ## 🔧 What has changed in this mod?
 
@@ -23,21 +24,24 @@ This mod aims to be the best rebalance mod for all types of players! Once you si
 | Difficulty                     | Stages Were Too Easy           | Somewhat Difficult But Balanced                             |
 | Stage Rewards                  | Not Very Rewarding             | Contain Greater Rewards                                     |
 | Blackmarket                   | Very Annoying To Get Good Rewards | Prices Rebalanced                                      |
-| Crafting Costs                | Expensive                      | Rebalanced                                                 |
+| Crafting Costs                | Expensive                      | Balanced And Fair                                                 |
 | Leveling Up Characters        | Took Too Long To Get Max Level                 | XP Requirements Reduced After Level 30                      |
 | Level Cap                     | Level 50 Cap For All Characters                              | Level 60 Cap For All Characters                             |
-| Armour Bonuses                | Not Much Variety               | Greater and Capped at Level 5                               |
-| Accessories                  | None                          | Accessories Are Now Upgradeable                             |
+| Armour Bonuses                | Not Great               | Stronger and Capped at Level 5                               |
+| Accessories                  | Non-Upgradeable Accessories                          | Accessories Are Now Upgradeable Up To Level 5                             |
 | Armour Set                   | Original                      | New Armour Set                                              |
 | Weapon Upgrades             | Didn’t Feel Enjoyable To Upgrade         | Upgrades Improve Ammo Capacity And Fire Rate                |
 | UI                          | Original                      | Enhanced Main Menu Look                                      |
 | FPS Counter                 | None                         | Added                                                       |
-| Controls                    | Original                      | Enhanced PC Controls                                        |
+| Controls                    | Manual                      | Smoother PC Controls                                        |
 | Audio                      | No Adjustable Audio           | Adjustable Audio (Click Music/Sound Buttons Twice to Reduce by 10%) |
-| Bugs & Typos               | A Lot Of Visual Bugs                 | Fixed Lots                                                  |
+| Bugs & Typos               | A Lot Of Visual Bugs                 | Fixed A Lot Of Bugs Triniti Didn't                                                  |
 | Textures                   | Original                     | Restored Old Textures & Redone Most To Look Better         |
 | Weapon Balance             | Somewhat Decent                     | Buffed Crystal Weapons Slightly                             |
 | Stage Weapon Limits        | Only Melee Weapons Allowed                        | Limits Certain Weapon Types On Certain Stages For A Better Gameplay Flow |
+| Weapons        | Regular                        | Most Weapons Now Have A Glowing Animation |
+| Graphics        | Basic                        | Enhanced Shadows, Textures And More |
+| Blackmarket        | Decent                        | Blackmarket Now Shows 4 Items Per Day |
 
 ---
 
@@ -66,7 +70,6 @@ This mod aims to be the best rebalance mod for all types of players! Once you si
 ### Android
 
 - Use touchscreen controls and on-screen buttons.  
-- Use settings to adjust audio.
 
 ### PC (Windows)
 
@@ -76,6 +79,5 @@ This mod aims to be the best rebalance mod for all types of players! Once you si
 - **Switch Weapons:** Q and E keys  
 - **Pause/Menu:** Esc key  
 - **Ability:** Middle Mouse and Left Ctrl  
-- Adjustable audio can be controlled within the game’s settings.
 
 ---
